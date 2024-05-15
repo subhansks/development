@@ -4,30 +4,30 @@ import React from "react";
 
 const HomeFilters = () => {
   return (
-    <div className="mobile-filters-heading gap-2 flex">
-      <div className="flex gap-1 bg-dealguru-white p-[4px] rounded-lg">
+    <div className=" gap-2 flex ">
+      <div className="flex gap-1 bg-dealguru-white px-1 rounded-md justify-center items-center h-11">
         <Link
-          className=" button text-sm px-[14px] py-[4px] border-r bg-dealguru-grey text-dealguru-blue"
+          className="flex items-center justify-center rounded-md button text-sm  px-3  h-9  border-r bg-dealguru-grey text-dealguru-blue"
           href="/test"
         >
           Utvalda favoriter
         </Link>
         <Link
-          className=" button px-[14px] text-sm py-[4px] border-r bg-dealguru-white text-[#5a5a5a]"
+          className=" flex items-center justify-center rounded-md button px-3 h-9 text-sm  border-r bg-dealguru-white text-[#5a5a5a]"
           href="/test"
         >
           Nya deals
         </Link>
         <Link
-          className=" button px-[14px] text-sm py-[4px] border-r bg-dealguru-white text-[#5a5a5a]"
+          className=" flex items-center justify-center rounded-md button px-3 h-9 text-sm  border-r bg-dealguru-white text-[#5a5a5a]"
           href="/test"
         >
           Högst betyg
         </Link>
       </div>
-      <div className="flex  bg-dealguru-white p-[4px] rounded-lg">
+      <div className="flex px-1 gap-1  bg-dealguru-white  rounded-md justify-center items-center h-11">
         <Link
-          className=" mr- button px-[10px] py-[5px] border-r bg-dealguru-white text-dealguru-blue"
+          className=" button px-2 py-1 flex items-center justify-center h-9 border-r bg-dealguru-grey text-dealguru-blue"
           href="/test"
         >
           <Image
@@ -39,7 +39,7 @@ const HomeFilters = () => {
           />
         </Link>
         <Link
-          className=" button px-[10px] py-[5px] border-r bg-dealguru-grey text-[#5a5a5a]"
+          className=" button px-2 py-1 h-9 border-r flex justify-center items-center bg-dealguru-grey text-[#5a5a5a]"
           href="/test"
         >
           <Image

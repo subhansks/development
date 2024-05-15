@@ -5,7 +5,7 @@ import React from "react";
 const Navbar = () => {
   return (
     <header className="flex flex-col">
-      <p className="flex bg-dealguru-blue text-center font-semibold h-[32px] text-dealguru-white items-center justify-center">
+      <p className="flex bg-dealguru-blue text-center font-bold h-[32px] text-dealguru-white items-center justify-center">
         DealGuru - Just nu 10293 deals och rabatter
       </p>
 

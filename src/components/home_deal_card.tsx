@@ -1,57 +1,93 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import LikeModule from "./like_module";
+import Comment_Bookmark from "./comment_bookmark";
 
 const HomeDealCard = () => {
   return (
-    <div className="  w-full h-[250px] bg-white rounded-xl shadow-lg shadow-gray-200 p-4 flex gap-4">
-      <div className="w-fit h-[200px] flex  justify-start ">
+    <div className="  w-full min-h-[250px] bg-white rounded-xl shadow-lg shadow-gray-200 p-4 flex gap-3  items-center">
+      <div className="w-[25%] h-[200px] flex justify-start items-center ">
         <Image
           src="/deal1.jpg"
           width={200}
-          height={200}
+          height={0}
           alt="placeholder"
-          className=" w-auto h-full object-scale-down  "
+          className=" h-auto w-full rounded-l-md  object-fill"
         />
       </div>
-      <div className="flex gap-4 w-full flex-col justify-between ">
+      <div className="flex gap-4 w-[75%] flex-col justify-between self-start h-full">
         <div className="flex gap-4">
-          <div className="flex-2 flex-col flex gap-4 h-fit">
-            <h1 className="text-black text-[19px] font-semibold capitalize">
-              SAS EuroBonus - 20% poängrabatt på bonusresor till/från Sverige,
-              Norge, Danmark & Finland
-            </h1>
-          </div>
-          <div className="flex flex-1 items-end h-fit min-w-fit flex-col gap-4">
-            <p className=" text-xs font-semibold ">Bra deal? Rösta här:</p>
-            <div className="flex gap-2">
-              <div className="border border-dealguru-blue  w-[35px] h-[35px] flex p-2 items-center justify-center rounded-md  ">
-                <span>22</span>
-              </div>
-              <div className="border border-blue-950 w-[35px] h-[35px] flex p-2 items-center justify-center rounded-md cursor-pointer">
-                <Image alt="heart" width={30} height={30} src={"/heart.svg"} />
-              </div>
-              <div className="border border-blue-950 w-[35px] h-[35px] flex p-2 items-center justify-center rounded-md cursor-pointer">
-                <Image alt="heart" width={30} height={30} src={"/like.svg"} />
-              </div>
-              <div className="border border-blue-950 w-[35px] h-[35px] flex p-2 items-center justify-center rounded-md cursor-pointer">
+          <div className="flex-2 flex-col gap-2 flex h-fit">
+            <Link href={"/"}>
+              <h1 className="text-dealguru-black text-xl font-bold capitalize">
+                Sänk din elfaktura med Greenely Sänk din elfaktura med Greenely
+              </h1>
+            </Link>
+            <div className="flex gap-2 items-center w-fit">
+              <p className="font-bold pr-2 text-lg border-r text-dealguru-blue border-gray-300">
+                230 SEK
+              </p>
+              <Link href={"/"}>
+                <p className="capitalize bord text-sm font-bold">greenely</p>
+              </Link>
+            </div>
+            <div className="flex flex-col gap-[2px]">
+              <div className="flex gap-2 items-center">
                 <Image
-                  alt="heart"
-                  width={30}
-                  height={30}
-                  src={"/dislike.svg"}
+                  width={32}
+                  height={32}
+                  src="/blank_avatar_new.png"
+                  className="w-8  h-8 rounded-full"
+                  alt="Avatar"
                 />
+                <p className="font-bold text-sm">DealGuru-teamet </p>
+                <p className="text-sm text-gray-400">
+                  Kontrollerad för 1 dag sedan
+                </p>
+              </div>
+              <Link className="font-bold text-sm mt-2" href={"/"}>
+                Få full kontroll över ditt elpris och spara pengar
+              </Link>
+              <div className=" flex items-center gap-2">
+                <Link
+                  className="text-dealguru-blue capitalize bord text-sm font-bold"
+                  href={"/"}
+                >
+                  greenely
+                </Link>
+                <div className="border-r border-gray-300 h-5" />
+                <Link
+                  className="text-dealguru-blue capitalize bord text-sm font-bold"
+                  href={"/"}
+                >
+                  Gratis & rabattkoder
+                </Link>
+                <div className="border-r border-gray-300 h-5" />
+
+                <Link
+                  className="text-dealguru-blue capitalize bord text-sm font-bold"
+                  href={"/"}
+                >
+                  greenely
+                </Link>
               </div>
             </div>
           </div>
+          <LikeModule />
         </div>
-        <Link
-          className=" bg-dealguru-blue text-white text-base text-center p-2 rounded-md font-medium "
-          href=""
-        >
-          {" "}
-          Go to deal
-        </Link>
+        <div className="flex justify-between items-center">
+          <div className="flex justify-between ">
+            <Comment_Bookmark />
+          </div>
+          <Link
+            className="w-1/3 bg-dealguru-blue text-white text-base text-center p-2 rounded-md font-medium "
+            href=""
+          >
+            {" "}
+            Gå direkt till dealen
+          </Link>
+        </div>
       </div>
     </div>
   );

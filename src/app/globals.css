@@ -1,5 +1,6 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rubik:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
 
 
 @tailwind base;
@@ -20,9 +21,9 @@
   --dealguru-shadow: 0px 0px 10px 0px #272E610D;
 }
 
+
 body {
  background-color: var(--dealguru-grey);
-  
   
 }
 
@@ -30,7 +31,7 @@ body {
   .button {
     background-color: var(--dealguru-blue);
     color: var(--dealguru-white);
-    border-radius: 0.5rem;
+    border-radius: 6px;
     font-weight: 600;
     border:1px solid var(--dealguru-white) ;
     transition: ease-out  100ms;

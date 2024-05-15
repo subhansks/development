@@ -37,7 +37,7 @@ const FavDealCard = () => {
                   alt="like"
                   className=""
                 />
-                <span className="font-semibold text-gray-400 text-sm">234</span>
+                <span className="font-bold text-gray-400 text-sm">234</span>
               </div>
             </div>
           </div>

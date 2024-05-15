@@ -43,7 +43,7 @@ export default function Category_slider() {
           <CarouselItem className=" flex  w-fit  pl-0 " key={index}>
             <div className=" text-nowrap w-fit px-[12px] py-[8px] rounded-lg bg-dealguru-white">
               <Link
-                className="text-sm text-dealguru-blue font-semibold"
+                className="text-sm text-dealguru-blue font-bold"
                 href={`/${d}`}
               >
                 {" "}
