@@ -7,7 +7,7 @@ const HomeFilters = () => {
     <div className="mobile-filters-heading gap-2 flex">
       <div className="flex gap-1 bg-dealguru-white p-[4px] rounded-lg">
         <Link
-          className=" mr- button text-sm px-[14px] py-[4px] border-r bg-dealguru-grey text-dealguru-blue"
+          className=" button text-sm px-[14px] py-[4px] border-r bg-dealguru-grey text-dealguru-blue"
           href="/test"
         >
           Utvalda favoriter
