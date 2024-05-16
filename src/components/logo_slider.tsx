@@ -72,7 +72,7 @@ function Img_group() {
           height={0}
           className="h-auto grayscale opacity-60 mr-6"
           alt="logos"
-          src={"/logos/ikea.png"}
+          src={"/logos/Ikea.png"}
         />
       </div>
       <div className="min-w-32 h-20 p-2 flex items-center">
