@@ -7,8 +7,6 @@ import LogoSlider from "./logo_slider";
 const Footer = () => {
   return (
     <>
-      {/* <LogoSlider /> */}
-
       <LogoSlider />
 
       <div className="grid bg-dealguru-white w-full px-x-pad grid-cols-6 mt-4 items-start py-8 text-sm">

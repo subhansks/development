@@ -90,7 +90,6 @@ function Img_group() {
 
 export default function LogoSlider() {
   return (
-    // <Marquee className="  py-4 bg-dealguru-white flex justify-between rounded-lg  ">
     <div className="overflow-hidden mt-10 mx-16  rounded-xl">
       <div className="flex  overflow-hidden bg-white  w-fit gap-4">
         <div className="flex marquee-animation w-fit gap-4">
@@ -117,6 +116,5 @@ export default function LogoSlider() {
         </div>
       </div>
     </div>
-    // </Marquee>
   );
 }
