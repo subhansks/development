@@ -1,7 +1,6 @@
 import React from "react";
 import HomeFilters from "./filters_home";
 import HomeDealCard from "./home_deal_card";
-import LogoSlider from "./logo_slider";
 
 const HomePageContent = () => {
   return (
@@ -19,11 +18,6 @@ const HomePageContent = () => {
         <HomeDealCard />
         <HomeDealCard />
         <HomeDealCard />
-        <HomeDealCard />
-        <HomeDealCard />
-        <HomeDealCard />
-        <HomeDealCard />
-        <LogoSlider />
       </div>
     </div>
   );

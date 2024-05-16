@@ -71,4 +71,17 @@ body {
     border-width: 9px;
   
   }
+
+  .marquee-animation{
+    animation: marquee 80s linear infinite;
+  }
+
+  @keyframes marquee {
+    from{
+      transform: translateX(calc(-100%));
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
 }

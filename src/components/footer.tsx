@@ -8,7 +8,10 @@ const Footer = () => {
   return (
     <>
       {/* <LogoSlider /> */}
-      <div className="grid bg-dealguru-white w-full px-x-pad grid-cols-6 mt-8 items-start py-8 text-sm">
+
+      <LogoSlider />
+
+      <div className="grid bg-dealguru-white w-full px-x-pad grid-cols-6 mt-4 items-start py-8 text-sm">
         <div className=" col-span-2">
           <Link href="/">
             <Image

@@ -1,21 +1,9 @@
-"use client";
-import * as React from "react";
-
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import Image from "next/image";
-import Link from "next/link";
-import Marquee from "react-fast-marquee";
 
-export default function LogoSlider() {
+function Img_group() {
   return (
-    <Marquee className="  py-4 bg-dealguru-white flex justify-between rounded-lg">
-      <div className="w-fit">
+    <>
+      <div className="min-w-32 h-20 p-2 flex items-center">
         <Image
           width={100}
           height={0}
@@ -24,7 +12,7 @@ export default function LogoSlider() {
           src={"/logos/adidas.jpg"}
         />
       </div>
-      <div className="w-fit">
+      <div className="min-w-32 h-20 p-2 flex items-center">
         <Image
           width={100}
           height={0}
@@ -33,7 +21,7 @@ export default function LogoSlider() {
           src={"/logos/Adlibris.png"}
         />
       </div>
-      <div className="w-fit">
+      <div className="min-w-32 h-20 p-2 flex items-center">
         <Image
           width={100}
           height={0}
@@ -42,7 +30,7 @@ export default function LogoSlider() {
           src={"/logos/ahlens.png"}
         />
       </div>
-      <div className="w-fit">
+      <div className="min-w-32 h-20 p-2 flex items-center">
         <Image
           width={100}
           height={0}
@@ -51,7 +39,7 @@ export default function LogoSlider() {
           src={"/logos/apotek.png"}
         />
       </div>
-      <div className="w-fit">
+      <div className="min-w-32 h-20 p-2 flex items-center">
         <Image
           width={100}
           height={0}
@@ -60,7 +48,7 @@ export default function LogoSlider() {
           src={"/logos/apple.png"}
         />
       </div>
-      <div className="w-fit">
+      <div className="min-w-32 h-20 p-2 flex items-center">
         <Image
           width={100}
           height={0}
@@ -69,7 +57,7 @@ export default function LogoSlider() {
           src={"/logos/xxl.jpg"}
         />
       </div>
-      <div className="w-fit">
+      <div className="min-w-32 h-20 p-2 flex items-center">
         <Image
           width={100}
           height={0}
@@ -78,7 +66,7 @@ export default function LogoSlider() {
           src={"/logos/hotels.jpg"}
         />
       </div>
-      <div className="w-fit">
+      <div className="min-w-32 h-20 p-2 flex items-center">
         <Image
           width={100}
           height={0}
@@ -87,7 +75,7 @@ export default function LogoSlider() {
           src={"/logos/ikea.png"}
         />
       </div>
-      <div className="w-fit">
+      <div className="min-w-32 h-20 p-2 flex items-center">
         <Image
           width={100}
           height={0}
@@ -96,6 +84,39 @@ export default function LogoSlider() {
           src={"/logos/Lindex.png"}
         />
       </div>
-    </Marquee>
+    </>
+  );
+}
+
+export default function LogoSlider() {
+  return (
+    // <Marquee className="  py-4 bg-dealguru-white flex justify-between rounded-lg  ">
+    <div className="overflow-hidden mt-10 mx-16  rounded-xl">
+      <div className="flex  overflow-hidden bg-white  w-fit gap-4">
+        <div className="flex marquee-animation w-fit gap-4">
+          <div className="flex gap-4">
+            <Img_group />
+          </div>
+          <div className="flex gap-4">
+            <Img_group />
+          </div>
+          <div className="flex gap-4">
+            <Img_group />
+          </div>
+        </div>
+        <div className="flex w-fit marquee-animation gap-4">
+          <div className="flex gap-4">
+            <Img_group />
+          </div>
+          <div className="flex gap-4">
+            <Img_group />
+          </div>
+          <div className="flex gap-4">
+            <Img_group />
+          </div>
+        </div>
+      </div>
+    </div>
+    // </Marquee>
   );
 }

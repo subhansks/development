@@ -1,6 +1,3 @@
-"use client";
-import * as React from "react";
-
 import {
   Carousel,
   CarouselContent,
@@ -8,7 +5,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import Image from "next/image";
 import Link from "next/link";
 const category = [
   "Presenter",
