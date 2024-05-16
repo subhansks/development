@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { SheetDemo } from "./left_menubar";
 
 const Navbar = () => {
   return (
@@ -11,11 +12,7 @@ const Navbar = () => {
 
       <nav className="flex h-16 justify-between px-x-pad py-2 bg-dealguru-white">
         <div className="w-[68%] gap-6 flex items-center justify-between">
-          <div className=" border flex justify-center items-center rounded-md w-[42px] h-[42px] border-gray-300">
-            <span className="font-bold conte w-[42px] flex justify-center">
-              ☰
-            </span>
-          </div>
+          <SheetDemo />
 
           <div className="">
             <Link href="/">

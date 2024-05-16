@@ -42,6 +42,7 @@ const config = {
         "dealguru-blue": "#0067e1",
         "dealguru-white": "#ffffff",
         "dealguru-black": "#1B2738",
+
         "dealguru-grey": "rgb(245, 245, 245)",
       },
       gap: {

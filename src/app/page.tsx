@@ -1,7 +1,8 @@
 import Category_slider from "@/components/category_slider";
 import HomePageContent from "@/components/home_page_content";
 import HomePageFilters from "@/components/home_page_content";
-import Sidebar from "@/components/sidebar";
+import Sidebar from "@/components/sidebar/sidebar";
+
 import Image from "next/image";
 import Link from "next/link";
 
