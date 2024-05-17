@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 
 function Img_group() {
   return (
     <>
-      <div className="min-w-32 h-20 p-2 flex items-center">
+      <Link href={"/"} className="min-w-32 h-20 p-2 flex items-center">
         <Image
           width={100}
           height={0}
@@ -11,8 +12,8 @@ function Img_group() {
           alt="logos"
           src={"/logos/adidas.jpg"}
         />
-      </div>
-      <div className="min-w-32 h-20 p-2 flex items-center">
+      </Link>
+      <Link href={"/"} className="min-w-32 h-20 p-2 flex items-center">
         <Image
           width={100}
           height={0}
@@ -20,8 +21,8 @@ function Img_group() {
           alt="logos"
           src={"/logos/Adlibris.png"}
         />
-      </div>
-      <div className="min-w-32 h-20 p-2 flex items-center">
+      </Link>
+      <Link href={"/"} className="min-w-32 h-20 p-2 flex items-center">
         <Image
           width={100}
           height={0}
@@ -29,8 +30,8 @@ function Img_group() {
           alt="logos"
           src={"/logos/ahlens.png"}
         />
-      </div>
-      <div className="min-w-32 h-20 p-2 flex items-center">
+      </Link>
+      <Link href={"/"} className="min-w-32 h-20 p-2 flex items-center">
         <Image
           width={100}
           height={0}
@@ -38,8 +39,8 @@ function Img_group() {
           alt="logos"
           src={"/logos/apotek.png"}
         />
-      </div>
-      <div className="min-w-32 h-20 p-2 flex items-center">
+      </Link>
+      <Link href={"/"} className="min-w-32 h-20 p-2 flex items-center">
         <Image
           width={100}
           height={0}
@@ -47,8 +48,8 @@ function Img_group() {
           alt="logos"
           src={"/logos/apple.png"}
         />
-      </div>
-      <div className="min-w-32 h-20 p-2 flex items-center">
+      </Link>
+      <Link href={"/"} className="min-w-32 h-20 p-2 flex items-center">
         <Image
           width={100}
           height={0}
@@ -56,8 +57,8 @@ function Img_group() {
           alt="logos"
           src={"/logos/xxl.jpg"}
         />
-      </div>
-      <div className="min-w-32 h-20 p-2 flex items-center">
+      </Link>
+      <Link href={"/"} className="min-w-32 h-20 p-2 flex items-center">
         <Image
           width={100}
           height={0}
@@ -65,8 +66,8 @@ function Img_group() {
           alt="logos"
           src={"/logos/hotels.jpg"}
         />
-      </div>
-      <div className="min-w-32 h-20 p-2 flex items-center">
+      </Link>
+      <Link href={"/"} className="min-w-32 h-20 p-2 flex items-center">
         <Image
           width={100}
           height={0}
@@ -74,8 +75,8 @@ function Img_group() {
           alt="logos"
           src={"/logos/Ikea.png"}
         />
-      </div>
-      <div className="min-w-32 h-20 p-2 flex items-center">
+      </Link>
+      <Link href={"/"} className="min-w-32 h-20 p-2 flex items-center">
         <Image
           width={100}
           height={0}
@@ -83,7 +84,7 @@ function Img_group() {
           alt="logos"
           src={"/logos/Lindex.png"}
         />
-      </div>
+      </Link>
     </>
   );
 }

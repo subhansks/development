@@ -84,4 +84,8 @@ body {
       transform: translateX(0);
     }
   }
+.hover_card{
+  top: 0 !important;
+  bottom: 0 !important;
+}
 }
