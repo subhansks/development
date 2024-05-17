@@ -1,7 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -16,76 +13,67 @@
 
   --dealguru-text-color: rgb(41, 41, 41);
 
-  --dealguru-background: #F7F7F7;
-  
-  --dealguru-shadow: 0px 0px 10px 0px #272E610D;
-}
+  --dealguru-background: #f7f7f7;
 
+  --dealguru-shadow: 0px 0px 10px 0px #272e610d;
+}
 
 body {
- background-color: var(--dealguru-grey);
-  
+  background-color: var(--dealguru-grey);
 }
 
-@layer base { 
+@layer base {
   .button {
     background-color: var(--dealguru-blue);
     color: var(--dealguru-white);
     border-radius: 6px;
     font-weight: 600;
-    border:1px solid var(--dealguru-white) ;
-    transition: ease-out  100ms;
-      
-
+    border: 1px solid var(--dealguru-white);
+    transition: ease-out 100ms;
   }
   .button:hover {
     background-color: white;
     color: var(--dealguru-blue);
     border-radius: 0.5rem;
-    border:1px solid var(--dealguru-blue) ;
-
+    border: 1px solid var(--dealguru-blue);
   }
-  .widthImpo{
-    
-    max-width:  50px !important;
+  .widthImpo {
+    max-width: 50px !important;
   }
 
-
-  .last_child_hr:last-child{
+  .last_child_hr:last-child {
     display: none;
-
   }
-  .discount-code-button:before{
+  .discount-code-button:before {
     content: "";
     position: absolute;
     top: 0;
     right: 0;
     border-style: solid;
-    border-width: 8.5px;
+    border-width: 8px;
     border-color: #fff #fff #9cf #9cf;
     border-radius: 0;
-    transition: border-width ;
-    transition-duration: 0.5;
+    transition: ease-in-out border-width;
+    transition-duration: 0.2s;
   }
-  .discount-code-button:hover:before{
+  .discount-code-button:hover:before {
     border-width: 9px;
-  
   }
 
-  .marquee-animation{
+  .marquee-animation {
     animation: marquee 80s linear infinite;
   }
 
   @keyframes marquee {
-    from{
+    from {
       transform: translateX(calc(-100%));
     }
     to {
       transform: translateX(0);
     }
   }
-.hover_card{
-  top: 0 !important;
-  bottom: 0 !important;
-}
+  .hover_card {
+    top: 0 !important;
+    bottom: 0 !important;
+  }
 }

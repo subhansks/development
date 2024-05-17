@@ -52,7 +52,7 @@ const config = {
         main_card: "12px",
       },
       padding: {
-        "x-pad": "64px",
+        "x-pad": "2rem",
       },
     },
   },

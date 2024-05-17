@@ -1,7 +1,9 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { SheetDemo } from "./left_menubar";
+import Navbar_right_button from "./navbar_right_button";
 
 const Navbar = () => {
   return (
@@ -10,7 +12,7 @@ const Navbar = () => {
         DealGuru - Just nu 10293 deals och rabatter
       </p>
 
-      <nav className="flex h-16 justify-between px-x-pad py-2 bg-dealguru-white">
+      <nav className="flex h-16 justify-between px-x-pad py-2 bg-dealguru-white gap-4">
         <div className="w-[68%] gap-6 flex items-center justify-between">
           <SheetDemo />
 
@@ -41,31 +43,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="flex justify-between gap-7 items-center">
-          <div className="flex items-center gap-3">
-            <Image
-              width={40}
-              height={40}
-              src="/blank_avatar_new.png"
-              className="w-[40px]  h-[40px] rounded-full p-1"
-              alt="Avatar"
-            />
-            <Link className="text-dealguru-black text-sm" href="/test">
-              Mitt konto
-            </Link>
-          </div>
-          <Image
-            width={28}
-            height={28}
-            src="/bell_icon.svg"
-            alt="Notification Icon"
-          />
-          <div className="button h-[42px] flex  justify-center items-center px-5  text-sm leading-3">
-            <Link className="font-bold" href="/test">
-              +NY DEAL
-            </Link>
-          </div>
-        </div>
+        <Navbar_right_button />
       </nav>
     </header>
   );
