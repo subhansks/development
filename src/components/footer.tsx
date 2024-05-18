@@ -9,8 +9,8 @@ const Footer = () => {
     <>
       <LogoSlider />
 
-      <div className="grid gap-2 bg-dealguru-white w-full px-x-pad grid-cols-6 mt-4 items-start py-8 text-sm">
-        <div className=" col-span-2">
+      <div className="grid  gap-2 grid-cols-2 md:grid-cols-3  lg:grid-cols-4 bg-dealguru-white w-full px-x-pad md_lg:grid-cols-6 mt-4 items-start py-8 text-sm ">
+        <div className=" col-span-2 w-full">
           <Link href="/">
             <Image
               width={160}
@@ -20,7 +20,7 @@ const Footer = () => {
               alt="Logo"
             />
           </Link>
-          <p className="w-2/3 mt-4 text-gray-600">
+          <p className="md:w-2/3 w-full  mt-4 text-gray-600">
             Dealguru.se är ett community för dig som älskar bra erbjudanden och
             deals. Tillsammans hjälper vi varandra att göra bättre deals genom
             att hitta och dela de bästa erbjudandena genom att dela dem med
@@ -30,7 +30,7 @@ const Footer = () => {
           </p>
           <SocialIcons />
         </div>
-        <div className=" col-span-1">
+        <div className=" col-span-1 ">
           <h4 className="text-xl font-bold mb-4">DealGuru</h4>
           <ul className="flex flex-col gap-4">
             <li className="text-sm text-gray-600">
@@ -153,7 +153,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="flex border-t border-gray-300 py-8 px-x-pad bg-dealguru-white justify-between ">
+      <div className="flex md:flex-row flex-col  border-t border-gray-300 py-8 px-x-pad bg-dealguru-white gap-2 items-center md:justify-between ">
         <div className="text-sm text-gray-600">
           Copyright 2023-2024 DealGuru AB
         </div>

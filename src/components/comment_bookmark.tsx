@@ -3,9 +3,9 @@ import React from "react";
 
 const Comment_Bookmark = () => {
   return (
-    <div className="flex flex-1 items-end h-fit min-w-fit flex-col gap-4">
-      <div className="flex gap-2">
-        <div className=" gap-1 bg-dealguru-grey  min-w-[40px]  h-[40px] flex p-2 items-center justify-center rounded-md cursor-pointer">
+    <div className="flex flex-1 items-end h-fit min-w-fit">
+      <div className="flex gap-2 md:flex-row flex-row-reverse">
+        <div className=" gap-1 bg-dealguru-grey  min-w-[40px] max-w-fit  min-h-[40px] flex p-2 items-center justify-center rounded-md cursor-pointer">
           <Image
             className="w-[18px]"
             alt="heart"
@@ -15,7 +15,7 @@ const Comment_Bookmark = () => {
           />
           <span className="text-dealguru-black">23</span>
         </div>
-        <div className=" bg-dealguru-grey  w-[40px] h-[40px] flex items-center justify-center rounded-md cursor-pointer">
+        <div className=" bg-dealguru-grey  min-w-[40px] min-h-[40px] flex items-center justify-center rounded-md cursor-pointer p-2">
           <Image alt="heart" width={15} height={15} src={"/bookmark.svg"} />
         </div>
       </div>

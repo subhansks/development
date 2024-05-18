@@ -3,7 +3,7 @@ import React from "react";
 
 const LikeModule = () => {
   return (
-    <div className="flex flex-1 items-end h-fit min-w-fit flex-col gap-4">
+    <div className="flex flex-1 items-end h-fit min-w-fit flex-col gap-4 max-md:items-start max-md:gap-2">
       <p className=" text-xs font-bold ">Bra deal? Rösta här:</p>
       <div className="flex gap-2">
         <div className="border border-dealguru-blue  w-[40px] h-[40px] flex p-2 items-center justify-center rounded-md  ">

@@ -118,7 +118,7 @@ function Img_group() {
 
 export default function LogoSlider() {
   return (
-    <div className="overflow-hidden mt-10 mx-16  rounded-xl">
+    <div className="overflow-hidden mt-10 mx-4 md:mx-8  rounded-xl">
       <div className="flex  overflow-hidden bg-white  w-fit gap-4">
         <div className="flex marquee-animation w-fit gap-4">
           <div className="flex gap-4 justify-center">

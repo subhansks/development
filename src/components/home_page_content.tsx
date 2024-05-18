@@ -4,8 +4,8 @@ import HomeDealCard from "./home_deal_card";
 
 const HomePageContent = () => {
   return (
-    <div className="xl:col-span-5 2xl:col-span-5  border-gray-300 rounded-lg">
-      <div className="flex items-end justify-between    h-11">
+    <div className="md_lg:col-span-5 md:col-span-7   border-gray-300 rounded-lg">
+      <div className="flex md:items-end justify-between md:flex-row flex-col items-start   gap-2 md:mb-0   min-h-11 ">
         <div className=" ">
           <h1 className="text-[1.5rem] not-italic text-dealguru-black font-bold">
             Bästa dealsen just nu
