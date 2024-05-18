@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="px-x-pad max-md:px-4 w-full">
+    <main className="z-0 px-x-pad max-md:px-4 w-full mt-28">
       <Category_slider />
 
       <div className=" grid grid-cols-1  md:gap-5  md:grid-cols-7   w-full mt-5">

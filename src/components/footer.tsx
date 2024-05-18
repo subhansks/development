@@ -157,10 +157,12 @@ const Footer = () => {
         <div className="text-sm text-gray-600">
           Copyright 2023-2024 DealGuru AB
         </div>
+        {/* <Link href="#top">To top</Link> */}
         <div className="flex gap-3">
           <Link className="text-sm text-gray-600" href="/">
             Privacy Policy
           </Link>
+
           <Link className="text-sm text-gray-600" href="/">
             Terms of Use
           </Link>

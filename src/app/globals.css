@@ -21,6 +21,9 @@
 body {
   background-color: var(--dealguru-grey);
 }
+html{
+  scroll-behavior: smooth;
+}
 
 @layer base {
   .button {

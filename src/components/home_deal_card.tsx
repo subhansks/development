@@ -9,7 +9,7 @@ const HomeDealCard = () => {
   return (
     <div className="  w-full min-h-[250px]  bg-white rounded-xl shadow-lg shadow-gray-200 p-4 gap-3 max-md:items-start items-center">
       <div className="  flex  gap-2 md:gap-4  items-center ">
-        <div className=" min-w-[100px] h-full  w-[25%] py-4 md:py-6 flex items-center">
+        <div className=" min-w-[100px] h-full w-[40%] md:w-[25%] py-4 md:py-6 flex items-center">
           <Image
             src="/deal1.jpg"
             width={200}
@@ -18,14 +18,13 @@ const HomeDealCard = () => {
             className=" h-full  w-auto rounded-l-md object-cover "
           />
         </div>
-        <div className=" w-[75%]  flex-col flex justify-between gap-4 h-full">
-          <div className="flex min-w-full gap-4  flex-col md:flex-row ">
+        <div className="w-[60%] md:w-[75%]  flex-col flex justify-between gap-4 h-full">
+          <div className="flex min-w-full md:gap-4 gap-1 flex-col md:flex-row ">
             <div className="flex flex-col gap-2 ">
               {" "}
               <Link href={"/"}>
-                <h1 className="text-dealguru-black md:text-xl text-base font-bold capitalize">
-                  Sänk din elfaktura med Greenely Sänk din elfaktura med
-                  Greenely
+                <h1 className="text-dealguru-black md:text-xl text-sm  font-extrabold capitalize">
+                  Sänk din elfaktura med Greenely
                 </h1>
               </Link>
               <div className="max-md:hidden">

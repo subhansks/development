@@ -6,16 +6,18 @@ import Navbar_right_button from "./navbar_right_button";
 
 const Navbar = () => {
   return (
-    <header className="flex flex-col">
+    <header id="top" className="flex w-full top-0 z-50 fixed flex-col">
       <p className="flex bg-dealguru-blue text-center font-bold h-[32px] max-md:text-sm text-dealguru-white items-center justify-center">
         DealGuru - Just nu 10293 deals och rabatter
       </p>
 
-      <nav className="flex h-16 justify-between px-x-pad py-2 max-md:px-8 bg-dealguru-white gap-4">
+      <nav className="flex h-16 justify-between md:px-x-pad py-2 max-md:px-4 bg-dealguru-white gap-4">
         <div className="w-[68%] gap-6 flex max-lg:justify-start max-lg:w-1/2 items-center justify-between">
-          <SheetDemo />
+          <div className="md:block hidden">
+            <SheetDemo />
+          </div>
 
-          <div className=" ">
+          <div>
             <Link href="/">
               <Image
                 width={160}
