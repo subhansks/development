@@ -13,7 +13,7 @@ const HomeDealCard = () => {
           width={200}
           height={0}
           alt="placeholder"
-          className=" h-auto w-full rounded-l-md  object-fill"
+          className=" h-full w-auto rounded-l-md  object-scale-down"
         />
       </div>
       <div className="flex gap-4 w-[75%] flex-col justify-between self-start h-full">

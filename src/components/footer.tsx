@@ -9,7 +9,7 @@ const Footer = () => {
     <>
       <LogoSlider />
 
-      <div className="grid bg-dealguru-white w-full px-x-pad grid-cols-6 mt-4 items-start py-8 text-sm">
+      <div className="grid gap-2 bg-dealguru-white w-full px-x-pad grid-cols-6 mt-4 items-start py-8 text-sm">
         <div className=" col-span-2">
           <Link href="/">
             <Image
@@ -66,31 +66,25 @@ const Footer = () => {
           <h4 className="text-xl font-bold mb-4">Kategorier</h4>
           <ul className="flex flex-col gap-4">
             <li className="text-sm text-gray-600">
-              <Link href="/">Deals </Link>
+              <Link href="/">Presents </Link>
             </li>
             <li className="text-sm text-gray-600">
-              <Link href="/">Deals </Link>
+              <Link href="/">Free samples</Link>
             </li>
             <li className="text-sm text-gray-600">
-              <Link href="/">Deals </Link>
+              <Link href="/">Electronics </Link>
             </li>
             <li className="text-sm text-gray-600">
-              <Link href="/">Deals </Link>
+              <Link href="/">TV </Link>
             </li>
             <li className="text-sm text-gray-600">
-              <Link href="/">Deals </Link>
+              <Link href="/">Barbecues </Link>
             </li>
             <li className="text-sm text-gray-600">
-              <Link href="/">Deals </Link>
+              <Link href="/"> Smartphones & Mobile Phones </Link>
             </li>
             <li className="text-sm text-gray-600">
-              <Link href="/">Deals </Link>
-            </li>
-            <li className="text-sm text-gray-600">
-              <Link href="/">Deals </Link>
-            </li>
-            <li className="text-sm text-gray-600">
-              <Link href="/">Deals </Link>
+              <Link href="/">vacuum cleaner </Link>
             </li>
           </ul>
         </div>
