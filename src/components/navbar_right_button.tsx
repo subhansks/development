@@ -6,7 +6,7 @@ import React from "react";
 
 const Navbar_right_button = () => {
   const val = useMediaQuery("(min-width: 768px)");
-  console.log(val);
+  // console.log(val);
 
   return (
     <>
@@ -40,7 +40,28 @@ const Navbar_right_button = () => {
           </div>
         </div>
       ) : (
-        <h1>change</h1>
+        <div className="flex items-center gap-3">
+          <div>
+            <Image
+              width={28}
+              height={28}
+              src="/bell_icon.svg"
+              alt="Notification Icon"
+            />
+          </div>
+          <button className="bg-dealguru-blue text-white  h-6 rounded-full w-6 flex justify-center items-center">
+            +
+          </button>
+          <div>
+            <Image
+              width={40}
+              height={40}
+              src="/blank_avatar_new.png"
+              className="w-[40px]  h-[40px] rounded-full p-1"
+              alt="Avatar"
+            />
+          </div>
+        </div>
       )}
     </>
   );
