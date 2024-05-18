@@ -33,33 +33,14 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 
-export function DropdownMenuDemo() {
+export function DropdownMenuDemo({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <div className="flex items-center gap-3">
-          <Image
-            width={40}
-            height={40}
-            src="/blank_avatar_new.png"
-            className="w-[40px]  h-[40px] rounded-full p-1"
-            alt="Avatar"
-          />
-          <Link
-            className="text-dealguru-black text-sm text-nowrap"
-            href="/test"
-          >
-            Mitt konto
-          </Link>
-          <Image
-            width={8}
-            height={8}
-            alt="DropDown"
-            className="rotate-90 cursor-pointer"
-            src={"/angle.svg"}
-          />
-        </div>
-      </DropdownMenuTrigger>
+      <DropdownMenuTrigger asChild>{children}</DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
         <DropdownMenuLabel>My Account</DropdownMenuLabel>
         <DropdownMenuSeparator />

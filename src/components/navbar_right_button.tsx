@@ -9,7 +9,30 @@ const Navbar_right_button = () => {
   return (
     <>
       <div className="hidden justify-between gap-4 items-center  md:flex ">
-        <DropdownMenuDemo />
+        <DropdownMenuDemo>
+          <div className="flex items-center gap-3">
+            <Image
+              width={40}
+              height={40}
+              src="/blank_avatar_new.png"
+              className="w-[40px]  h-[40px] rounded-full p-1"
+              alt="Avatar"
+            />
+            <Link
+              className="text-dealguru-black text-sm text-nowrap"
+              href="/test"
+            >
+              Mitt konto
+            </Link>
+            <Image
+              width={8}
+              height={8}
+              alt="DropDown"
+              className="rotate-90 cursor-pointer"
+              src={"/angle.svg"}
+            />
+          </div>
+        </DropdownMenuDemo>
         <Image
           width={28}
           height={28}
@@ -35,15 +58,17 @@ const Navbar_right_button = () => {
         <button className="bg-dealguru-blue text-white  h-6 rounded-full w-6 flex justify-center items-center">
           +
         </button>
-        <div>
-          <Image
-            width={40}
-            height={40}
-            src="/blank_avatar_new.png"
-            className="w-[40px]  h-[40px] rounded-full p-1"
-            alt="Avatar"
-          />
-        </div>
+        <DropdownMenuDemo>
+          <div>
+            <Image
+              width={40}
+              height={40}
+              src="/blank_avatar_new.png"
+              className="w-[40px]  h-[40px] rounded-full p-1"
+              alt="Avatar"
+            />
+          </div>
+        </DropdownMenuDemo>
       </div>
     </>
   );
