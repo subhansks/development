@@ -20,6 +20,7 @@
 
 body {
   background-color: var(--dealguru-grey);
+  box-sizing: border-box;
 }
 html{
   scroll-behavior: smooth;

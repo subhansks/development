@@ -24,11 +24,12 @@ const Navbar_right_button = () => {
             >
               Mitt konto
             </Link>
+
             <Image
-              width={8}
-              height={8}
+              width={18}
+              height={16}
               alt="DropDown"
-              className="rotate-90 cursor-pointer"
+              className="-rotate-90 cursor-pointer"
               src={"/angle.svg"}
             />
           </div>

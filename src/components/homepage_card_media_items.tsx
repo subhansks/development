@@ -47,20 +47,6 @@ const HomepageMediaCard = () => {
             Gratis & rabattkoder
           </Link>
           <div className="border-r border-gray-300 h-5" />
-
-          <Link
-            className="text-dealguru-blue capitalize bord text-sm font-bold text-nowrap"
-            href={"/"}
-          >
-            greenely
-          </Link>
-          <div className="border-r border-gray-300 h-5" />
-          <Link
-            className="text-dealguru-blue capitalize bord text-sm font-bold text-nowrap"
-            href={"/"}
-          >
-            greenely
-          </Link>
         </div>
       </div>
     </div>

@@ -36,8 +36,8 @@ const FavDealCard = () => {
                 <div className="flex gap-1 ">
                   <Image
                     src="/like.svg"
-                    width={18}
-                    height={18}
+                    width={14}
+                    height={14}
                     alt="like"
                     className=""
                   />

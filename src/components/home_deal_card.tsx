@@ -8,23 +8,23 @@ import HomepageMediaCard from "./homepage_card_media_items";
 const HomeDealCard = () => {
   return (
     <div className="  w-full min-h-[250px]  bg-white rounded-xl shadow-lg shadow-gray-200 p-4 gap-3 max-md:items-start items-center">
-      <div className="  flex  gap-2 md:gap-4  items-center ">
-        <div className=" min-w-[100px] h-full w-[40%] md:w-[25%] py-4 md:py-6 flex items-center">
+      <div className="  flex w-full  gap-2 md:gap-4  items-start md:h-full  ">
+        <div className=" h-24  md:h-[230px] md:min-w-[230px] md:max-w-[230px] flex md:items-center items-start ">
           <Image
-            src="/images/dealcard.png"
+            src="/images/dealcard1.png  "
             width={200}
             height={0}
             alt="placeholder"
-            className=" h-full  w-auto rounded-l-md object-cover "
+            className="   h-auto  w-full  rounded-l-md object-cover "
           />
         </div>
-        <div className="w-[60%] md:w-[75%]  flex-col flex justify-between gap-4 h-full">
-          <div className="flex min-w-full md:gap-4 gap-1 flex-col md:flex-row ">
-            <div className="flex flex-col gap-2 ">
+        <div className="  flex-col flex-grow flex justify-between gap-4 h-full">
+          <div className="flex min-w-full md:gap-2 gap-1 flex-col md:flex-row ">
+            <div className="flex flex-col gap-2  ">
               {" "}
               <Link href={"/"}>
                 <h1 className="text-dealguru-black md:text-xl text-sm  font-bold ">
-                  50 % på utvalda Plus-Plus
+                  Sänk din elfaktura
                 </h1>
               </Link>
               <div className="max-md:hidden">
@@ -39,7 +39,7 @@ const HomeDealCard = () => {
               <Comment_Bookmark />
             </div>
             <Link
-              className="w-1/3 min-w-max bg-dealguru-blue text-white text-base text-center md:py-2 md:px-6  rounded-md font-medium text-nowrap"
+              className="w-1/3 min-w-max bg-dealguru-blue text-white text-base text-center md:py-2 md:px-6  rounded-md font-semibold text-nowrap"
               href=""
             >
               {" "}
@@ -55,7 +55,7 @@ const HomeDealCard = () => {
             <Comment_Bookmark />
           </div>
           <Link
-            className="flex-grow min-w-max bg-dealguru-blue text-white text-base text-center p-2 rounded-md font-medium px-4 py-2 text-nowrap"
+            className="flex-grow min-w-max bg-dealguru-blue text-white text-base text-center p-2 rounded-md font-semibold px-4 py-2 text-nowrap"
             href=""
           >
             {" "}

@@ -36,7 +36,7 @@ const Navbar = () => {
               placeholder="Skriv det du söker..."
             />
             <Link
-              className=" z-20 mr-1 button px-[14px] py-[4px] border-r"
+              className=" z-20 mr-1 button px-[14px] py-[6px] border-r text-sm"
               href="/test"
             >
               Sök
