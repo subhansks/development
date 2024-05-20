@@ -11,7 +11,7 @@ const HomeDealCard = () => {
       <div className="  flex  gap-2 md:gap-4  items-center ">
         <div className=" min-w-[100px] h-full w-[40%] md:w-[25%] py-4 md:py-6 flex items-center">
           <Image
-            src="/deal1.jpg"
+            src="/images/dealcard.png"
             width={200}
             height={0}
             alt="placeholder"
@@ -23,8 +23,8 @@ const HomeDealCard = () => {
             <div className="flex flex-col gap-2 ">
               {" "}
               <Link href={"/"}>
-                <h1 className="text-dealguru-black md:text-xl text-sm  font-extrabold capitalize">
-                  Sänk din elfaktura med Greenely
+                <h1 className="text-dealguru-black md:text-xl text-sm  font-bold ">
+                  50 % på utvalda Plus-Plus
                 </h1>
               </Link>
               <div className="max-md:hidden">

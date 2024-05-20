@@ -53,7 +53,7 @@ const config = {
         main_card: "12px",
       },
       padding: {
-        "x-pad": "2rem",
+        "x-pad": "4rem",
       },
     },
   },
