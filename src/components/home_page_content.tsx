@@ -1,6 +1,7 @@
 import React from "react";
 import HomeFilters from "./filters_home";
 import HomeDealCard from "./home_deal_card";
+import CarouselSize from "./homepage/slider";
 
 const HomePageContent = () => {
   return (
@@ -14,6 +15,16 @@ const HomePageContent = () => {
         <HomeFilters />
       </div>
       <div className=" grid grid-cols-1 md:grid-cols-1 mt-3 gap-4">
+        <HomeDealCard />
+        <HomeDealCard />
+        <HomeDealCard />
+
+        <div className="flex gap-3 flex-col ">
+          <h1 className="text-[1.3rem] not-italic text-dealguru-black font-bold">
+            Bästa dealsen just nu
+          </h1>
+          <CarouselSize />
+        </div>
         <HomeDealCard />
         <HomeDealCard />
         <HomeDealCard />

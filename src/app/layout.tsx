@@ -24,6 +24,7 @@ const nunitoSans = Nunito_Sans({
 });
 
 import Footer from "@/components/footer";
+import Footer_Menu from "@/components/footer_menu";
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -35,6 +36,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <Footer_Menu />
       </body>
     </html>
   );

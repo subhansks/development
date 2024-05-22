@@ -33,8 +33,13 @@ const category = [
 ];
 export default function Category_slider() {
   return (
-    <Carousel className="mt-3 ml-12 mr-12">
-      <CarouselContent className="flex gap-3 pl-4">
+    <Carousel
+      opts={{
+        align: "start",
+      }}
+      className="mt-3 ml-12 mr-12"
+    >
+      <CarouselContent className="ml-0 flex gap-3 pl-4">
         {category.map((d, index) => (
           <CarouselItem className=" flex  w-fit  pl-0 " key={index}>
             <div className=" text-nowrap w-fit px-[12px] py-[8px] rounded-lg bg-dealguru-white">
