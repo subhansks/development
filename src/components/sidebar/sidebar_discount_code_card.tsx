@@ -13,8 +13,8 @@ const DiscountCodeCard = () => {
         <Discount_code_card_component />
         <Discount_code_card_component />
         <Discount_code_card_component />
-        <Discount_code_card_component />◘
-        <Discount_code_card_component />◘
+        <Discount_code_card_component />
+        <Discount_code_card_component />
         <Discount_code_card_component />
       </div>
     </div>
