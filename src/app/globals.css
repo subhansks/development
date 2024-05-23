@@ -22,8 +22,13 @@ body {
   background-color: var(--dealguru-grey);
   box-sizing: border-box;
 }
-html{
+
+html {
   scroll-behavior: smooth;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  
 }
 
 @layer base {

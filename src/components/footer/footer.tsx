@@ -1,8 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import SocialIcons from "./social_icon";
-import LogoSlider from "./logo_slider";
+
+import SocialIcons from "../homepage/social_icon";
+import LogoSlider from "../homepage/logo_slider";
 
 const Footer = () => {
   return (

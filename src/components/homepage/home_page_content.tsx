@@ -1,7 +1,7 @@
 import React from "react";
 import HomeFilters from "./filters_home";
+import CarouselSize from "./slider";
 import HomeDealCard from "./home_deal_card";
-import CarouselSize from "./homepage/slider";
 
 const HomePageContent = () => {
   return (

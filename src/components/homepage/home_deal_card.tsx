@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import HomepageMediaCard from "./homepage_card_media_items";
 import LikeModule from "./like_module";
 import Comment_Bookmark from "./comment_bookmark";
-import HomepageMediaCard from "./homepage_card_media_items";
 
 const HomeDealCard = () => {
   return (

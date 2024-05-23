@@ -45,7 +45,7 @@ export default function CarouselSize() {
           </CarouselItem>
         </CarouselContent>
         <CarouselPrevious className="absolute left-2 opacity-40 w-12 h-12 disabled:hidden" />
-        <CarouselNext className="absolute right-2 opacity-40 w-12 h-12 " />
+        <CarouselNext className="absolute right-2 opacity-40 w-12 h-12  disabled:hidden" />
       </Carousel>
     </div>
   );

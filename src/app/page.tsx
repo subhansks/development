@@ -1,6 +1,6 @@
-import Category_slider from "@/components/category_slider";
-import HomePageContent from "@/components/home_page_content";
-import HomePageFilters from "@/components/home_page_content";
+import Category_slider from "@/components/homepage/category_slider";
+import HomePageContent from "@/components/homepage/home_page_content";
+import HomePageFilters from "@/components/homepage/home_page_content";
 import Responsive_profile_name from "@/components/homepage/responsive_profile_name";
 import Sidebar from "@/components/sidebar/sidebar";
 

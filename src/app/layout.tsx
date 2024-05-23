@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import "./globals.css";
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/header/navbar";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,8 +23,8 @@ const nunitoSans = Nunito_Sans({
   weight: ["200", "400", "700", "900"], // Add the weights you need
 });
 
-import Footer from "@/components/footer";
-import Footer_Menu from "@/components/footer_menu";
+import Footer from "@/components/footer/footer";
+import Footer_Menu from "@/components/footer/footer_menu";
 export default function RootLayout({
   children,
 }: Readonly<{

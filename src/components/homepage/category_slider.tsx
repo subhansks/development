@@ -1,11 +1,11 @@
+import Link from "next/link";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
-import Link from "next/link";
+} from "../ui/carousel";
 const category = [
   "Presenter",
   "Gratisprover",
@@ -39,7 +39,7 @@ export default function Category_slider() {
       }}
       className="mt-3 ml-12 mr-12"
     >
-      <CarouselContent className="ml-0 flex gap-3 pl-4">
+      <CarouselContent className="ml-0 flex gap-3 pl-0">
         {category.map((d, index) => (
           <CarouselItem className=" flex  w-fit  pl-0 " key={index}>
             <div className=" text-nowrap w-fit px-[12px] py-[8px] rounded-lg bg-dealguru-white">
@@ -54,8 +54,8 @@ export default function Category_slider() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="rounded-lg h-10 hover:text-dealguru-white hover:bg-dealguru-blue" />
-      <CarouselNext className="rounded-lg h-10  hover:text-dealguru-white hover:bg-dealguru-blue" />
+      <CarouselPrevious className="rounded-lg h-10 hover:text-dealguru-white hover:bg-dealguru-blue " />
+      <CarouselNext className="rounded-lg h-10  hover:text-dealguru-white hover:bg-dealguru-blue disabled:hidden" />
     </Carousel>
   );
 }

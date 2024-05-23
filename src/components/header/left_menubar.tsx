@@ -4,7 +4,6 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
-
 import HoverCardNavigate from "./sidebar_menu_hover";
 
 const nav = [

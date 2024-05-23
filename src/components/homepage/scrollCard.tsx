@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import Comment_Bookmark from "../comment_bookmark";
+import Comment_Bookmark from "./comment_bookmark";
 
 const ScrollCard = () => {
   return (
