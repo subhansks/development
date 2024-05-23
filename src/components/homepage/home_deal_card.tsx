@@ -59,7 +59,7 @@ const HomeDealCard = () => {
             href=""
           >
             {" "}
-            Gå direkt till dealen button
+            Gå direkt till dealen
           </Link>
         </div>
       </div>
