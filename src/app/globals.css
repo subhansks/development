@@ -25,10 +25,11 @@ body {
 
 html {
   scroll-behavior: smooth;
-  -moz-osx-font-smoothing: grayscale;
+
   -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
 }
 
 @layer base {
