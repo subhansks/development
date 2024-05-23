@@ -61,8 +61,8 @@ export function SheetDemo() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <div className=" border flex justify-center items-center rounded-md w-[42px] h-[42px] border-gray-300 cursor-pointer">
-          <span className="font-bold text-2xl text-gray-600 conte w-[42px] flex justify-center">
+        <div className=" border flex items-center rounded-md w-[37px] h-[36px] border-gray-300 cursor-pointer">
+          <span className="font-bold mt-1 text-2xl text-gray-600 conte w-[42px] flex justify-center">
             ☰
           </span>
         </div>

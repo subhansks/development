@@ -54,7 +54,7 @@ export default function Category_slider() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="rounded-lg h-10 hover:text-dealguru-white hover:bg-dealguru-blue " />
+      <CarouselPrevious className="rounded-lg h-10 hover:text-dealguru-white hover:bg-dealguru-blue "></CarouselPrevious>
       <CarouselNext className="rounded-lg h-10  hover:text-dealguru-white hover:bg-dealguru-blue disabled:hidden" />
     </Carousel>
   );

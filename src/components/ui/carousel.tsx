@@ -8,6 +8,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 type CarouselApi = UseEmblaCarouselType[1];
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;
@@ -216,8 +217,22 @@ const CarouselPrevious = React.forwardRef<
       onClick={scrollPrev}
       {...props}
     >
-      <ArrowLeft className="h-4 w-4" />
-      <span className="sr-only">Previous slide</span>
+      <svg
+        id="icon_svg_down"
+        width="18"
+        height="18"
+        viewBox="0 0 18 18"
+        className="rotate-90"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M5 7.24219L8.53553 10.7777C8.92606 11.1682 9.55922 11.1682 9.94975 10.7777L13.4853 7.24219"
+          stroke="#000000"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        ></path>
+      </svg>
     </Button>
   );
 });
@@ -245,8 +260,22 @@ const CarouselNext = React.forwardRef<
       onClick={scrollNext}
       {...props}
     >
-      <ArrowRight className="h-4 w-4" />
-      <span className="sr-only">Next slide</span>
+      <svg
+        id="icon_svg_down"
+        width="18"
+        height="18"
+        viewBox="0 0 18 18"
+        className="-rotate-90"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M5 7.24219L8.53553 10.7777C8.92606 11.1682 9.55922 11.1682 9.94975 10.7777L13.4853 7.24219"
+          stroke="#000000"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        ></path>
+      </svg>
     </Button>
   );
 });

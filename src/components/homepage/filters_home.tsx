@@ -65,19 +65,19 @@ const HomeFilters = () => {
             className="flex  flex-grow items-center justify-center rounded-md button text-sm  px-3  h-9  border-r bg-dealguru-grey text-dealguru-blue"
             href="/test"
           >
-            Utvalda favoriter
+            Standard
           </Link>
           <Link
             className=" flex flex-grow  items-center justify-center rounded-md button px-3 h-9 text-sm  border-r bg-dealguru-white text-[#5a5a5a]"
             href="/test"
           >
-            Nya deals
+            Nyast
           </Link>
           <Link
             className=" flex flex-grow  items-center justify-center rounded-md button px-3 h-9 text-sm  border-r bg-dealguru-white text-[#5a5a5a]"
             href="/test"
           >
-            Högst betyg
+            Popularitet
           </Link>
         </div>
       </div>
