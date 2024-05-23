@@ -15,7 +15,10 @@ const ScrollCard = () => {
           alt="Logo"
         />
       </Link>
-      <Link className="text-sm line-clamp-2 font-bold mt-2" href={"/"}>
+      <Link
+        className="text-sm line-clamp-2 font-bold mt-2 antialiased"
+        href={"/"}
+      >
         Bebeconfort Soko Compact Stroller 0-15kg Shadow{" "}
       </Link>
       <div className="flex gap-3 self-start">

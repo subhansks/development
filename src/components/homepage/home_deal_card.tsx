@@ -39,7 +39,7 @@ const HomeDealCard = () => {
               <Comment_Bookmark />
             </div>
             <Link
-              className="w-1/3 min-w-max bg-dealguru-blue text-white text-base text-center md:py-2 md:px-6  rounded-md font-semibold text-nowrap"
+              className="w-1/3 min-w-max bg-dealguru-blue text-white text-base font-[sans-serif] text-center md:py-2 md:px-6  rounded-md font-semibold text-nowrap"
               href=""
             >
               {" "}
