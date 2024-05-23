@@ -39,7 +39,7 @@ const HomeDealCard = () => {
               <Comment_Bookmark />
             </div>
             <Link
-              className="w-1/3 min-w-max bg-dealguru-blue text-white text-base font-[sans-serif] text-center md:py-2 md:px-6  rounded-md font-semibold text-nowrap"
+              className="w-1/3 min-w-max bg-dealguru-blue text-white text-base font-[sans-serif] text-center md:py-2 md:px-6  rounded-md font-medium text-nowrap"
               href=""
             >
               {" "}
@@ -55,7 +55,7 @@ const HomeDealCard = () => {
             <Comment_Bookmark />
           </div>
           <Link
-            className="flex-grow min-w-max bg-dealguru-blue text-white text-base text-center p-2 rounded-md font-semibold px-4 py-2 text-nowrap"
+            className="flex-grow min-w-max bg-dealguru-blue text-white text-base font-[sans-serif] text-center p-2 rounded-md font-medium px-4 py-2 text-nowrap"
             href=""
           >
             {" "}

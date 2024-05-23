@@ -54,7 +54,7 @@ const ScrollCard = () => {
           <span className=" text-sm text-gray-400">23</span>
         </div>
         <Link
-          className="  bg-dealguru-blue text-white text-sm  md:py-2 md:px-6  rounded-md font-semibold text-nowrap"
+          className="  bg-dealguru-blue text-white text-sm py-2 px-6  rounded-md font-semibold text-nowrap"
           href=""
         >
           Visa Deal
