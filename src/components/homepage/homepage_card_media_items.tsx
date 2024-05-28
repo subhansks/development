@@ -24,7 +24,7 @@ const HomepageMediaCard = () => {
           />
           <div className="flex  md:gap-2 flex-col-reverse md:flex-row items-start md:items-center">
             <p className="font-bold text-sm">John </p>
-            <p className="text-sm text-gray-400">
+            <p className="text-sm text-[#637381]">
               Kontrollerad för 1 dag sedan
             </p>
           </div>

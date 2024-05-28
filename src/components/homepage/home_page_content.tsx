@@ -2,13 +2,14 @@ import React from "react";
 import HomeFilters from "./filters_home";
 import CarouselSize from "./slider";
 import HomeDealCard from "./home_deal_card";
+import CarouselSlider from "./slider";
 
 const HomePageContent = () => {
   return (
     <div className="md_lg:col-span-5 md:col-span-7   border-gray-300 rounded-lg">
       <div className="flex md:items-end justify-between md:flex-row flex-col items-start   gap-2 md:mb-0   min-h-11 ">
         <div className=" ">
-          <h1 className="text-[1.3rem] not-italic text-dealguru-black font-bold">
+          <h1 className="text-[1.3rem] not-italic text-dealguru-black font-bold antialiased">
             Bästa dealsen just nu
           </h1>
         </div>
@@ -23,7 +24,7 @@ const HomePageContent = () => {
           <h1 className="text-[1.3rem] not-italic text-dealguru-black font-bold">
             Bästa dealsen just nu
           </h1>
-          <CarouselSize />
+          <CarouselSlider />
         </div>
         <HomeDealCard />
         <HomeDealCard />

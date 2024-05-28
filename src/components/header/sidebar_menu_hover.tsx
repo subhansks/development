@@ -15,7 +15,7 @@ function SecondNest({ title, sub_content }: any) {
       <Link
         href={"/"}
         className={`flex w-full justify-between pl-4 pr-4 h-full items-center ${
-          trigger_t && "bg-gray-100"
+          trigger_t && "bg-dealguru-blue"
         }  `}
       >
         {title}
@@ -24,7 +24,7 @@ function SecondNest({ title, sub_content }: any) {
         )}
       </Link>
       {trigger_t && sub_content && (
-        <div className="py-6 absolute top-0 bottom-0 left-[298px] bg-white flex flex-col w-[300px]  border-l border-l-gray-400">
+        <div className="py-6 absolute top-0 bottom-0 left-[259px] bg-white flex flex-col w-[260px]  border-l border-l-[1px]">
           {sub_content.map((item: any, index: number) => (
             <>
               <div
@@ -38,7 +38,7 @@ function SecondNest({ title, sub_content }: any) {
                   {item.sub_content_SubContent_title}{" "}
                 </Link>
               </div>
-              <hr className="mx-3  last_child_hr border-gray-200" />
+              {/* <hr className="mx-3  last_child_hr " /> */}
             </>
           ))}
         </div>
@@ -59,13 +59,20 @@ const HoverCardNavigate = ({ title, sub_content }: any) => {
       <Link
         href={"/"}
         className={`flex w-full justify-between pl-4 pr-4 h-full items-center ${
-          trigger && "bg-gray-100"
+          trigger && "bg-dealguru-blue"
         }  `}
       >
-        {title} <Image src="/angle.svg" width={8} height={8} alt="angle logo" />
+        {title}
+        <Image
+          src="/angle_right_icon.svg"
+          width={20}
+          height={20}
+          alt="angle Icon"
+          className=" "
+        />
       </Link>
       {trigger && sub_content && (
-        <div className="py-6 absolute top-0 bottom-0 left-[300px]  bg-white flex flex-col w-[300px] border-l  border-l-gray-400   ">
+        <div className="py-6 absolute top-0 bottom-0 left-[260px]  bg-white flex flex-col w-[260px]  border-l-[1px] ">
           {sub_content.map((item: any, index: number) => (
             <>
               <SecondNest
@@ -73,7 +80,7 @@ const HoverCardNavigate = ({ title, sub_content }: any) => {
                 title={item?.sub_content_title}
                 sub_content={item.sub_content_SubContent}
               />
-              <hr className="mx-3  last_child_hr border-gray-200" />
+              {/* <hr className="mx-3  last_child_hr " /> */}
             </>
           ))}
         </div>

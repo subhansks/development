@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/carousel";
 import ScrollCard from "./scrollCard";
 
-export default function CarouselSize() {
+export default function CarouselSlider() {
   return (
     <div className="flex">
       <Carousel
