@@ -19,7 +19,7 @@ const Navbar_right_button = () => {
               alt="Avatar"
             />
             <Link
-              className="text-dealguru-black text-sm text-nowrap"
+              className="text-dealguru-black text-[15px] text-nowrap"
               href="/test"
             >
               Mitt konto

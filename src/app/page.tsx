@@ -9,7 +9,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="z-0 px-4 md:px-8  md_lg:px-x-pad w-full mt-28">
+    <main className="z-0 px-4  2xl:px-x-pad md:px-8 w-full mt-28">
       <Responsive_profile_name />
 
       <Category_slider />

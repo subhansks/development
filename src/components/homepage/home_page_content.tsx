@@ -2,6 +2,7 @@ import React from "react";
 import HomeFilters from "./filters_home";
 import CarouselSize from "./slider";
 import HomeDealCard from "./home_deal_card";
+import CarouselSlider from "./slider";
 
 const HomePageContent = () => {
   return (
@@ -23,7 +24,7 @@ const HomePageContent = () => {
           <h1 className="text-[1.3rem] not-italic text-dealguru-black font-bold">
             Bästa dealsen just nu
           </h1>
-          <CarouselSize />
+          <CarouselSlider />
         </div>
         <HomeDealCard />
         <HomeDealCard />

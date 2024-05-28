@@ -10,6 +10,14 @@ const config = {
   ],
   prefix: "",
   theme: {
+    screens: {
+      sm: "375px",
+      md: "768px",
+      lg: "1024px",
+      md_lg: "1280px",
+      xl: "1440px",
+      "2xl": "1500px",
+    },
     container: {
       center: true,
       padding: "2rem",
@@ -32,13 +40,7 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
-      screens: {
-        sm: "375px",
-        md: "768px",
-        lg: "1024px",
-        md_lg: "1280px",
-        xl: "1440px",
-      },
+
       colors: {
         "dealguru-blue": "#0067e1",
         "dealguru-white": "#ffffff",

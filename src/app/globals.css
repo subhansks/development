@@ -1,8 +1,36 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "__myFont";
+  font-weight: 600;
+  src: url(/public/font/OpenSans-Light.ttf) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "__myFont_Fallback";
+  src: local("Arial");
+  ascent-override: 99.49%;
+  descent-override: 34.74%;
+  line-gap-override: 0%;
+  size-adjust: 101.62%;
+}
+.__className_01 {
+  /* font-family: "__myFont", "__myFont_Fallback";
+   */
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-feature-settings: normal;
+  font-weight: 500;
+}
+.sidemenu_heading {
+  /* font-family: "__myFont", "__myFont_Fallback";
+   */
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-feature-settings: normal;
+}
 
 :root {
   --header-height: 96px;
@@ -17,7 +45,6 @@
 
   --dealguru-shadow: 0px 0px 10px 0px #272e610d;
 }
-
 body {
   background-color: var(--dealguru-grey);
   box-sizing: border-box;
@@ -87,5 +114,9 @@ html {
   }
   .no-scrollbar::-webkit-scrollbar {
     display: none;
+    scrollbar-width: none;
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
   }
 }
