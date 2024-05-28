@@ -11,9 +11,9 @@ const Navbar = () => {
         DealGuru - Just nu 10293 deals och rabatter
       </p>
 
-      <nav className="flex h-16 justify-between md_lg:px-x-pad md:px-8 px-4 py-2  bg-dealguru-white gap-4  ">
+      <nav className="flex h-16 justify-between 2xl:px-x-pad md:px-8 px-4 py-2  bg-dealguru-white gap-4  ">
         <div className="w-[68%] gap-6 flex max-lg:justify-start max-lg:w-1/2 items-center justify-between">
-          <div className="md:block hidden">
+          <div className="lg:block hidden">
             <SheetDemo />
           </div>
 
@@ -31,7 +31,7 @@ const Navbar = () => {
 
           <div className="max-w-[730px] w-[730px] min-w-[200px] h-[42px] max-lg:hidden flex-nowrap flex justify-end relative items-center">
             <input
-              className=" w-full px-4 h-full absolute border rounded-md border-gray-300"
+              className=" w-full px-4 h-full absolute border rounded-md border-gray-300 text-sm"
               type="text"
               placeholder="Skriv det du söker..."
             />
