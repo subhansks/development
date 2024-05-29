@@ -74,19 +74,21 @@ const HoverCardNavigate = ({ title, sub_content }: any) => {
     >
       <Link
         href={`/${title}`}
-        className={`flex w-full justify-between pl-4 pr-4 h-full items-center ${
+        className={`flex w-1/2 justify-between pl-4 pr-4 h-full items-center  ${
           trigger && "bg-gray-100"
         }  `}
       >
         {title}
       </Link>
-      <Image
-        src="/angle_right_icon.svg"
-        width={20}
-        height={20}
-        alt="angle Icon"
-        className=" "
-      />
+      <div className=" w-1/2 flex justify-end mr-4">
+        <Image
+          src="/angle_right_icon.svg"
+          width={20}
+          height={20}
+          alt="angle Icon"
+          className=" "
+        />
+      </div>
       {trigger && sub_content && (
         <div className="py-6 absolute top-0 bottom-0 lg:left-[260px] left-[0px]  bg-white flex flex-col w-[260px]  border-l-[1px] ">
           <div className="px-4 flex gap-4" onClick={() => setTrigger(false)}>
