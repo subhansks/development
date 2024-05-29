@@ -5,10 +5,8 @@ import React, { useState, useEffect } from "react";
 import { SheetDemo } from "../header/left_menubar";
 
 const Footer_Menu = () => {
- 
-
   return (
-    <div className="2xl:px-x-pad md:px-8 px-4  fixed bottom-0 z-50 lg:hidden   w-full flex bg-dealguru-white h-16 items-center justify-between">
+    <div className="2xl:px-x-pad md:px-12 px-8  fixed bottom-0 z-50 lg:hidden   w-full flex bg-dealguru-white h-16 items-center justify-between">
       <div>
         {/* <Image
           width={20}

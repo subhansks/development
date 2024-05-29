@@ -30,7 +30,17 @@ function SecondNest({ title, sub_content }: any) {
         )}
       </Link>
       {trigger_t && sub_content && (
-        <div className="py-6 absolute top-0 bottom-0 left-[259px] bg-white flex flex-col w-[260px]  border-l border-l-[1px]">
+        <div className="py-6 absolute top-0 bottom-0 lg:left-[260px] left-[0px] bg-white flex flex-col w-[260px]  border-l border-l-[1px]">
+          <div className="px-4 flex gap-4" onClick={() => setTrigger_t(false)}>
+            <Image
+              src="/menu_back_icon.svg"
+              width={20}
+              height={20}
+              alt="angle Icon"
+              className=" "
+            />
+            <h2 className="text-2xl font-bold capitalize ">{title}</h2>
+          </div>
           {sub_content.map((item: any, index: number) => (
             <>
               <div
@@ -78,7 +88,17 @@ const HoverCardNavigate = ({ title, sub_content }: any) => {
         className=" "
       />
       {trigger && sub_content && (
-        <div className="py-6 absolute top-0 bottom-0 left-[260px]  bg-white flex flex-col w-[260px]  border-l-[1px] ">
+        <div className="py-6 absolute top-0 bottom-0 lg:left-[260px] left-[0px]  bg-white flex flex-col w-[260px]  border-l-[1px] ">
+          <div className="px-4 flex gap-4" onClick={() => setTrigger(false)}>
+            <Image
+              src="/menu_back_icon.svg"
+              width={20}
+              height={20}
+              alt="angle Icon"
+              className=" "
+            />
+            <h2 className="text-2xl font-bold capitalize ">{title}</h2>
+          </div>
           {sub_content.map((item: any, index: number) => (
             <>
               <SecondNest
