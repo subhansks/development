@@ -68,7 +68,7 @@ const HoverCardNavigate = ({ title, sub_content }: any) => {
   // console.log(trigger_t);
   return (
     <div
-      className="flex  min-h-10 justify-start items-center gap-4 "
+      className="flex  min-h-10 justify-start items-center gap-2 "
       onMouseOver={() => setTrigger(true)}
       onMouseOut={() => setTrigger(false)}
     >
@@ -80,7 +80,7 @@ const HoverCardNavigate = ({ title, sub_content }: any) => {
       >
         {title}
       </Link>
-      <div className=" w-1/2 flex justify-end mr-4">
+      <div className=" w-1/2 flex justify-end pr-4 h-full ">
         <Image
           src="/angle_right_icon.svg"
           width={20}
