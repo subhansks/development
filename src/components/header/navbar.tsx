@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { SheetDemo } from "./left_menubar";
 import Navbar_right_button from "./navbar_right_button";
+import SearchBar from "./searchBar";
 
 const Navbar = () => {
   return (
@@ -30,17 +31,9 @@ const Navbar = () => {
           </div>
 
           <div className="max-w-[730px] w-[730px] min-w-[200px] h-[42px] max-lg:hidden flex-nowrap flex justify-end relative items-center">
-            <input
-              className=" w-full px-4 h-full absolute border rounded-md border-gray-300 text-sm"
-              type="text"
-              placeholder="Skriv det du söker..."
-            />
-            <Link
-              className=" z-20 mr-1 button px-[14px] py-[6px] border-r text-sm"
-              href="/test"
-            >
-              Sök
-            </Link>
+            <SearchBar/>
+              
+            
           </div>
         </div>
 

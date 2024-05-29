@@ -15,12 +15,18 @@ function SecondNest({ title, sub_content }: any) {
       <Link
         href={"/"}
         className={`flex w-full justify-between pl-4 pr-4 h-full items-center ${
-          trigger_t && "bg-dealguru-blue"
+          trigger_t && "bg-gray-100"
         }  `}
       >
         {title}
         {sub_content && (
-          <Image src="/angle.svg" width={8} height={8} alt="angle logo" />
+          <Image
+            src="/angle_right_icon.svg"
+            width={20}
+            height={20}
+            alt="angle Icon"
+            className=" "
+          />
         )}
       </Link>
       {trigger_t && sub_content && (
@@ -52,25 +58,25 @@ const HoverCardNavigate = ({ title, sub_content }: any) => {
   // console.log(trigger_t);
   return (
     <div
-      className="flex  min-h-10 justify-start items-center  "
+      className="flex  min-h-10 justify-start items-center gap-4 "
       onMouseOver={() => setTrigger(true)}
       onMouseOut={() => setTrigger(false)}
     >
       <Link
-        href={"/"}
+        href={`/${title}`}
         className={`flex w-full justify-between pl-4 pr-4 h-full items-center ${
-          trigger && "bg-dealguru-blue"
+          trigger && "bg-gray-100"
         }  `}
       >
         {title}
-        <Image
-          src="/angle_right_icon.svg"
-          width={20}
-          height={20}
-          alt="angle Icon"
-          className=" "
-        />
       </Link>
+      <Image
+        src="/angle_right_icon.svg"
+        width={20}
+        height={20}
+        alt="angle Icon"
+        className=" "
+      />
       {trigger && sub_content && (
         <div className="py-6 absolute top-0 bottom-0 left-[260px]  bg-white flex flex-col w-[260px]  border-l-[1px] ">
           {sub_content.map((item: any, index: number) => (
