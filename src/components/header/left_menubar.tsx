@@ -32,6 +32,32 @@ const nav = [
     ],
   },
   {
+    title: "Clothes",
+    sub_content: [
+      {
+        sub_content_title: "stitched",
+        sub_content_SubContent: [
+          { sub_content_SubContent_title: "silk" },
+          { sub_content_SubContent_title: "cotton" },
+        ],
+      },
+      { sub_content_title: "unstich" },
+    ],
+  },
+  {
+    title: "Clothes",
+    sub_content: [
+      {
+        sub_content_title: "stitched",
+        sub_content_SubContent: [
+          { sub_content_SubContent_title: "silk" },
+          { sub_content_SubContent_title: "cotton" },
+        ],
+      },
+      { sub_content_title: "unstich" },
+    ],
+  },
+  {
     title: "Children",
     sub_content: [
       { sub_content_title: "toys" },
