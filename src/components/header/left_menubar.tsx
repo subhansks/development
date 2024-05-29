@@ -132,16 +132,15 @@ const nav = [
 ];
 
 export function SheetDemo() {
-  const [isWidth700, setIsWidth700] = useState(false);
+  const [isWidth1024, setIsWidth1024] = useState(false);
 
   useEffect(() => {
     const checkScreenWidth = () => {
-      setIsWidth700(window.innerWidth === 1024 || window.innerWidth > 1024);
+      setIsWidth1024(window.innerWidth === 1024 || window.innerWidth < 1024);
     };
 
     // Check initial screen width
     checkScreenWidth();
-    console.log(isWidth700, "-----------333333333------------");
 
     // Add event listener to check screen width on resize
     window.addEventListener("resize", checkScreenWidth);
@@ -154,29 +153,26 @@ export function SheetDemo() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        {isWidth700 ? (
-          <div className=" border flex items-center rounded-md w-[37px] h-[36px] border-gray-300 cursor-pointer">
-            <span className="font-bold mt-1 text-2xl text-gray-600 conte w-[42px] flex justify-center">
-              ☰
-            </span>
-          </div>
-        ) : (
+        {isWidth1024 ? (
           <Image
             width={20}
             height={20}
             alt="Footer Nav Button"
             src={"/footer_nav_button.svg"}
           />
+        ) : (
+          <div className=" border flex items-center rounded-md w-[37px] h-[36px] border-gray-300 cursor-pointer">
+            <span className="font-bold mt-1 text-2xl text-gray-600 conte w-[42px] flex justify-center">
+              ☰
+            </span>
+          </div>
         )}
       </SheetTrigger>
       <SheetContent side={"left"} className="">
         <div className=" flex z-[90 ] flex-col pb-6 h-[100vh] w-[260px] stroke-none  overflow-y-scroll no-scrollbar ">
           <ul className="">
             <li>
-              <Link
-                href={"/"}
-                className="flex py-3 gap-2 hover:bg-dealguru-blue px-4"
-              >
+              <Link href={"/"} className="flex py-3 gap-2 px-4">
                 <Image
                   alt="Notification Icon"
                   width="28"
@@ -187,10 +183,7 @@ export function SheetDemo() {
               </Link>
             </li>
             <li>
-              <Link
-                href={"/"}
-                className="flex py-3 gap-2 hover:bg-dealguru-blue px-4"
-              >
+              <Link href={"/"} className="flex py-3 gap-2  px-4">
                 <Image
                   alt="Notification Icon"
                   width="28"
@@ -201,10 +194,7 @@ export function SheetDemo() {
               </Link>
             </li>
             <li>
-              <Link
-                href={"/"}
-                className="flex py-3 gap-2 hover:bg-dealguru-blue px-4"
-              >
+              <Link href={"/"} className="flex py-3 gap-2 px-4">
                 <Image
                   alt="Notification Icon"
                   width="28"
@@ -215,10 +205,7 @@ export function SheetDemo() {
               </Link>
             </li>
             <li>
-              <Link
-                href={"/"}
-                className="flex py-3 gap-2 hover:bg-dealguru-blue px-4"
-              >
+              <Link href={"/"} className="flex py-3 gap-2 px-4">
                 <Image
                   alt="Notification Icon"
                   width="28"
@@ -240,7 +227,7 @@ export function SheetDemo() {
                 src="/left_menu_dot_box.svg"
               />
               <span className="font-bold block truncate  ps-3">
-                Alla kategorier{" "}
+                Alla kategorier
               </span>
             </li>
           </ul>
@@ -251,6 +238,7 @@ export function SheetDemo() {
                 title={d.title}
                 sub_content={d.sub_content}
               />
+
               {/* <hr className="mx-3  last_child_hr " /> */}
             </>
           ))}
