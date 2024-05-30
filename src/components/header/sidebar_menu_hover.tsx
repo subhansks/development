@@ -30,7 +30,7 @@ function SecondNest({ title, sub_content }: any) {
         )}
       </Link>
       {trigger_t && sub_content && (
-        <div className="py-6 absolute top-0 bottom-0 lg:left-[260px] left-[0px] bg-white flex flex-col w-[260px]  border-l border-l-[1px]">
+        <div className="py-6 absolute top-0 bottom-0 lg:left-[260px]  left-[0px] z-[110] bg-white flex flex-col w-[260px]  border-l border-l-[1px]">
           <div className="px-4 flex gap-4" onClick={() => setTrigger_t(false)}>
             <Image
               src="/menu_back_icon.svg"
@@ -74,7 +74,7 @@ const HoverCardNavigate = ({ title, sub_content }: any) => {
     >
       <Link
         href={`/${title}`}
-        className={`flex w-[80%] justify-between pl-4 pr-4 h-full items-center z-10 ${
+        className={`flex z-[90] w-[80%] justify-between pl-4 pr-4 h-full items-center  ${
           trigger && "bg-gray-100"
         }  `}
       >
@@ -90,7 +90,7 @@ const HoverCardNavigate = ({ title, sub_content }: any) => {
         />
       </div>
       {trigger && sub_content && (
-        <div className="py-6 absolute top-0 bottom-0 lg:left-[260px] left-[0px]  bg-white flex flex-col w-[260px]  border-l-[1px] ">
+        <div className="py-6 absolute top-0 bottom-0 lg:left-[260px] left-[0px] z-[100] bg-white flex flex-col w-[260px]  border-l-[1px] ">
           <div className="px-4 flex gap-4" onClick={() => setTrigger(false)}>
             <Image
               src="/menu_back_icon.svg"
