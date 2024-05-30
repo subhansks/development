@@ -42,7 +42,7 @@ export default function Category_slider() {
       <CarouselContent className="ml-0 flex gap-3 pl-0">
         {category.map((d, index) => (
           <CarouselItem className=" flex  w-fit  pl-0 " key={index}>
-            <div className=" text-nowrap w-fit px-[12px] py-[8px] rounded-lg bg-dealguru-white">
+            <div className=" text-nowrap  whitespace-nowrap w-fit px-[12px] py-[8px] rounded-lg bg-dealguru-white">
               <Link
                 className="text-sm text-dealguru-blue font-bold"
                 href={`/${d}`}
