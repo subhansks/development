@@ -71,8 +71,8 @@ const HoverCardNavigate = ({ title, sub_content }: any) => {
   return (
     <div
       className="flex  min-h-10 justify-start items-center gap-2 "
-      onMouseOver={() => setTrigger(true)}
-      onMouseOut={() => setTrigger(false)}
+      onMouseOver={() => window.innerWidth > 1024 && setTrigger(true)}
+      onMouseOut={() => window.innerWidth > 1024 && setTrigger(false)}
     >
       <Link
         href={`/${title}`}
