@@ -185,9 +185,10 @@ export function SheetDemo() {
             height={20}
             alt="Footer Nav Button"
             src={"/footer_nav_button.svg"}
+            className="block lg:hidden"
           />
         ) : (
-          <div className=" border flex items-center rounded-md w-[37px] h-[36px] border-gray-300 cursor-pointer">
+          <div className=" border hidden lg:flex items-center rounded-md w-[37px] h-[36px] border-gray-300 cursor-pointer">
             <span className="font-bold mt-1 text-2xl text-gray-600 conte w-[42px] flex justify-center">
               ☰
             </span>

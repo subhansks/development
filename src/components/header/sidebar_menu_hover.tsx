@@ -1,34 +1,34 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 function SecondNest({ title, sub_content }: any) {
+  const [isWidth1024, setIsWidth1024] = useState(false);
+
   const [trigger_t, setTrigger_t] = useState(false);
 
   return (
-    <div className="flex   min-h-10 justify-start items-center overflow-y-scroll no-scrollbar ">
+    <div
+      className="flex   min-h-10 justify-start items-center overflow-y-scroll no-scrollbar "
+      onMouseOver={() => setTrigger_t(true)}
+      onMouseOut={() => setTrigger_t(false)}
+    >
       <Link
         href={"/"}
-        className={`flex w-[60%]  justify-between pl-4 pr-4 h-full items-center ${
+        className={`flex w-full justify-between pl-4 pr-4 h-full items-center ${
           trigger_t && "bg-gray-100"
         }  `}
       >
         {title}
         {sub_content && (
-          <div
-            className="w-[40%]"
-            onMouseOver={() => setTrigger_t(true)}
-            onMouseOut={() => setTrigger_t(false)}
-          >
-            <Image
-              src="/angle_right_icon.svg"
-              width={20}
-              height={20}
-              alt="angle Icon"
-              className=" "
-            />
-          </div>
+          <Image
+            src="/angle_right_icon.svg"
+            width={20}
+            height={20}
+            alt="angle Icon"
+            className=" "
+          />
         )}
       </Link>
       {trigger_t && sub_content && (
@@ -69,25 +69,33 @@ const HoverCardNavigate = ({ title, sub_content }: any) => {
   const [trigger, setTrigger] = useState(false);
   // console.log(trigger_t);
   return (
-    <div className="flex  min-h-10 justify-start items-center gap-2 ">
+    <div
+      className="flex  min-h-10 justify-start items-center gap-2 "
+      onMouseOver={() => setTrigger(true)}
+      onMouseOut={() => setTrigger(false)}
+    >
       <Link
         href={`/${title}`}
-        className={`flex z-[90] w-[60%] justify-between pl-4 pr-4 h-full items-center  ${
+        className={`flex z-[90] lg:w-full w-[80%] justify-between pl-4 pr-4 h-full items-center  ${
           trigger && "bg-gray-100"
         }  `}
       >
         {title}
-      </Link>
-      <div
-        className=" w-[40%] flex justify-end pr-4 h-full "
-        onMouseOver={() => setTrigger(true)}
-        onMouseOut={() => setTrigger(false)}
-      >
         <Image
           src="/angle_right_icon.svg"
           width={20}
           height={20}
           alt="angle Icon"
+          className="lg:block hidden "
+        />
+      </Link>
+      <div className="lg:hidden   w-[20%] flex justify-end pr-4 h-full ">
+        <Image
+          src="/angle_right_icon.svg"
+          width={20}
+          height={20}
+          alt="angle Icon"
+          onClick={() => setTrigger(true)}
           className=" "
         />
       </div>
