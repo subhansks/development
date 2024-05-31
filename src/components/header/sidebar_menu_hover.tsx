@@ -1,9 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 function SecondNest({ title, sub_content }: any) {
+  const [isWidth1024, setIsWidth1024] = useState(false);
+
   const [trigger_t, setTrigger_t] = useState(false);
 
   return (
@@ -74,18 +76,26 @@ const HoverCardNavigate = ({ title, sub_content }: any) => {
     >
       <Link
         href={`/${title}`}
-        className={`flex z-[90] w-[80%] justify-between pl-4 pr-4 h-full items-center  ${
+        className={`flex z-[90] lg:w-full w-[80%] justify-between pl-4 pr-4 h-full items-center  ${
           trigger && "bg-gray-100"
         }  `}
       >
         {title}
-      </Link>
-      <div className=" w-[20%] flex justify-end pr-4 h-full ">
         <Image
           src="/angle_right_icon.svg"
           width={20}
           height={20}
           alt="angle Icon"
+          className="lg:block hidden "
+        />
+      </Link>
+      <div className="lg:hidden   w-[20%] flex justify-end pr-4 h-full ">
+        <Image
+          src="/angle_right_icon.svg"
+          width={20}
+          height={20}
+          alt="angle Icon"
+          onClick={() => setTrigger(true)}
           className=" "
         />
       </div>
