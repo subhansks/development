@@ -105,6 +105,14 @@ html {
     }
   }
 
+  @media not all and (min-resolution: 0.001dpcm) {
+    > @media {
+      .aligh_icon {
+        display: none;
+      }
+    }
+  }
+
   .marquee-animation {
     animation: marquee 80s linear infinite;
   }
