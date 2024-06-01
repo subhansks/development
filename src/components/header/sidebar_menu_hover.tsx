@@ -15,7 +15,7 @@ function SecondNest({ title, sub_content }: any) {
       onMouseOut={() => window.innerWidth > 1024 && setTrigger_t(false)}
     >
       <Link
-        href={"/"}
+        href={`/${title}`}
         className={`flex w-full justify-between pl-4 pr-4 h-full items-center ${
           trigger_t && "bg-gray-100"
         }  `}
@@ -27,10 +27,20 @@ function SecondNest({ title, sub_content }: any) {
             width={20}
             height={20}
             alt="angle Icon"
-            className=" "
+            className="lg:block hidden "
           />
         )}
       </Link>
+      <div className="lg:hidden   w-[20%] flex justify-end pr-4 h-full ">
+        <Image
+          src="/angle_right_icon.svg"
+          width={20}
+          height={20}
+          alt="angle Icon"
+          onClick={() => setTrigger_t(true)}
+          className=" "
+        />
+      </div>
       {trigger_t && sub_content && (
         <div className="py-6 absolute top-0 bottom-0 lg:left-[260px]  left-[0px] z-[110] bg-white flex flex-col w-[260px]  border-l border-l-[1px]">
           <div className="px-4 flex gap-4" onClick={() => setTrigger_t(false)}>
@@ -50,7 +60,7 @@ function SecondNest({ title, sub_content }: any) {
                 className="flex  min-h-10 justify-start items-center overflow-y-scroll no-scrollbar "
               >
                 <Link
-                  href={"/"}
+                  href={`/${item.sub_content_SubContent_title}`}
                   className={`flex w-full justify-between pl-4 pr-4 h-full items-center hover:bg-gray-100 `}
                 >
                   {item.sub_content_SubContent_title}{" "}
