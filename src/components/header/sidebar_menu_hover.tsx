@@ -11,8 +11,8 @@ function SecondNest({ title, sub_content }: any) {
   return (
     <div
       className="flex   min-h-10 justify-start items-center overflow-y-scroll no-scrollbar "
-      onMouseOver={() => setTrigger_t(true)}
-      onMouseOut={() => setTrigger_t(false)}
+      onMouseOver={() => window.innerWidth > 1024 && setTrigger_t(true)}
+      onMouseOut={() => window.innerWidth > 1024 && setTrigger_t(false)}
     >
       <Link
         href={"/"}
