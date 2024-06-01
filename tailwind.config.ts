@@ -18,6 +18,7 @@ const config = {
       //
       xl: "1440px",
       "2xl": "1500px",
+      "3xl": "1900px",
     },
     container: {
       center: true,
