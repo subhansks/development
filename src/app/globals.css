@@ -97,16 +97,8 @@ html {
   }
 
   @media not all and (min-resolution: 0.001dpcm) {
-    @media {
-      .aligh_icon {
-        position: relative;
-        bottom: 6px;
-      }
-    }
-  }
-
-  @media not all and (min-resolution: 0.001dpcm) {
-    > @media {
+    @supports (-webkit-appearance: none) {
+      /* Safari Only CSS here */
       .aligh_icon {
         display: none;
       }
