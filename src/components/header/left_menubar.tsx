@@ -199,8 +199,8 @@ export function SheetDemo() {
           </div>
         )}
       </SheetTrigger>
-      <SheetContent side={"left"} className="">
-        <div className=" flex z-[90 ] flex-col pb-6 h-[100vh] w-[260px] stroke-none  overflow-y-scroll no-scrollbar ">
+      <SheetContent side={"left"} className="lg:w-[260px] w-[80%]">
+        <div className=" flex z-[90 ] flex-col pb-6 h-[100vh] stroke-none  overflow-y-scroll no-scrollbar ">
           <ul className="">
             <li>
               <Link href={"/4"} className="flex py-3 gap-2 px-4">
