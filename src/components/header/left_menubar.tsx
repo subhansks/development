@@ -188,13 +188,14 @@ export function SheetDemo() {
             className="block lg:hidden"
           />
         ) : (
-          <div className=" border hidden lg:flex items-center rounded-md w-[37px] h-[36px] border-gray-300 cursor-pointer">
-            <span
-              className="font-bold mt-1 text-2xl text-gray-600 conte w-[42px] flex justify-center items-center
-            "
-            >
-              ☰
-            </span>
+          <div className=" border hidden lg:flex justify-center items-center rounded-md w-[37px] h-[36px] border-gray-300 cursor-pointer">
+            <Image
+              width={20}
+              height={20}
+              alt="Footer Nav Button"
+              src={"/main_menu_icon.svg"}
+              className=""
+            />
           </div>
         )}
       </SheetTrigger>
