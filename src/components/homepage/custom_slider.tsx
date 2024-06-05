@@ -165,8 +165,7 @@ export default function CustomSlider() {
                 className="text-sm text-dealguru-blue font-bold"
                 href={`/${d}`}
               >
-                {/* ${index + 1} */}
-                {d}-{index + 1}
+                {/* {d}-{index + 1} */}
               </Link>
             </div>
           </div>
