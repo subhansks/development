@@ -52,7 +52,7 @@ export default function CustomSlider() {
       setTimeout(checkPosition, 350);
     }
   };
-
+ //code clean
   const scrollPrev = () => {
     if (sliderRef.current) {
       const newScrollPosition =
