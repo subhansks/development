@@ -31,7 +31,23 @@
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-feature-settings: normal;
 }
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
 
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.slick-slide {
+  width: fit-content !important;
+  margin-right: 10px !important;
+}
+/* .slick-track {
+  width: fit-content !important;
+} */
 :root {
   --header-height: 96px;
 
