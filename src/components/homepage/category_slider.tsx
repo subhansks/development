@@ -35,9 +35,6 @@ const category = [
 export default function Category_slider() {
   return (
     <Carousel
-      slideSize="70%"
-      slideGap={{ base: 0, sm: "md" }}
-      slidesToScroll={3}
       opts={{
         align: "start",
       }}
