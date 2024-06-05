@@ -174,8 +174,8 @@ export default function CustomSlider() {
       <button
         onClick={scrollPrev}
         disabled={atStart}
-        className={`absolute left-0 z-10 bg-dealguru-blue h-full text-white px-2 py-1 rounded-lg ${
-          atStart ? "opacity-50 cursor-not-allowed hidden" : ""
+        className={`absolute left-0 z-10 bg-dealguru-blue hidden md:block h-full text-white px-2 py-1 rounded-lg ${
+          atStart ? "opacity-0 cursor-not-allowed hidden " : ""
         }`}
         style={{ top: "50%", transform: "translateY(-50%)" }}
       >
@@ -184,8 +184,8 @@ export default function CustomSlider() {
       <button
         onClick={scrollNext}
         disabled={atEnd}
-        className={`absolute right-0 z-10 bg-dealguru-blue h-full text-white px-2 py-1 rounded-lg ${
-          atEnd ? "opacity-50 cursor-not-allowed hidden" : ""
+        className={`absolute right-0 z-10 bg-dealguru-blue hidden md:block h-full text-white px-2 py-1 rounded-lg ${
+          atEnd ? "opacity-0 cursor-not-allowed hidden" : ""
         }`}
         style={{ top: "50%", transform: "translateY(-50%)" }}
       >
