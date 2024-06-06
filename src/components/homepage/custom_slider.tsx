@@ -196,10 +196,10 @@ export default function CustomSlider() {
               style={{ marginLeft: index === 0 ? "5px" : "0" }}
             >
               <Link
-                className="text-sm text-dealguru-blue font-bold"
+                className="text-sm text-dealguru-blue font-bold boll"
                 href={`/${d}`}
               >
-                {d}-{index}
+                {d}
               </Link>
             </div>
           </div>
