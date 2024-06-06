@@ -180,7 +180,7 @@ export default function CustomSlider() {
     <div className="relative mt-3">
       <div
         ref={sliderRef}
-        className="overflow-x-scroll flex gap-3 pl-0 hide-scrollbar mx-8"
+        className="overflow-x-scroll flex gap-3 pl-0 hide-scrollbar mx-0 md:mx-8"
         style={{ scrollBehavior: "smooth" }}
         onScroll={handleScroll}
       >
