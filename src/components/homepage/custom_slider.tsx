@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 
 const category = [
@@ -20,6 +20,8 @@ const category = [
   "Parfymer",
   "Resor",
   "Ekonomi",
+  "Skor",
+  "Smartphones & Mobiltelefoner",
   "Robotdammsugare",
   "Kuponger",
   "Jackor",
@@ -29,6 +31,8 @@ const category = [
   "Parfymer",
   "Resor",
   "Ekonomi",
+  "Skor",
+  "Smartphones & Mobiltelefoner",
   "Robotdammsugare",
   "Kuponger",
   "Jackor",
@@ -38,6 +42,8 @@ const category = [
   "Parfymer",
   "Resor",
   "Ekonomi",
+  "Skor",
+  "Smartphones & Mobiltelefoner",
   "Robotdammsugare",
   "Kuponger",
   "Jackor",
@@ -47,7 +53,7 @@ const category = [
   "Parfymer",
   "Resor",
   "Ekonomi",
-  // Repeated items removed for brevity
+  // Add more categories as needed
 ];
 
 export default function CustomSlider() {
@@ -69,14 +75,13 @@ export default function CustomSlider() {
             containerWidth / itemWidthWithGap
           );
           setVisibleItems(visibleItemsCount);
-          console.log(`Number of visible items: ${visibleItemsCount}`);
           setAtStart(true);
           checkPosition();
         }
       }
     };
 
-    setTimeout(calculateItemWidth, 0);
+    calculateItemWidth();
     window.addEventListener("resize", calculateItemWidth);
 
     return () => {
@@ -84,79 +89,108 @@ export default function CustomSlider() {
     };
   }, []);
 
-  const checkPosition = () => {
+  const debounce = (func: Function, wait: number) => {
+    let timeout: NodeJS.Timeout;
+    return (...args: any) => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func(...args), wait);
+    };
+  };
+
+  const checkPosition = useCallback(() => {
     if (sliderRef.current) {
       const maxScrollLeft =
         sliderRef.current.scrollWidth - sliderRef.current.clientWidth;
       const currentScrollLeft = sliderRef.current.scrollLeft;
       setAtStart(currentScrollLeft === 0);
       setAtEnd(currentScrollLeft >= maxScrollLeft - 1); // Adjust condition to handle float precision issues
-      logCutOffTags();
     }
-  };
+  }, []);
 
-  const logCutOffTags = () => {
+  const ensureItemVisibility = useCallback(() => {
     if (sliderRef.current) {
       const currentScrollLeft = sliderRef.current.scrollLeft;
-      const containerWidth = sliderRef.current.clientWidth;
-
-      category.forEach((d, index) => {
-        const tag = sliderRef.current!.querySelector(
-          `div[data-index="${index}"]`
-        ) as HTMLElement;
-        if (tag) {
-          const tagRect = tag.getBoundingClientRect();
-          const sliderRect = sliderRef.current!.getBoundingClientRect();
-          const tagLeft = tagRect.left - sliderRect.left;
-          const tagRight = tagLeft + tagRect.width;
-
+      for (let i = 0; i < category.length; i++) {
+        const item = sliderRef.current.querySelector(`#category-${i}`);
+        if (item) {
+          const itemRect = item.getBoundingClientRect();
+          const sliderRect = sliderRef.current.getBoundingClientRect();
           if (
-            tagLeft < currentScrollLeft ||
-            tagRight > currentScrollLeft + containerWidth
+            itemRect.left < sliderRect.left &&
+            itemRect.right > sliderRect.left
           ) {
-            console.log(`Tag "${d}-${index + 1}" is being cut off.`);
+            const newScrollPosition =
+              currentScrollLeft + itemRect.left - sliderRect.left;
+            sliderRef.current.scrollTo({
+              left: newScrollPosition,
+              behavior: "smooth",
+            });
+            break;
           }
         }
-      });
+      }
+      checkPosition();
     }
-  };
+  }, [checkPosition]);
 
   const scrollNext = () => {
     if (sliderRef.current) {
-      const newScrollPosition =
-        sliderRef.current.scrollLeft + itemWidth * visibleItems;
+      const currentScrollLeft = sliderRef.current.scrollLeft;
+      const maxScrollLeft =
+        sliderRef.current.scrollWidth - sliderRef.current.clientWidth;
+      const newScrollPosition = Math.min(
+        currentScrollLeft + itemWidth * visibleItems,
+        maxScrollLeft
+      );
       sliderRef.current.scrollTo({
         left: newScrollPosition,
         behavior: "smooth",
       });
-      // Immediate checkPosition to ensure correct button state
-      setTimeout(checkPosition, 350);
+      setTimeout(() => {
+        ensureItemVisibility();
+        checkPosition();
+      }, 350);
     }
   };
 
   const scrollPrev = () => {
     if (sliderRef.current) {
-      const newScrollPosition =
-        sliderRef.current.scrollLeft - itemWidth * visibleItems;
+      const currentScrollLeft = sliderRef.current.scrollLeft;
+      const newScrollPosition = Math.max(
+        currentScrollLeft - itemWidth * visibleItems,
+        0
+      );
       sliderRef.current.scrollTo({
         left: newScrollPosition,
         behavior: "smooth",
       });
-      // Immediate checkPosition to ensure correct button state
-      setTimeout(checkPosition, 350);
+      setTimeout(() => {
+        ensureItemVisibility();
+        checkPosition();
+      }, 350);
     }
   };
+
+  const handleScroll = debounce(() => {
+    ensureItemVisibility();
+    checkPosition();
+  }, 200);
 
   return (
     <div className="relative mt-3">
       <div
         ref={sliderRef}
-        className="overflow-x-scroll flex gap-3 pl-0 hide-scrollbar"
+        className="overflow-x-scroll flex gap-3 pl-0 hide-scrollbar mx-8"
         style={{ scrollBehavior: "smooth" }}
-        onScroll={checkPosition}
+        onScroll={handleScroll}
       >
         {category.map((d, index) => (
-          <div className="flex w-fit pl-0" key={index} data-index={index}>
+          <div
+            className="flex w-fit pl-0"
+            key={index}
+            data-index={index}
+            id={`category-${index}`}
+          >
             <div
               className="text-nowrap whitespace-nowrap w-fit px-[12px] py-[8px] rounded-lg bg-dealguru-white"
               style={{ marginLeft: index === 0 ? "5px" : "0" }}
@@ -165,7 +199,7 @@ export default function CustomSlider() {
                 className="text-sm text-dealguru-blue font-bold"
                 href={`/${d}`}
               >
-                {d}
+                {d}-{index}
               </Link>
             </div>
           </div>
@@ -175,7 +209,7 @@ export default function CustomSlider() {
         onClick={scrollPrev}
         disabled={atStart}
         className={`absolute left-0 z-10 bg-dealguru-blue hidden md:block h-full text-white px-2 py-1 rounded-lg ${
-          atStart ? "opacity-0 cursor-not-allowed hidden " : ""
+          atStart ? "opacity-0 cursor-not-allowed" : ""
         }`}
         style={{ top: "50%", transform: "translateY(-50%)" }}
       >
@@ -185,7 +219,7 @@ export default function CustomSlider() {
         onClick={scrollNext}
         disabled={atEnd}
         className={`absolute right-0 z-10 bg-dealguru-blue hidden md:block h-full text-white px-2 py-1 rounded-lg ${
-          atEnd ? "opacity-0 cursor-not-allowed hidden" : ""
+          atEnd ? "opacity-0 cursor-not-allowed" : ""
         }`}
         style={{ top: "50%", transform: "translateY(-50%)" }}
       >
