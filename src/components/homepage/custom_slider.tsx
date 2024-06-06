@@ -80,18 +80,22 @@ export default function CustomSlider() {
     wheel: true,
     pagination: false,
     arrows: true,
-    speed: 1500,
+    speed: 500,
     perPage: 10,
     perMove: perMove,
+    drag: false,
+    breakpoints: {
+      1024: { arrows: false },
+    },
   };
 
   return (
-    <div className="">
+    <div className="mt-3">
       <Splide
         ref={splideRef}
         options={splideOptions}
         aria-label="Category Slider"
-        className="h-11 bg-dealguru-grey w-full"
+        className="h-11 bg-dealguru-grey w-full "
       >
         {category.map((d, index) => {
           console.log(`Rendering slide for category`); // Log inside the map function

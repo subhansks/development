@@ -145,3 +145,11 @@ html {
     scrollbar-width: none;
   }
 }
+@media screen and (max-width: 1024px) {
+  .splide__arrows--ltr {
+    display: none !important;
+  }
+  #splide01 {
+    height: 2.75rem;
+  }
+}
