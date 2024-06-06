@@ -22,24 +22,7 @@ const category = [
   "Parfymer",
   "Resor",
   "Ekonomi",
-  "Robotdammsugare",
-  "Kuponger",
-  "Jackor",
-  "Kläder",
-  "Kroppsvård",
-  "Trädgård",
-  "Parfymer",
-  "Resor",
-  "Ekonomi",
-  "Robotdammsugare",
-  "Kuponger",
-  "Jackor",
-  "Kläder",
-  "Kroppsvård",
-  "Trädgård",
-  "Parfymer",
-  "Resor",
-  "Ekonomi", // Add more categories as needed
+  // Add more categories as needed
 ];
 
 export default function CustomSlider() {
@@ -84,9 +67,6 @@ export default function CustomSlider() {
     perPage: 10,
     perMove: perMove,
     drag: true,
-    breakpoints: {
-      1024: { arrows: false },
-    },
   };
 
   return (
@@ -95,28 +75,25 @@ export default function CustomSlider() {
         ref={splideRef}
         options={splideOptions}
         aria-label="Category Slider"
-        className="h-11 bg-dealguru-grey w-full "
+        className="h-11 bg-dealguru-grey w-full"
       >
-        {category.map((d, index) => {
-          console.log(`Rendering slide for category`); // Log inside the map function
-          return (
-            <SplideSlide
-              key={index}
-              className="flex justify-center items-center h-2"
-            >
-              <div className="gap-3 flex justify-center items-center mr-4">
-                <div className="text-nowrap whitespace-nowrap w-fit px-[12px] py-[8px] rounded-lg bg-dealguru-white">
-                  <Link
-                    className="text-sm text-dealguru-blue font-bold"
-                    href={`/${d}`}
-                  >
-                    {d}-{index}
-                  </Link>
-                </div>
+        {category.map((d, index) => (
+          <SplideSlide
+            key={index}
+            className="flex justify-center items-center h-2"
+          >
+            <div className="gap-3 flex justify-center items-center mr-4">
+              <div className="text-nowrap whitespace-nowrap w-fit px-[12px] py-[8px] rounded-lg bg-dealguru-white">
+                <Link
+                  className="text-sm text-dealguru-blue font-bold"
+                  href={`/${d}`}
+                >
+                  {d}-{index}
+                </Link>
               </div>
-            </SplideSlide>
-          );
-        })}
+            </div>
+          </SplideSlide>
+        ))}
       </Splide>
     </div>
   );
