@@ -83,7 +83,7 @@ export default function CustomSlider() {
     speed: 500,
     perPage: 10,
     perMove: perMove,
-    drag: false,
+    drag: true,
     breakpoints: {
       1024: { arrows: false },
     },
