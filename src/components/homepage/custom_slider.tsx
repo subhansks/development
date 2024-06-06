@@ -90,7 +90,7 @@ export default function CustomSlider() {
             key={index}
             className="flex justify-center items-center h-2"
           >
-            <div className="gap-3 flex justify-center items-center mr-4">
+            <div className="gap-3 flex justify-center items-center mr-4 mnj">
               <div className="text-nowrap whitespace-nowrap w-fit px-[12px] py-[8px] rounded-lg bg-dealguru-white">
                 <Link
                   className="text-sm text-dealguru-blue font-bold"
