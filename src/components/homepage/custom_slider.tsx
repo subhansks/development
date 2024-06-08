@@ -1,96 +1,126 @@
 "use client";
-
 import { useRef, useState, useEffect } from "react";
+import styles from "./ScrollSlider.module.css";
 import Link from "next/link";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
-import "@splidejs/splide/css";
 
-const category = [
-  "Presenter",
-  "Gratisprover",
-  "Elektronik",
-  "TV",
-  "Grillar",
-  "Skor",
-  "Robotdammsugare",
-  "Kuponger",
-  "Jackor",
-  "Kläder",
-  "Kroppsvård",
-  "Trädgård",
-  "Parfymer",
-  "Resor",
-  "Ekonomi",
-  "Robotdammsugare",
-  "Kuponger",
-  "Jackor",
-  "Kläder",
-  "Kroppsvård",
-  "Trädgård",
-  "Parfymer",
-  "Resor",
-  "Ekonomi",
-  // Add more categories as needed
-];
+const ScrollSlider = () => {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [isPrevVisible, setIsPrevVisible] = useState(false);
+  const [isNextVisible, setIsNextVisible] = useState(true);
 
-export default function CustomSlider() {
-  const [perMove, setPerMove] = useState(10);
-  const splideRef = useRef<any>(null);
-
-  useEffect(() => {
-    const updatePerMove = () => {
-      if (splideRef.current && splideRef.current.splide) {
-        const splide = splideRef.current.splide;
-        const slides = splide.Components.Elements.slides;
-        const visibleSlides = slides.filter((slide: HTMLElement) =>
-          slide.classList.contains("is-visible")
-        ).length;
-        setPerMove(visibleSlides);
-      }
-    };
-
-    const splideInstance = splideRef.current && splideRef.current.splide;
-    if (splideInstance) {
-      splideInstance.on("moved", updatePerMove);
-      splideInstance.on("resized", updatePerMove);
-      updatePerMove();
+  const scrollTo = (direction: number) => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      const containerWidth = container.clientWidth;
+      container.scrollBy({
+        left: direction * containerWidth,
+        behavior: "smooth",
+      });
+      setTimeout(checkScrollPosition, 500); // Check position after scroll animation
     }
-
-    return () => {
-      if (splideInstance) {
-        splideInstance.off("moved", updatePerMove);
-        splideInstance.off("resized", updatePerMove);
-      }
-    };
-  }, []);
-
-  const splideOptions = {
-    height: "3rem",
-    focus: "start",
-    autoWidth: true,
-    wheel: true,
-    pagination: false,
-    arrows: true,
-    speed: 500,
-    perPage: 10,
-    perMove: perMove,
-    drag: true,
   };
 
+  const checkScrollPosition = () => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      const { scrollLeft, clientWidth, scrollWidth } = container;
+      setIsPrevVisible(scrollLeft > 0);
+      setIsNextVisible(scrollLeft + clientWidth < scrollWidth);
+    }
+  };
+
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (container) {
+      container.addEventListener("scroll", checkScrollPosition);
+      checkScrollPosition(); // Initial check
+
+      return () => {
+        container.removeEventListener("scroll", checkScrollPosition);
+      };
+    }
+  }, []);
+
+  const category = [
+    "Presenter",
+    "Gratisprover",
+    "Elektronik",
+    "TV",
+    "Grillar",
+    "Skor",
+    "Smartphones & Mobiltelefoner",
+    "Robotdammsugare",
+    "Kuponger",
+    "Jackor",
+    "Kläder",
+    "Kroppsvård",
+    "Trädgård",
+    "Parfymer",
+    "Resor",
+    "Ekonomi",
+    "Jackor",
+    "Kläder",
+    "Kroppsvård",
+    "Trädgård",
+    "Parfymer",
+    "Resor",
+    "Ekonomi",
+    "Presenter",
+    "Gratisprover",
+    "Elektronik",
+    "TV",
+    "Grillar",
+    "Skor",
+    "Smartphones & Mobiltelefoner",
+    "Robotdammsugare",
+    "Kuponger",
+    "Jackor",
+    "Kläder",
+    "Kroppsvård",
+    "Trädgård",
+    "Parfymer",
+    "Resor",
+    "Ekonomi",
+    "Jackor",
+    "Kläder",
+    "Kroppsvård",
+    "Trädgård",
+    "Parfymer",
+    "Resor",
+    "Ekonomi",
+    // Add more items if necessary
+  ];
+
   return (
-    <div className="mt-3">
-      <Splide
-        ref={splideRef}
-        options={splideOptions}
-        aria-label="Category Slider"
-        className="h-11 bg-dealguru-grey w-full"
-      >
-        {category.map((d, index) => (
-          <SplideSlide
-            key={index}
-            className="flex justify-center items-center h-2"
-          >
-            <div className="gap-3 flex justify-center items-center mr-4 mnj">
+    <div className="relative flex justify-center items-center">
+      {isPrevVisible && (
+        <button
+          id="prevButton"
+          type="button"
+          className="w-5 bg-dealguru-white rounded-l-lg h-10 hover:text-dealguru-white hover:bg-dealguru-blue absolute left-0"
+          onClick={() => scrollTo(-1)}
+        >
+          {"<"}
+        </button>
+      )}
+      {isNextVisible && (
+        <button
+          id="nextButton"
+          type="button"
+          className="w-5 bg-dealguru-white rounded-r-lg h-10 hover:text-dealguru-white hover:bg-dealguru-blue absolute right-0"
+          onClick={() => scrollTo(1)}
+        >
+          {">"}
+        </button>
+      )}
+      <div className="px-6 scrollBox-space--s-s scrollBox-space--fromW3-m-s scrollBox-space--fromMaxPageWidth-remove flex width--all-12 boxAlign-ai--all-c">
+        <div
+          id="scrollContainer"
+          ref={scrollContainerRef}
+          className="scrollBox-container overflow--avoid-vClip flex flex--grow-1 overflow--scrollX-raw hide-scrollbar carousel--isPrev carousel--isNext"
+        >
+          {category.map((d, index) => (
+            <div className="scrollBox-item space--v-1" key={index}>
               <div className="text-nowrap whitespace-nowrap w-fit px-[12px] py-[8px] rounded-lg bg-dealguru-white">
                 <Link
                   className="text-sm text-dealguru-blue font-bold"
@@ -100,9 +130,11 @@ export default function CustomSlider() {
                 </Link>
               </div>
             </div>
-          </SplideSlide>
-        ))}
-      </Splide>
+          ))}
+        </div>
+      </div>
     </div>
   );
-}
+};
+
+export default ScrollSlider;

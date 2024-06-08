@@ -1,5 +1,3 @@
-"use client";
-import React, { useRef } from "react";
 import Link from "next/link";
 import {
   Carousel,
@@ -8,8 +6,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../ui/carousel";
-
-const categories = [
+const category = [
   "Presenter",
   "Gratisprover",
   "Elektronik",
@@ -35,58 +32,31 @@ const categories = [
   "Ekonomi",
 ];
 
-export default function CategorySlider() {
-  const carouselRef = useRef<HTMLDivElement>(null);
-
-  const handleNext = () => {
-    if (carouselRef.current) {
-      carouselRef.current.scrollBy({
-        left: carouselRef.current.clientWidth,
-        behavior: "smooth",
-      });
-    }
-  };
-
-  const handlePrevious = () => {
-    if (carouselRef.current) {
-      carouselRef.current.scrollBy({
-        left: -carouselRef.current.clientWidth,
-        behavior: "smooth",
-      });
-    }
-  };
-
+export default function Category_slider() {
   return (
-    <Carousel className="mt-3 ml-12 mr-12">
-      <CarouselContent
-        ref={carouselRef}
-        className="ml-0 flex gap-3 overflow-hidden"
-      >
-        {categories.map((category, index) => (
-          <CarouselItem className="flex w-fit pl-0" key={index}>
-            <div className="text-nowrap whitespace-nowrap w-fit px-[12px] py-[8px] rounded-lg bg-dealguru-white">
+    <Carousel
+      opts={{
+        align: "start",
+      }}
+      className="mt-3 ml-12 mr-12"
+    >
+      <CarouselContent className="ml-0 flex gap-3 pl-0">
+        {category.map((d, index) => (
+          <CarouselItem className=" flex  w-fit  pl-0 " key={index}>
+            <div className=" text-nowrap  whitespace-nowrap w-fit px-[12px] py-[8px] rounded-lg bg-dealguru-white">
               <Link
                 className="text-sm text-dealguru-blue font-bold"
-                href={`/${category}`}
+                href={`/${d}`}
               >
-                {category}
+                {" "}
+                {d}
               </Link>
             </div>
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious
-        onClick={handlePrevious}
-        className="rounded-lg h-10 hover:text-dealguru-white hover:bg-dealguru-blue"
-      >
-        Previous
-      </CarouselPrevious>
-      <CarouselNext
-        onClick={handleNext}
-        className="rounded-lg h-10 hover:text-dealguru-white hover:bg-dealguru-blue"
-      >
-        Next
-      </CarouselNext>
+      <CarouselPrevious className="rounded-lg h-10 hover:text-dealguru-white hover:bg-dealguru-blue "></CarouselPrevious>
+      <CarouselNext className="rounded-lg h-10  hover:text-dealguru-white hover:bg-dealguru-blue disabled:hidden" />
     </Carousel>
   );
 }
