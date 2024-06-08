@@ -25,18 +25,22 @@ const ScrollSlider = () => {
     if (container) {
       const { scrollLeft, clientWidth, scrollWidth } = container;
       setIsPrevVisible(scrollLeft > 0);
-      setIsNextVisible(scrollLeft + clientWidth < scrollWidth);
+      setIsNextVisible(scrollLeft + clientWidth < scrollWidth - 1); // Adjusted to ensure accurate comparison
     }
   };
 
   useEffect(() => {
     const container = scrollContainerRef.current;
     if (container) {
-      container.addEventListener("scroll", checkScrollPosition);
+      const handleScroll = () => {
+        requestAnimationFrame(checkScrollPosition);
+      };
+
+      container.addEventListener("scroll", handleScroll);
       checkScrollPosition(); // Initial check
 
       return () => {
-        container.removeEventListener("scroll", checkScrollPosition);
+        container.removeEventListener("scroll", handleScroll);
       };
     }
   }, []);
@@ -65,17 +69,66 @@ const ScrollSlider = () => {
     "Parfymer",
     "Resor",
     "Ekonomi",
-    "Presenter",
-    "Gratisprover",
-    "Elektronik",
-    "TV",
-    "Grillar",
-    "Skor",
-    "Smartphones & Mobiltelefoner",
-    "Robotdammsugare",
-    "Kuponger",
+    "Kroppsvård",
+    "Trädgård",
+    "Parfymer",
+    "Resor",
+    "Ekonomi",
     "Jackor",
     "Kläder",
+    "Kroppsvård",
+    "Trädgård",
+    "Parfymer",
+    "Resor",
+    "Ekonomi",
+    "Kroppsvård",
+    "Trädgård",
+    "Parfymer",
+    "Resor",
+    "Ekonomi",
+    "Jackor",
+    "Kläder",
+    "Kroppsvård",
+    "Trädgård",
+    "Parfymer",
+    "Resor",
+    "Ekonomi",
+    "Trädgård",
+    "Parfymer",
+    "Resor",
+    "Ekonomi",
+    "Kroppsvård",
+    "Trädgård",
+    "Parfymer",
+    "Resor",
+    "Ekonomi",
+    "Jackor",
+    "Kläder",
+    "Kroppsvård",
+    "Trädgård",
+    "Parfymer",
+    "Resor",
+    "Ekonomi",
+    "Trädgård",
+    "Parfymer",
+    "Resor",
+    "Ekonomi",
+    "Kroppsvård",
+    "Trädgård",
+    "Parfymer",
+    "Resor",
+    "Ekonomi",
+    "Jackor",
+    "Kläder",
+    "Kroppsvård",
+    "Trädgård",
+    "Parfymer",
+    "Resor",
+    "Ekonomi",
+    "Trädgård",
+    "Parfymer",
+    "Resor",
+    "Ekonomi",
     "Kroppsvård",
     "Trädgård",
     "Parfymer",
@@ -97,7 +150,7 @@ const ScrollSlider = () => {
         <button
           id="prevButton"
           type="button"
-          className="w-5 bg-dealguru-white rounded-l-lg h-10 hover:text-dealguru-white hover:bg-dealguru-blue absolute left-0"
+          className="w-5 md:block hidden bg-dealguru-white rounded-l-lg h-10 hover:text-dealguru-white hover:bg-dealguru-blue absolute left-0"
           onClick={() => scrollTo(-1)}
         >
           {"<"}
@@ -107,13 +160,13 @@ const ScrollSlider = () => {
         <button
           id="nextButton"
           type="button"
-          className="w-5 bg-dealguru-white rounded-r-lg h-10 hover:text-dealguru-white hover:bg-dealguru-blue absolute right-0"
+          className="w-5 md:block hidden bg-dealguru-white rounded-r-lg h-10 hover:text-dealguru-white hover:bg-dealguru-blue absolute right-0"
           onClick={() => scrollTo(1)}
         >
           {">"}
         </button>
       )}
-      <div className="px-6 scrollBox-space--s-s scrollBox-space--fromW3-m-s scrollBox-space--fromMaxPageWidth-remove flex width--all-12 boxAlign-ai--all-c">
+      <div className="md:px-6 px-0 scrollBox-space--s-s scrollBox-space--fromW3-m-s scrollBox-space--fromMaxPageWidth-remove flex width--all-12 boxAlign-ai--all-c">
         <div
           id="scrollContainer"
           ref={scrollContainerRef}
