@@ -2,6 +2,7 @@
 import { useRef, useState, useEffect } from "react";
 import styles from "./ScrollSlider.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 const ScrollSlider = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -68,79 +69,6 @@ const ScrollSlider = () => {
     "Trädgård",
     "Parfymer",
     "Resor",
-    "Ekonomi",
-    "Kroppsvård",
-    "Trädgård",
-    "Parfymer",
-    "Resor",
-    "Ekonomi",
-    "Jackor",
-    "Kläder",
-    "Kroppsvård",
-    "Trädgård",
-    "Parfymer",
-    "Resor",
-    "Ekonomi",
-    "Kroppsvård",
-    "Trädgård",
-    "Parfymer",
-    "Resor",
-    "Ekonomi",
-    "Jackor",
-    "Kläder",
-    "Kroppsvård",
-    "Trädgård",
-    "Parfymer",
-    "Resor",
-    "Ekonomi",
-    "Trädgård",
-    "Parfymer",
-    "Resor",
-    "Ekonomi",
-    "Kroppsvård",
-    "Trädgård",
-    "Parfymer",
-    "Resor",
-    "Ekonomi",
-    "Jackor",
-    "Kläder",
-    "Kroppsvård",
-    "Trädgård",
-    "Parfymer",
-    "Resor",
-    "Ekonomi",
-    "Trädgård",
-    "Parfymer",
-    "Resor",
-    "Ekonomi",
-    "Kroppsvård",
-    "Trädgård",
-    "Parfymer",
-    "Resor",
-    "Ekonomi",
-    "Jackor",
-    "Kläder",
-    "Kroppsvård",
-    "Trädgård",
-    "Parfymer",
-    "Resor",
-    "Ekonomi",
-    "Trädgård",
-    "Parfymer",
-    "Resor",
-    "Ekonomi",
-    "Kroppsvård",
-    "Trädgård",
-    "Parfymer",
-    "Resor",
-    "Ekonomi",
-    "Jackor",
-    "Kläder",
-    "Kroppsvård",
-    "Trädgård",
-    "Parfymer",
-    "Resor",
-    "Ekonomi",
     // Add more items if necessary
   ];
 
@@ -153,7 +81,13 @@ const ScrollSlider = () => {
           className="w-5 md:block hidden bg-dealguru-white rounded-l-lg h-10 hover:text-dealguru-white hover:bg-dealguru-blue absolute left-0"
           onClick={() => scrollTo(-1)}
         >
-          {"<"}
+          <Image
+            src="/angle_right_slider.svg"
+            width={20}
+            height={20}
+            alt="angle Icon"
+            className="rotate-180 "
+          />
         </button>
       )}
       {isNextVisible && (
@@ -163,7 +97,13 @@ const ScrollSlider = () => {
           className="w-5 md:block hidden bg-dealguru-white rounded-r-lg h-10 hover:text-dealguru-white hover:bg-dealguru-blue absolute right-0"
           onClick={() => scrollTo(1)}
         >
-          {">"}
+          <Image
+            src="/angle_right_slider.svg"
+            width={20}
+            height={20}
+            alt="angle Icon"
+            className=" "
+          />
         </button>
       )}
       <div className="md:px-6 px-0 scrollBox-space--s-s scrollBox-space--fromW3-m-s scrollBox-space--fromMaxPageWidth-remove flex width--all-12 boxAlign-ai--all-c">
