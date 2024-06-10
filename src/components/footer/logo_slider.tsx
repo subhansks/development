@@ -36,7 +36,7 @@ function ImgGroup() {
     <>
       {images.map((image, index) => (
         <div className="scrollBox-item space--v-1" key={index}>
-          <div className="text-nowrap whitespace-nowrap w-fit px-[12px] py-[8px] rounded-lg bg-dealguru-white flex justify-center items-center">
+          <div className="text-nowrap max-w-24 max-h-9 whitespace-nowrap w-fit px-[12px] py-[8px] rounded-lg bg-dealguru-white flex justify-center items-center">
             <Link
               className="text-sm text-dealguru-blue font-bold"
               href={`/${image.src}`}
@@ -99,7 +99,7 @@ export default function LogoSlider() {
   }, []);
 
   return (
-    <div className="relative flex justify-center items-center  rounded-l-lg">
+    <div className="relative flex justify-center items-center">
       {isPrevVisible && (
         <button
           id="prevButton"
@@ -132,11 +132,11 @@ export default function LogoSlider() {
           />
         </button>
       )}
-      <div className="scrollBox-space--s-s scrollBox-space--fromW3-m-s scrollBox-space--fromMaxPageWidth-remove flex width--all-12 boxAlign-ai--all-c">
+      <div className=" scrollBox-space--s-s scrollBox-space--fromW3-m-s scrollBox-space--fromMaxPageWidth-remove flex width--all-12 boxAlign-ai--all-c">
         <div
           id="scrollContainer"
           ref={scrollContainerRef}
-          className="pl-8 bg-dealguru-white rounded-lg scrollBox-container justify-center items-center overflow--avoid-vClip flex flex--grow-1 overflow--scrollX-raw hide-scrollbar carousel--isPrev carousel--isNext"
+          className="py-5 bg-dealguru-white rounded-lg justify-center items-center scrollBox-container flex flex--grow-1 overflow--scrollX-raw hide-scrollbar carousel--isPrev carousel--isNext"
         >
           <ImgGroup />
         </div>
