@@ -1,6 +1,5 @@
 "use client";
 import { useRef, useState, useEffect } from "react";
-import styles from "./ScrollSlider.module.css";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -82,7 +81,7 @@ const ScrollSlider = () => {
           onClick={() => scrollTo(-1)}
         >
           <Image
-            src="/angle_right_slider.svg"
+            src="/assets/svg/angle_right_slider.svg"
             width={20}
             height={20}
             alt="angle Icon"
@@ -98,7 +97,7 @@ const ScrollSlider = () => {
           onClick={() => scrollTo(1)}
         >
           <Image
-            src="/angle_right_slider.svg"
+            src="/assets/svg/angle_right_slider.svg"
             width={20}
             height={20}
             alt="angle Icon"

@@ -5,30 +5,30 @@ import { useEffect, useRef, useState } from "react";
 
 // Array of image objects
 const images = [
-  { src: "/logos/Adlibris.png", alt: "Adlibris" },
-  { src: "/logos/ahlens.png", alt: "Ahlens" },
-  { src: "/logos/apotek.png", alt: "Apotek" },
-  { src: "/logos/apple.png", alt: "Apple" },
-  { src: "/logos/xxl.jpg", alt: "XXL" },
-  { src: "/logos/hotels.jpg", alt: "Hotels" },
-  { src: "/logos/Ikea.png", alt: "Ikea" },
-  { src: "/logos/Lindex.png", alt: "Lindex" },
-  { src: "/logos/xxl.jpg", alt: "XXL" },
-  { src: "/logos/hotels.jpg", alt: "Hotels" },
-  { src: "/logos/Ikea.png", alt: "Ikea" },
-  { src: "/logos/Lindex.png", alt: "Lindex" },
-  { src: "/logos/xxl.jpg", alt: "XXL" },
-  { src: "/logos/hotels.jpg", alt: "Hotels" },
-  { src: "/logos/Ikea.png", alt: "Ikea" },
-  { src: "/logos/Lindex.png", alt: "Lindex" },
-  { src: "/logos/xxl.jpg", alt: "XXL" },
-  { src: "/logos/hotels.jpg", alt: "Hotels" },
-  { src: "/logos/Ikea.png", alt: "Ikea" },
-  { src: "/logos/Lindex.png", alt: "Lindex" },
-  { src: "/logos/xxl.jpg", alt: "XXL" },
-  { src: "/logos/hotels.jpg", alt: "Hotels" },
-  { src: "/logos/Ikea.png", alt: "Ikea" },
-  { src: "/logos/Lindex.png", alt: "Lindex" },
+  { src: "/assets/images/logos/adidas.jpg", alt: "Adidas" },
+  { src: "/assets/images/logos/ahlens.png", alt: "Ahlens" },
+  { src: "/assets/images/logos/apotek.png", alt: "Apotek" },
+  { src: "/assets/images/logos/apple.png", alt: "Apple" },
+  { src: "/assets/images/logos/xxl.jpg", alt: "XXL" },
+  { src: "/assets/images/logos/hotels.jpg", alt: "Hotels" },
+  { src: "/assets/images/logos/Ikea.png", alt: "Ikea" },
+  { src: "/assets/images/logos/Lindex.png", alt: "Lindex" },
+  { src: "/assets/imageslogos/xxl.jpg", alt: "XXL" },
+  { src: "/assets/images/logos/hotels.jpg", alt: "Hotels" },
+  { src: "/assets/images/logos/Ikea.png", alt: "Ikea" },
+  { src: "/assets/images/logos/Lindex.png", alt: "Lindex" },
+  { src: "/assets/images/logos/xxl.jpg", alt: "XXL" },
+  { src: "/assets/images/logos/hotels.jpg", alt: "Hotels" },
+  { src: "/assets/images/logos/Ikea.png", alt: "Ikea" },
+  { src: "/assets/images/logos/Lindex.png", alt: "Lindex" },
+  { src: "/assets/images/logos/xxl.jpg", alt: "XXL" },
+  { src: "/assets/images/logos/hotels.jpg", alt: "Hotels" },
+  { src: "/assets/images/logos/Ikea.png", alt: "Ikea" },
+  { src: "/assets/images/logos/Lindex.png", alt: "Lindex" },
+  { src: "/assets/images/logos/xxl.jpg", alt: "XXL" },
+  { src: "/assets/images/logos/hotels.jpg", alt: "Hotels" },
+  { src: "/assets/images/logos/Ikea.png", alt: "Ikea" },
+  { src: "/assets/images/logos/Lindex.png", alt: "Lindex" },
 ];
 
 function ImgGroup() {
@@ -108,7 +108,7 @@ export default function LogoSlider() {
           onClick={() => scrollTo(-1)}
         >
           <Image
-            src="/angle_right_slider.svg"
+            src="/assets/svg/angle_right_slider.svg"
             width={20}
             height={20}
             alt="angle Icon"
@@ -124,7 +124,7 @@ export default function LogoSlider() {
           onClick={() => scrollTo(1)}
         >
           <Image
-            src="/angle_right_slider.svg"
+            src="/assets/svg/angle_right_slider.svg"
             width={20}
             height={20}
             alt="angle Icon"

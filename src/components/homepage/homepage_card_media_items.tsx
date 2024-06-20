@@ -18,7 +18,7 @@ const HomepageMediaCard = () => {
           <Image
             width={32}
             height={32}
-            src="/blank_avatar_new.png"
+            src="/assets/images/blank_avatar_new.png"
             className="w-8  h-8 rounded-full"
             alt="Avatar"
           />

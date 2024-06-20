@@ -9,7 +9,7 @@ const Fav_dealcard_component = () => {
         {/* Card Image */}
         <Link href={"#"}>
           <Image
-            src="/deal1.jpg"
+            src="/assets/images/deal1.jpg"
             width={65}
             height={65}
             alt=""
@@ -31,7 +31,7 @@ const Fav_dealcard_component = () => {
             <div className=" ">
               <div className="flex gap-1 ">
                 <Image
-                  src="/like.svg"
+                  src="/assets/svg/like.svg"
                   width={14}
                   height={14}
                   alt="like"

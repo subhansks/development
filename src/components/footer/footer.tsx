@@ -9,13 +9,13 @@ const Footer = () => {
   return (
     <>
       <div className="  bg-dealguru-white w-full   ">
-        <div className="grid gap-4 3xl:w-[1900px] 3xl:m-auto lg:gap-2 grid-cols-2 md:grid-cols-3  lg:grid-cols-4 bg-dealguru-white w-full 2xl:px-x-pad md:px-8 px-4 md_lg:grid-cols-6 mt-4 items-start py-8 text-sm ">
+        <div className="grid gap-4 3xl:w-[1900px] 3xl:m-auto lg:gap-2 grid-cols-2 md:grid-cols-3  lg:grid-cols-4 bg-dealguru-white w-full 2xl:px-x-pad md:px-8 px-4 md_lg:grid-cols-6 pt-12 items-start py-8 text-sm ">
           <div className=" col-span-2 w-full ">
             <Link href="/">
               <Image
                 width={160}
                 height={0}
-                src="/logo.png"
+                src="/assets/images/logo.png"
                 className="w-[160px]  h-full"
                 alt="Logo"
               />

@@ -10,7 +10,7 @@ const Ad_Section = () => {
           {/* Card Image */}
           <Link href={"#"}>
             <Image
-              src="/images/ad.jpg"
+              src="/assets/images/ad.jpg"
               width={300}
               height={400}
               alt=""

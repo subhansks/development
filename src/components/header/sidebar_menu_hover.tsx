@@ -23,7 +23,7 @@ function SecondNest({ title, sub_content }: any) {
         {title}
         {sub_content && (
           <Image
-            src="/angle_right_icon.svg"
+            src="/assets/svg/angle_right_icon.svg"
             width={20}
             height={20}
             alt="angle Icon"
@@ -33,7 +33,7 @@ function SecondNest({ title, sub_content }: any) {
       </Link>
       <div className="lg:hidden   w-[20%] flex justify-end pr-4 h-full ">
         <Image
-          src="/angle_right_icon.svg"
+          src="/assets/svg/angle_right_icon.svg"
           width={20}
           height={20}
           alt="angle Icon"
@@ -45,7 +45,7 @@ function SecondNest({ title, sub_content }: any) {
         <div className="py-6 absolute top-0 bottom-0 lg:left-[260px]  left-[0px] z-[110] bg-white flex flex-col lg:w-[260px] w-[100%]  border-l border-l-[1px]">
           <div className="px-4 flex gap-4" onClick={() => setTrigger_t(false)}>
             <Image
-              src="/menu_back_icon.svg"
+              src="/assets/svg/menu_back_icon.svg"
               width={20}
               height={20}
               alt="angle Icon"
@@ -92,7 +92,7 @@ const HoverCardNavigate = ({ title, sub_content }: any) => {
       >
         {title}
         <Image
-          src="/angle_right_icon.svg"
+          src="/assets/svg/angle_right_icon.svg"
           width={20}
           height={20}
           alt="angle Icon"
@@ -101,7 +101,7 @@ const HoverCardNavigate = ({ title, sub_content }: any) => {
       </Link>
       <div className="lg:hidden   w-[20%] flex justify-end pr-4 h-full ">
         <Image
-          src="/angle_right_icon.svg"
+          src="/assets/svg/angle_right_icon.svg"
           width={20}
           height={20}
           alt="angle Icon"
@@ -113,7 +113,7 @@ const HoverCardNavigate = ({ title, sub_content }: any) => {
         <div className="py-6 absolute top-0 bottom-0 lg:left-[260px] left-[0px] z-[100] bg-white flex flex-col lg:w-[260px] w-[100%]  border-l-[1px] ">
           <div className="px-4 flex gap-4" onClick={() => setTrigger(false)}>
             <Image
-              src="/menu_back_icon.svg"
+              src="/assets/svg/menu_back_icon.svg"
               width={20}
               height={20}
               alt="angle Icon"
