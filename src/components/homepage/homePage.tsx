@@ -1,6 +1,5 @@
 import React from "react";
 import HomeFilters from "./filters_home";
-import CarouselSize from "./slider";
 import HomeDealCard from "./home_deal_card";
 import CarouselSlider from "./slider";
 import LogoSlider from "../footer/logo_slider";

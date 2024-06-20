@@ -184,7 +184,7 @@ export function SheetDemo() {
             width={20}
             height={20}
             alt="Footer Nav Button"
-            src={"/footer_nav_button.svg"}
+            src={"/assets/svg/footer_nav_button.svg"}
             className="block lg:hidden"
           />
         ) : (
@@ -193,7 +193,7 @@ export function SheetDemo() {
               width={20}
               height={20}
               alt="Footer Nav Button"
-              src={"/main_menu_icon.svg"}
+              src={"/assets/svg/main_menu_icon.svg"}
               className=""
             />
           </div>
@@ -208,7 +208,7 @@ export function SheetDemo() {
                   alt="Notification Icon"
                   width="28"
                   height="28"
-                  src="/left_menu_store_icon.svg"
+                  src="/assets/svg/left_menu_store_icon.svg"
                 />
                 <span>Brands </span>
               </Link>
@@ -219,7 +219,7 @@ export function SheetDemo() {
                   alt="Notification Icon"
                   width="28"
                   height="28"
-                  src="/left_menu_store_icon.svg"
+                  src="/assets/svg/left_menu_store_icon.svg"
                 />
                 <span>Stores </span>
               </Link>
@@ -230,7 +230,7 @@ export function SheetDemo() {
                   alt="Notification Icon"
                   width="28"
                   height="28"
-                  src="/left_menu_message_icon.svg"
+                  src="/assets/svg/left_menu_message_icon.svg"
                 />
                 <span>Diskussioner </span>
               </Link>
@@ -241,7 +241,7 @@ export function SheetDemo() {
                   alt="Notification Icon"
                   width="28"
                   height="28"
-                  src="/left_menu_chat_icon.svg"
+                  src="/assets/svg/left_menu_chat_icon.svg"
                 />
                 <span>Köpguider </span>
               </Link>
@@ -255,7 +255,7 @@ export function SheetDemo() {
                 alt="Notification Icon"
                 width="28"
                 height="28"
-                src="/left_menu_dot_box.svg"
+                src="/assets/svg/left_menu_dot_box.svg"
               />
               <span className="font-bold block truncate  ps-3">
                 Alla kategorier

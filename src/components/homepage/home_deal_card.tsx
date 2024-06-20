@@ -11,7 +11,7 @@ const HomeDealCard = () => {
       <div className="  flex w-full  gap-2 md:gap-4  items-start md:h-full  ">
         <div className=" h-24  md:h-[230px] md:min-w-[230px] md:max-w-[230px] flex md:items-center items-start ">
           <Image
-            src="/dealcard1.png"
+            src="/assets/images/dealcard1.png"
             width={200}
             height={0}
             alt="placeholder"

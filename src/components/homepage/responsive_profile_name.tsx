@@ -7,7 +7,7 @@ const Responsive_profile_name = () => {
       <Image
         width={40}
         height={40}
-        src="/blank_avatar_new.png"
+        src="/assets/images/blank_avatar_new.png"
         className="w-[40px]  h-[40px] rounded-full p-1"
         alt="Avatar"
       />

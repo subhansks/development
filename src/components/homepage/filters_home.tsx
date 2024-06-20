@@ -1,5 +1,4 @@
 "use client";
-import useMediaQuery from "@/hooks/useMediaQuery";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -39,7 +38,7 @@ const HomeFilters = () => {
             <Image
               width={20}
               height={23}
-              src="/grid_icon.svg"
+              src="/assets/svg/grid_icon.svg"
               className=""
               alt="Avatar"
             />
@@ -51,7 +50,7 @@ const HomeFilters = () => {
             <Image
               width={20}
               height={23}
-              src="/list_icon_blue.svg"
+              src="/assets/svg/list_icon_blue.svg"
               className=""
               alt="Avatar"
             />

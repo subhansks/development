@@ -5,7 +5,7 @@ import React from "react";
 // Define an array of image objects
 const images = [
   {
-    src: "/images/sliderCard2.jpg",
+    src: "/assets/images/sliderCard2.jpg",
     alt: "Bebeconfort Soko Compact Stroller 0-15kg Shadow",
     price: "95 kr",
     originalPrice: "95 kr",
@@ -15,7 +15,7 @@ const images = [
     link: "/",
   },
   {
-    src: "/images/sliderCard2.jpg",
+    src: "/assets/images/sliderCard2.jpg",
     alt: "Bebeconfort Soko Compact Stroller 0-15kg Shadow",
     price: "95 kr",
     originalPrice: "95 kr",
@@ -25,7 +25,7 @@ const images = [
     link: "/",
   },
   {
-    src: "/images/sliderCard2.jpg",
+    src: "/assets/images/sliderCard2.jpg",
     alt: "Bebeconfort Soko Compact Stroller 0-15kg Shadow",
     price: "95 kr",
     originalPrice: "95 kr",
@@ -35,7 +35,7 @@ const images = [
     link: "/",
   },
   {
-    src: "/images/sliderCard2.jpg",
+    src: "/assets/images/sliderCard2.jpg",
     alt: "Bebeconfort Soko Compact Stroller 0-15kg Shadow",
     price: "95 kr",
     originalPrice: "95 kr",
@@ -45,7 +45,7 @@ const images = [
     link: "/",
   },
   {
-    src: "/images/sliderCard2.jpg",
+    src: "/assets/images/sliderCard2.jpg",
     alt: "Bebeconfort Soko Compact Stroller 0-15kg Shadow",
     price: "95 kr",
     originalPrice: "95 kr",
@@ -55,7 +55,7 @@ const images = [
     link: "/",
   },
   {
-    src: "/images/sliderCard2.jpg",
+    src: "/assets/images/sliderCard2.jpg",
     alt: "Bebeconfort Soko Compact Stroller 0-15kg Shadow",
     price: "95 kr",
     originalPrice: "95 kr",
@@ -65,7 +65,47 @@ const images = [
     link: "/",
   },
   {
-    src: "/images/sliderCard2.jpg",
+    src: "/assets/images/sliderCard2.jpg",
+    alt: "Bebeconfort Soko Compact Stroller 0-15kg Shadow",
+    price: "95 kr",
+    originalPrice: "95 kr",
+    store: "Amazon",
+    categories: ["Barnvagnar", "Barn"],
+    likes: 23,
+    link: "/",
+  },
+  {
+    src: "/assets/images/sliderCard2.jpg",
+    alt: "Bebeconfort Soko Compact Stroller 0-15kg Shadow",
+    price: "95 kr",
+    originalPrice: "95 kr",
+    store: "Amazon",
+    categories: ["Barnvagnar", "Barn"],
+    likes: 23,
+    link: "/",
+  },
+  {
+    src: "/assets/images/sliderCard2.jpg",
+    alt: "Bebeconfort Soko Compact Stroller 0-15kg Shadow",
+    price: "95 kr",
+    originalPrice: "95 kr",
+    store: "Amazon",
+    categories: ["Barnvagnar", "Barn"],
+    likes: 23,
+    link: "/",
+  },
+  {
+    src: "/assets/images/sliderCard2.jpg",
+    alt: "Bebeconfort Soko Compact Stroller 0-15kg Shadow",
+    price: "95 kr",
+    originalPrice: "95 kr",
+    store: "Amazon",
+    categories: ["Barnvagnar", "Barn"],
+    likes: 23,
+    link: "/",
+  },
+  {
+    src: "/assets/images/sliderCard2.jpg",
     alt: "Bebeconfort Soko Compact Stroller 0-15kg Shadow",
     price: "95 kr",
     originalPrice: "95 kr",
@@ -136,7 +176,7 @@ const ScrollCard = () => {
                 alt="heart"
                 width={20}
                 height={20}
-                src={"/heart.svg"}
+                src={"/assets/svg//heart.svg"}
               />
               <span className="text-sm text-gray-400">{image.likes}</span>
             </div>

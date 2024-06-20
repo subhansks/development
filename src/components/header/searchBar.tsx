@@ -65,7 +65,7 @@ const SearchBar = () => {
                     <Image
                       width={16}
                       height={0}
-                      src="/search_icon_search_bar.svg"
+                      src="/assets/svg/search_icon_search_bar.svg"
                       className="max-w-[160px] max-md:w-[120px]  h-full"
                       alt="Search icon"
                     />

@@ -22,7 +22,7 @@ const Footer_Menu = () => {
           width={20}
           height={20}
           alt="Search Icon"
-          src={"/footer_search_icon.svg"}
+          src={"/assets/svg/footer_search_icon.svg"}
         />
       </Link>
       <Link href={"/"}>
@@ -30,7 +30,7 @@ const Footer_Menu = () => {
           width={20}
           height={20}
           alt="Home Icon"
-          src={"/footer_home_icon.svg"}
+          src={"/assets/svg/footer_home_icon.svg"}
         />
       </Link>
       <Link href={"/"}>
@@ -38,7 +38,7 @@ const Footer_Menu = () => {
           width={20}
           height={20}
           alt="Book mark icon"
-          src={"/footer_bookmark_icon.svg"}
+          src={"/assets/svg/footer_bookmark_icon.svg"}
         />
       </Link>
       <Link href={"/"}>
@@ -46,7 +46,7 @@ const Footer_Menu = () => {
           width={20}
           height={20}
           alt="Profile Icon"
-          src={"/footer_profile_icon.svg"}
+          src={"/assets/svg/footer_profile_icon.svg"}
         />
       </Link>
     </div>
