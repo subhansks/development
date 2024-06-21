@@ -5,6 +5,7 @@ import Navbar from "@/components/header/navbar";
 import localFont from "next/font/local";
 import Footer from "@/components/footer/footer";
 import Footer_Menu from "@/components/footer/footer_menu";
+import { Wrapper } from "@/context/ContextAPI";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,7 +23,9 @@ export default function RootLayout({
     <html lang="sv">
       <body className={myFont.className}>
         <Navbar />
-        {children}
+        <Wrapper>
+          {children}
+        </Wrapper>
         <Footer />
         <Footer_Menu />
       </body>
