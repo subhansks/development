@@ -361,3 +361,7 @@ html {
 .space--v-1 {
   padding-bottom: 0.25em !important;
 }
+
+.showless > p:not(:first-child) {
+  display: none;
+}
