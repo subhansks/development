@@ -6,13 +6,13 @@ import React from 'react';
 import PageContent from '../components/layouts/PageContent';
 import DealsSidebar from '../components/layouts/DealsSidebar';
 
-const page = () => {
+const page = ({ params }: any) => {
     return (
         <section className='min-h-screen z-0 px-4  2xl:px-x-pad md:px-8 w-full mt-28 3xl:w-[1900px] 3xl:m-auto 3xl:mt-28'>
             <ScrollSlider />
 
             <div className=" grid grid-cols-1  md:gap-5  md:grid-cols-7   w-full mt-5">
-                <PageContent />
+                <PageContent params={params} />
 
                 <DealsSidebar />
             </div>
