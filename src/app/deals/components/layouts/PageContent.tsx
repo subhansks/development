@@ -11,6 +11,7 @@ import Image from "next/image";
 
 const PageContent = () => {
     const isGrid = false;
+
     return (
         <div className={`${isGrid ? "col-span-7" : "md_lg:col-span-5 md:col-span-7 "}  border-gray-300 rounded-lg`}>
             <div className="flex flex-col gap-2">
