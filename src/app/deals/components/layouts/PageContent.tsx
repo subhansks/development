@@ -19,7 +19,7 @@ const PageContent = () => {
                 <div className="bg-dealguru-white h-48 p-4 rounded-md" >
                     <div className="flex gap-2">
                         <div>
-                            <Image src={'/assets/images/login-right-side.png'} alt="something" height={72} width={72} />
+                            <Image src={'/assets/images/login-right-side.png'} alt="attribute" height={72} width={72} />
                         </div>
 
                         <div>
