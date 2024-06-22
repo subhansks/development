@@ -13,7 +13,7 @@ const HomepageMediaCard = () => {
           <p className="capitalize bord text-sm font-bold">greenely</p>
         </Link>
       </div>
-      <div className="flex flex-col-reverse md:flex-col ">
+      <div className="flex flex-col-reverse  ">
         <div className="flex gap-2   md:mt-0 mt-2 items-center  ">
           <Image
             width={32}
