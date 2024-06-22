@@ -7,7 +7,6 @@ import LogoSlider from "../footer/logo_slider";
 import { Context } from "@/context/ContextAPI";
 import HomeDealCard_Grid from "./HomeDealCard_Grid";
 
-
 const HomePageContent = () => {
   const { isGrid, setIsGrid } = useContext(Context);
 
@@ -56,6 +55,7 @@ const HomePageContent = () => {
         <div className={`mb-3 ${isGrid && 'hidden'}`}>
           <LogoSlider />
         </div>
+
       </div>
     </div>
   );

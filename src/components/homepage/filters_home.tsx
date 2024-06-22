@@ -7,8 +7,6 @@ const HomeFilters = ({ setIsGrid }: any) => {
   // const val = useMediaQuery("(min-width: 768px)");
   // console.log(val);
 
-
-
   return (
     <>
       <div className=" gap-2 hidden  md:flex ">
