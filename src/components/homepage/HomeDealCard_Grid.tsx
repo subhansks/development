@@ -7,7 +7,7 @@ import Comment_Bookmark from "./comment_bookmark";
 
 const HomeDealCard_Grid = () => {
     return (
-        <div className=" overflow-hidden  w-full min-h-[250px]  bg-white rounded-xl shadow-lg shadow-gray-200 p-4 flex flex-col gap-3 items-center">
+        <div className=" overflow-hidden  w-full min-h-[250px]  bg-white rounded-xl shadow-lg shadow-gray-200 p-4 flex flex-col gap-4 items-center">
             <div className="  flex w-full  gap-4   items-start   ">
                 <div className=" h-24 min-w-[80px]  flex items-start ">
                     <Image

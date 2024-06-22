@@ -53,10 +53,10 @@ const navItems = [
 
 export default function ProfilePage({ children }: ProfilePageProps) {
   const pathname = usePathname();
-  console.log("Current pathname:", pathname);
+  // console.log("Current pathname:", pathname);
 
   return (
-    <main className="grid grid-cols-5 gap-7 p-4 z-0 w-full mt-28 2xl:px-16 md:px-8 3xl:w-[1900px] 3xl:m-auto 3xl:mt-28">
+    <main className="grid grid-cols-5 gap-7 p-4 z-0 w-full mt-28 2xl:px-16 md:px-8 3xl:w-[1900px] 3xl:m-auto 3xl:mt-28 min-h-screen">
       <div className="col-span-1 bg-gray-100">
         <nav>
           <ul
