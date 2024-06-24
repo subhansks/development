@@ -5,7 +5,7 @@ import React from 'react';
 
 const Sidebar_card = () => {
     return (
-        <Link href={'/'} className='overflow-hidden flex flex-col gap-1 border border-zinc-300 p-2 rounded-md'>
+        <Link href={'/'} className='overflow-hidden flex flex-col gap-1'>
             <div className='flex gap-2 items-center'>
                 <Image
                     width={40}
@@ -14,7 +14,11 @@ const Sidebar_card = () => {
                     className="w-[40px]  h-[40px] rounded-full "
                     alt="Avatar"
                 />
-                <p className='text-xs '>dealKentGöran</p>
+                <div className='text-xs '>
+
+                    dealKentGöran
+
+                </div>
             </div>
             <div className=' space-y-2'>
                 <p className='truncate font-bold text-base'>Bästa deal du hittat ? Som du är nöjd med ?</p>

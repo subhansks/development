@@ -1,6 +1,6 @@
 "use client";
 import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 const data = [
     'På denna sida hittar du de senaste och bästa erbjudandena inom hemelektronik här på DealGuru. Det finns något för alla, oavsett om du vill skaffa ett nytt hemmabiosystem, smarta hushållsapparater eller något helt annat. Här hittar du en mängd olika deals som låter dig köpa elektronik till rabatt. Det gör att du kan klicka hem allt från den senaste TV-apparaten till ett ljudsystem eller en gamingdator.',
@@ -10,7 +10,7 @@ const data = [
 
 const About_Search_Tag = ({ name }: any) => {
     const [showMore, setShowMore] = useState(false);
-    useEffect(() => { }, []);
+
     return (
         <div className={`bg-dealguru-white  ${showMore ? 'h-fit' : ' h-32d '} p-4 rounded-md flex flex-col gap-4 overflow-hidden`} >
             <div className="flex gap-3">
