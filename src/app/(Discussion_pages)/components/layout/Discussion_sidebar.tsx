@@ -3,7 +3,7 @@ import Sidebar_card from '../common/Sidebar_card';
 
 const Discussion_sidebar = () => {
     return (
-        <section className='col-span-full xl:col-span-2 row-span-full xl:row-auto hidden md:flex h-fit '>
+        <section className='col-span-full md_lg:col-span-2 xl:col-span-3 row-span-full md_lg:row-auto hidden md:flex h-fit '>
             <div className='w-full bg-dealguru-white p-3 rounded-lg flex flex-col gap-6'>
                 <div className='bg-dealguru-grey rounded-lg px-3 py-3  w-full'>
                     <p className='font-open_sans text-sm font-medium text-gray-500'>Liknande till det här inlägget</p>
