@@ -20,7 +20,7 @@ const HomePageContent = () => {
         </div>
         <HomeFilters setIsGrid={setIsGrid} />
       </div>
-      <div className={`${isGrid ? "grid md:grid-cols-3 mb-4" : "grid grid-cols-1 md:grid-cols-1"} mt-3 gap-4`}>
+      <div className={`${isGrid ? "grid md:grid-cols-3 mb-4 " : "grid grid-cols-1 md:grid-cols-1"} mt-3 gap-5`}>
 
         {/* This section of upper content is limited until carousel of contents maybe 6 - 10 feed components  */}
         {isGrid ? (
