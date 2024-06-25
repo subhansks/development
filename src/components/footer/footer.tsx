@@ -4,6 +4,7 @@ import React from "react";
 
 import SocialIcons from "../homepage/social_icon";
 import LogoSlider from "./logo_slider";
+import ToTop from "./ToTop";
 
 const Footer = () => {
   return (
@@ -159,7 +160,7 @@ const Footer = () => {
           <div className="text-sm text-gray-600">
             Copyright 2023-2024 DealGuru AB
           </div>
-          {/* <Link href="#top">To top</Link> */}
+          <ToTop />
           <div className="flex gap-3">
             <Link className="text-sm text-gray-600" href="/">
               Privacy Policy
