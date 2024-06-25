@@ -28,6 +28,9 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        open_sans: "var(--open_sans)",
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

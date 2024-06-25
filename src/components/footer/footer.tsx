@@ -15,7 +15,7 @@ const Footer = () => {
               <Image
                 width={160}
                 height={0}
-                src="/assets/images/logo.png"
+                src="/assets/images/logos/logo.png"
                 className="w-[160px]  h-full"
                 alt="Logo"
               />

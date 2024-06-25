@@ -23,7 +23,7 @@ const Navbar = () => {
                 <Image
                   width={160}
                   height={0}
-                  src="/logo.png"
+                  src="/assets/images/logos/logo.png"
                   className="max-w-[160px] max-md:w-[120px]  h-full"
                   alt="Logo"
                 />
