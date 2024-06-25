@@ -369,13 +369,12 @@ html {
 
 .target_child > div:last-child {
   border: none !important;
-  min-height: 100px;
+  min-height: 132px;
 }
 
-.target_child > div > div,
-.target_child > div > div > p {
-  border: none !important;
-  min-height: 100px;
+.target_child > div > div {
+  border: none;
+  min-height: 132px;
 }
 
 .target_child > div:first-child {
