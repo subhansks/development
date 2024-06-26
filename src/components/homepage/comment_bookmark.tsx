@@ -11,7 +11,7 @@ const Comment_Bookmark = () => {
             alt="heart"
             width={20}
             height={20}
-            src={"/comment_icon.svg"}
+            src={"/assets/svg/comment_icon.svg"}
           />
           <span className=" text-sm text-gray-400">23</span>
         </div>
@@ -20,7 +20,7 @@ const Comment_Bookmark = () => {
             alt="heart"
             width={15}
             height={15}
-            src={"/bookmark.svg"}
+            src={"/assets/svg/bookmark.svg"}
             className="h-[18px] w-auto"
           />
         </div>

@@ -1,10 +1,9 @@
 "use client";
-import useMediaQuery from "@/hooks/useMediaQuery";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const HomeFilters = () => {
+const HomeFilters = ({ setIsGrid }: any) => {
   // const val = useMediaQuery("(min-width: 768px)");
   // console.log(val);
 
@@ -32,30 +31,32 @@ const HomeFilters = () => {
           </Link>
         </div>
         <div className="flex px-1 gap-1  bg-dealguru-white  rounded-md justify-center items-center h-11">
-          <Link
+          <div
             className=" button px-2 py-1 flex items-center justify-center h-9 border-r bg-dealguru-grey text-dealguru-blue"
-            href="/test"
+
+            onClick={() => setIsGrid(true)}
           >
             <Image
               width={20}
               height={23}
-              src="/grid_icon.svg"
+              src="/assets/svg/grid_icon.svg"
               className=""
               alt="Avatar"
             />
-          </Link>
-          <Link
+          </div>
+          <div
             className=" button px-2 py-1 h-9 border-r flex justify-center items-center bg-dealguru-grey text-[#5a5a5a]"
-            href="/test"
+
+            onClick={() => setIsGrid(false)}
           >
             <Image
               width={20}
               height={23}
-              src="/list_icon_blue.svg"
+              src="/assets/svg/list_icon_blue.svg"
               className=""
-              alt="Avatar"
+              alt="List View"
             />
-          </Link>
+          </div>
         </div>
       </div>
 
@@ -65,19 +66,19 @@ const HomeFilters = () => {
             className="flex  flex-grow items-center justify-center rounded-md button text-sm  px-3  h-9  border-r bg-dealguru-grey text-dealguru-blue"
             href="/test"
           >
-            Utvalda favoriter
+            Standard
           </Link>
           <Link
             className=" flex flex-grow  items-center justify-center rounded-md button px-3 h-9 text-sm  border-r bg-dealguru-white text-[#5a5a5a]"
             href="/test"
           >
-            Nya deals
+            Nyast
           </Link>
           <Link
             className=" flex flex-grow  items-center justify-center rounded-md button px-3 h-9 text-sm  border-r bg-dealguru-white text-[#5a5a5a]"
             href="/test"
           >
-            Högst betyg
+            Popularitet
           </Link>
         </div>
       </div>

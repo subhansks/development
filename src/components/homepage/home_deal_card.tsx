@@ -11,7 +11,7 @@ const HomeDealCard = () => {
       <div className="  flex w-full  gap-2 md:gap-4  items-start md:h-full  ">
         <div className=" h-24  md:h-[230px] md:min-w-[230px] md:max-w-[230px] flex md:items-center items-start ">
           <Image
-            src="/dealcard1.png"
+            src="/assets/images/dealcard1.png"
             width={200}
             height={0}
             alt="placeholder"
@@ -39,7 +39,7 @@ const HomeDealCard = () => {
               <Comment_Bookmark />
             </div>
             <Link
-              className="w-1/3 min-w-max bg-dealguru-blue text-white text-base font-[sans-serif] text-center md:py-2 md:px-6  rounded-md font-semibold text-nowrap"
+              className=" flex items-center justify-center w-1/3 min-w-max bg-dealguru-blue text-white text-[15px]   text-center md:py-2 md:px-[5rem] __className_01  rounded-md  text-nowrap"
               href=""
             >
               {" "}
@@ -55,7 +55,7 @@ const HomeDealCard = () => {
             <Comment_Bookmark />
           </div>
           <Link
-            className="flex-grow min-w-max bg-dealguru-blue text-white text-base text-center p-2 rounded-md font-semibold px-4 py-2 text-nowrap"
+            className="flex items-center justify-center flex-grow min-w-max bg-dealguru-blue text-white text-sm __className_01 text-center p-2 rounded-md px-4 py-2 text-nowrap"
             href=""
           >
             {" "}

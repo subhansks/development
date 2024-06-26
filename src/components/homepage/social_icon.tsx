@@ -10,7 +10,7 @@ const SocialIcons = () => {
         <Image
           width={26}
           height={26}
-          src="/social_icons/tiktok.svg"
+          src="/assets/svg/social_icons/tiktok.svg"
           className="w-6  h-6 rounded-full"
           alt="Avatar"
         />
@@ -20,7 +20,7 @@ const SocialIcons = () => {
         <Image
           width={26}
           height={26}
-          src="/social_icons/instagram.svg"
+          src="/assets/svg/social_icons/instagram.svg"
           className="w-6  h-6 rounded-full"
           alt="Avatar"
         />
@@ -29,7 +29,7 @@ const SocialIcons = () => {
         <Image
           width={26}
           height={26}
-          src="/social_icons/facebook.svg"
+          src="/assets/svg/social_icons/facebook.svg"
           className="w-6  h-6 rounded-full"
           alt="Avatar"
         />
