@@ -2,6 +2,8 @@
 import { useRef, useState, useEffect, ReactNode } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
+import clsx from "clsx";
 
 const UserProfileLinksSlider = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -85,7 +87,7 @@ const UserProfileLinksSlider = () => {
       href: "/logga-ut",
     },
   ];
-
+  const pathname = usePathname();
   return (
     <div className="relative flex justify-center items-center md:hidden">
       {isPrevVisible && (
@@ -128,12 +130,27 @@ const UserProfileLinksSlider = () => {
         >
           {navItems.map((item, index) => (
             <div className="scrollBox-item space--v-1" key={index}>
-              <div className="text-nowrap whitespace-nowrap w-fit px-[12px] py-[8px] rounded-lg bg-dealguru-white">
+              <div
+                className={clsx(
+                  "text-nowrap whitespace-nowrap w-fit px-[12px] py-[8px] rounded-lg bg-dealguru-white",
+                  {
+                    "text-dealguru-blue bg-dealguru-blue":
+                      pathname === item.href,
+                  }
+                )}
+              >
                 <Link
-                  className="text-sm text-dealguru-blue font-bold"
+                  className=" flex text-sm text-dealguru-blue font-bold"
                   href={item.href}
                 >
-                  {item.name}
+                  <Image
+                    src={pathname === item.href ? item.activeIcon : item.icon}
+                    alt={`${item.name} icon`}
+                    width={20}
+                    height={20}
+                    loading="lazy"
+                  />
+                  <span className="ml-2.5">{item.name}</span>
                 </Link>
               </div>
             </div>
