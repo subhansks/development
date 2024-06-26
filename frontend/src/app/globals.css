@@ -1,0 +1,383 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "__myFont";
+  font-weight: 600;
+  src: url(/public/font/OpenSans-Light.ttf) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "__myFont_Fallback";
+  src: local("Arial");
+  ascent-override: 99.49%;
+  descent-override: 34.74%;
+  line-gap-override: 0%;
+  size-adjust: 101.62%;
+}
+.__className_01 {
+  /* font-family: "__myFont", "__myFont_Fallback";
+   */
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-feature-settings: normal;
+  font-weight: 500;
+}
+.sidemenu_heading {
+  /* font-family: "__myFont", "__myFont_Fallback";
+   */
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-feature-settings: normal;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+:root {
+  --header-height: 96px;
+
+  --dealguru-blue: #0067e1;
+  --dealguru-white: #fff;
+  --dealguru-grey: rgb(245, 245, 245);
+
+  --dealguru-text-color: rgb(41, 41, 41);
+
+  --dealguru-background: #f7f7f7;
+
+  --dealguru-shadow: 0px 0px 10px 0px #272e610d;
+}
+body {
+  background-color: var(--dealguru-grey);
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer base {
+  .button {
+    background-color: var(--dealguru-blue);
+    color: var(--dealguru-white);
+    border-radius: 6px;
+    font-weight: 600;
+    border: 1px solid var(--dealguru-white);
+    transition: ease-out 100ms;
+  }
+  .button:hover {
+    background-color: white;
+    color: var(--dealguru-blue);
+    border-radius: 0.5rem;
+    border: 1px solid var(--dealguru-blue);
+  }
+  .widthImpo {
+    max-width: 50px !important;
+  }
+
+  .last_child_hr:last-child {
+    display: none;
+  }
+  .discount-code-button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-style: solid;
+    border-width: 8px;
+    border-color: #fff #fff #9cf #9cf;
+    border-radius: 0;
+    transition: ease-in-out border-width;
+    transition-duration: 0.2s;
+  }
+  .discount-code-button:hover:before {
+    border-width: 9px;
+  }
+
+  @media not all and (min-resolution: 0.001dpcm) {
+    @supports (-webkit-appearance: none) {
+      /* Safari Only CSS here */
+      .aligh_icon {
+        display: none;
+      }
+    }
+  }
+
+  .marquee-animation {
+    animation: marquee 80s linear infinite;
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(calc(-100%));
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  .hover_card {
+    top: 0 !important;
+    bottom: 0 !important;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+    scrollbar-width: none;
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+}
+
+/* only style for slider custom */
+@media (min-width: 30em) {
+  .overflow--avoid-vClip {
+    padding-top: 1px;
+    padding-bottom: 1px;
+  }
+}
+
+@media (max-width: 29.99687em) {
+  .overflow--avoid-vClip {
+    padding-top: 1px;
+    padding-bottom: 1px;
+  }
+}
+@media (max-width: 47.99688em) {
+  .overflow--avoid-vClip {
+    padding-top: 1px;
+    padding-bottom: 1px;
+  }
+}
+
+@media (min-width: 48em) {
+  .overflow--avoid-vClip {
+    padding-top: 1px;
+    padding-bottom: 1px;
+  }
+}
+
+@media (min-width: 64em) {
+  .overflow--fromW4-clamp-m-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    max-height: 48px;
+  }
+  .overflow--avoid-vClip {
+    padding-top: 1px;
+    padding-bottom: 1px;
+  }
+}
+@media (max-width: 63.99688em) {
+  .overflow--avoid-vClip {
+    padding-top: 1px;
+    padding-bottom: 1px;
+  }
+}
+@media (max-width: 71.87188em) {
+  .overflow--avoid-vClip {
+    padding-top: 1px;
+    padding-bottom: 1px;
+  }
+}
+
+@media (min-width: 80em) {
+  .scrollBox-space--fromMaxPageWidth-remove {
+    --scrollBox-container-space: 0;
+  }
+  .scrollBox-container-mode--listing {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .scrollBox-container-mode--listing .scrollBox-item {
+    padding-left: 0;
+    padding-right: calc(var(--scrollBox-item-space) * 2);
+  }
+  .scrollBox-container-mode--listing .scrollBox-item:last-child {
+    padding-right: 0;
+  }
+}
+@media (min-width: 48em) {
+  .scrollBox-space--fromW3-m-s {
+    --scrollBox-container-space: 0.75em;
+    --scrollBox-item-space-l: 0.25em;
+    --scrollBox-item-space-r: 0.25em;
+    --scrollBox-btn-space: 1em;
+  }
+  .scrollBox-space--fromW3-l-s {
+    --scrollBox-container-space: 1.25em;
+    --scrollBox-item-space-l: 0.25em;
+    --scrollBox-item-space-r: 0.25em;
+    --scrollBox-btn-space: 1.5em;
+  }
+  .scrollBox-space--fromW3-m-m {
+    --scrollBox-container-space: 0.5em;
+    --scrollBox-item-space-l: 0.5em;
+    --scrollBox-item-space-r: 0.5em;
+    --scrollBox-btn-space: 1em;
+  }
+  .scrollBox-space--fromW3-l-m {
+    --scrollBox-container-space: 1em;
+    --scrollBox-item-space-l: 0.5em;
+    --scrollBox-item-space-r: 0.5em;
+    --scrollBox-btn-space: 1.5em;
+  }
+  .scrollBox-container-mode--listing {
+    margin-left: -1em;
+    margin-right: -1em;
+  }
+}
+
+@media (min-width: 80em) {
+  .scrollBox-space--fromMaxPageWidth-remove {
+    --scrollBox-container-space: 0;
+  }
+  .scrollBox-container-mode--listing {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .scrollBox-container-mode--listing .scrollBox-item {
+    padding-left: 0;
+    padding-right: calc(var(--scrollBox-item-space) * 2);
+  }
+  .scrollBox-container-mode--listing .scrollBox-item:last-child {
+    padding-right: 0;
+  }
+}
+
+.scrollBox-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+.scrollBox-item {
+  flex: 0 0 auto;
+}
+
+.scrollBox-space--s-s {
+  --scrollBox-container-space: 0.25em;
+  --scrollBox-item-space-l: 0.25em;
+  --scrollBox-item-space-r: 0.25em;
+  --scrollBox-btn-space: 0.5em;
+}
+.flex {
+  display: flex;
+}
+.width--all-12 {
+  width: 100%;
+}
+
+.boxAlign-ai--all-c {
+  align-items: center;
+}
+
+.scrollBox-container,
+.snap {
+  scroll-behavior: smooth;
+}
+.scrollBox-container,
+.snap--xMandatory {
+  scroll-snap-type: x mandatory;
+}
+
+.overflow--avoid-vClip {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.flex--grow-1 {
+  flex-grow: 1;
+}
+
+.overflow--scrollX-raw {
+  overflow-x: auto;
+}
+
+.hide-scrollbar {
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-touch .carousel-list--air.carousel--isPrev:before {
+  background: linear-gradient(
+    -270deg,
+    hsla(0, 0%, 100%, 0.98) 10%,
+    hsla(0, 0%, 100%, 0)
+  );
+  left: 0;
+}
+.no-touch .carousel-list--air.carousel--isNext:after {
+  background: linear-gradient(
+    270deg,
+    hsla(0, 0%, 100%, 0.98) 10%,
+    hsla(0, 0%, 100%, 0)
+  );
+  right: 0;
+}
+.no-touch .carousel-list--air.carousel--isNext:after,
+.no-touch .carousel-list--air.carousel--isPrev:before {
+  content: "";
+  display: block;
+  pointer-events: none;
+  z-index: 1;
+  position: absolute;
+}
+
+.no-touch .carousel-list--air.carousel--isNext:after,
+.no-touch .carousel-list--air.carousel--isPrev:before {
+  top: 0;
+  bottom: 0;
+  width: 4em;
+}
+
+.scrollBox-item {
+  scroll-snap-align: start;
+}
+
+.scrollBox-item {
+  padding-left: var(--scrollBox-item-space-l);
+  padding-right: var(--scrollBox-item-space-r);
+}
+
+.space--v-1 {
+  padding-top: 0.25em !important;
+}
+.space--v-1 {
+  padding-bottom: 0.25em !important;
+}
+
+/* DON'T REMOVE IT */
+.showless > p:not(:first-child) {
+  display: none;
+}
+
+.target_child > div:last-child {
+  border: none !important;
+  min-height: 132px;
+}
+
+.target_child > div > div {
+  border: none;
+  min-height: 132px;
+}
+
+.target_child > div:first-child {
+  border: none !important;
+  border-top: 1px solid #e3e3e3 !important;
+}
