@@ -236,7 +236,7 @@ export function SheetDemo() {
               </Link>
             </li>
             <li>
-              <Link href={"/1"} className="flex py-3 gap-2 px-4">
+              <Link href={"/kopguider"} className="flex py-3 gap-2 px-4">
                 <Image
                   alt="Notification Icon"
                   width="28"
