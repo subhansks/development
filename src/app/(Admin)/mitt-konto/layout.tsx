@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
+import UserProfileLinksSlider from "@/components/homepage/UserProfile_mobile_links_slider";
 
 // Define the props type
 interface ProfilePageProps {
@@ -57,7 +58,8 @@ export default function ProfilePage({ children }: ProfilePageProps) {
 
   return (
     <main className="grid grid-cols-1 lg:grid-cols-5 lg:gap-7 p-4 z-0 w-full mt-28 2xl:px-16 md:px-8 3xl:w-[1900px] 3xl:m-auto 3xl:mt-28">
-      <div className="col-span-1 bg-gray-100">
+      <UserProfileLinksSlider />
+      <div className="col-span-1 bg-gray-100 hidden md:block">
         <nav>
           <ul
             className="list-none p-0 m-0"
