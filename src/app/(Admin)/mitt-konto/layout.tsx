@@ -54,7 +54,6 @@ const navItems = [
 
 export default function ProfilePage({ children }: ProfilePageProps) {
   const pathname = usePathname();
-
   console.log("Current pathname:", pathname);
 
   return (
