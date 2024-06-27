@@ -22,16 +22,16 @@ const ActionButtons = () => {
           className=" w-12 h-12"
         />
       </div>
-      <div className=" bg-dealguru-grey md:min-w-[40px] md:min-h-[40px] min-w-[35px] min-h-[35px] flex p-2  items-center justify-center rounded-md cursor-pointer">
-        <div className="flex gap-2">
+      <div className=" bg-dealguru-grey md:min-w-[40px] md:min-h-[40px] min-w-[35px] w-fit min-h-[35px]  flex px-2 py-1 items-center justify-center rounded-md cursor-pointer">
+        <div className="flex gap-2 items-center ">
           <Image
             alt="heart"
             width={18}
             height={18}
             src={"/assets/svg/comment_icon.svg"}
-            className=""
+            className=" w-3 h-3 md:h-4 md:w-4"
           />
-          <p>1</p>
+          <p className="md:text-base text-xs">1</p>
         </div>
       </div>
       <div className=" bg-dealguru-grey md:w-[40px] md:h-[40px] w-[35px] h-[35px] flex p-2 items-center justify-center rounded-md cursor-pointer">

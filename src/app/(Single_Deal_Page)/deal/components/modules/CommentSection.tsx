@@ -22,7 +22,7 @@ const CommentSection = (): JSX.Element => {
           alt="Avatar"
         />
         <input
-          className="h-full w-full border border-gray-200 rounded-full px-3 "
+          className="min-h-full w-full border border-gray-200 rounded-full px-3 "
           placeholder="Skirv din kommentar har..."
         />
       </div>

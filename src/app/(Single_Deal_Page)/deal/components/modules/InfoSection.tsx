@@ -5,7 +5,7 @@ import ActionButtons from "../common/ActionButtons";
 
 const InfoSection = () => {
   return (
-    <div className="bg-dealguru-white shadow-md shadow-gray-200 min-h-36 rounded-lg p-4 gap-2 flex flex-col">
+    <div className="bg-dealguru-white shadow-md shadow-gray-200 min-h-36 rounded-b-lg lg:rounded-lg p-4 gap-2 flex flex-col">
       <div className="flex gap-5">
         <h1 className="font-open_sans text-lg md:text-xl lg:text-2xl 2xl:text-3xl font-bold">
           50% rabatt på familjebiljett till LEGOLAND Billund
@@ -15,7 +15,7 @@ const InfoSection = () => {
       <div>
         <p className="text-lg font-bold">50 % rabatt</p>
       </div>
-      <div className="flex gap-4 justify-between">
+      <div className="flex md:flex-row flex-col gap-4 justify-between">
         <div className="flex gap-2 items-center">
           <Image
             width={35}

@@ -11,8 +11,8 @@ import React from "react";
 
 const BreadCrumbs = () => {
   return (
-    <Breadcrumb className="">
-      <BreadcrumbList>
+    <Breadcrumb>
+      <BreadcrumbList className="flex-nowrap">
         <BreadcrumbItem>
           <BreadcrumbLink className="text-base text-dealguru-blue " href="/">
             Hem
@@ -28,8 +28,8 @@ const BreadCrumbs = () => {
           </BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
-        <BreadcrumbItem>
-          <BreadcrumbPage className="text-base text-gray-500 ">
+        <BreadcrumbItem className="overflow-hidden">
+          <BreadcrumbPage className="text-base text-gray-500 truncate ">
             50% rabatt på familjebiljett till LEGOLAND Billund
           </BreadcrumbPage>
         </BreadcrumbItem>
