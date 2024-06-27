@@ -361,3 +361,23 @@ html {
 .space--v-1 {
   padding-bottom: 0.25em !important;
 }
+
+/* DON'T REMOVE IT */
+.showless > p:not(:first-child) {
+  display: none;
+}
+
+.target_child > div:last-child {
+  border: none !important;
+  min-height: 132px;
+}
+
+.target_child > div > div {
+  border: none;
+  min-height: 132px;
+}
+
+.target_child > div:first-child {
+  border: none !important;
+  border-top: 1px solid #e3e3e3 !important;
+}

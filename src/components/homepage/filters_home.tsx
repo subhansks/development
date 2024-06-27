@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const HomeFilters = () => {
+const HomeFilters = ({ setIsGrid }: any) => {
   // const val = useMediaQuery("(min-width: 768px)");
   // console.log(val);
 
@@ -31,9 +31,10 @@ const HomeFilters = () => {
           </Link>
         </div>
         <div className="flex px-1 gap-1  bg-dealguru-white  rounded-md justify-center items-center h-11">
-          <Link
+          <div
             className=" button px-2 py-1 flex items-center justify-center h-9 border-r bg-dealguru-grey text-dealguru-blue"
-            href="/test"
+
+            onClick={() => setIsGrid(true)}
           >
             <Image
               width={20}
@@ -42,19 +43,20 @@ const HomeFilters = () => {
               className=""
               alt="Avatar"
             />
-          </Link>
-          <Link
+          </div>
+          <div
             className=" button px-2 py-1 h-9 border-r flex justify-center items-center bg-dealguru-grey text-[#5a5a5a]"
-            href="/test"
+
+            onClick={() => setIsGrid(false)}
           >
             <Image
               width={20}
               height={23}
               src="/assets/svg/list_icon_blue.svg"
               className=""
-              alt="Avatar"
+              alt="List View"
             />
-          </Link>
+          </div>
         </div>
       </div>
 

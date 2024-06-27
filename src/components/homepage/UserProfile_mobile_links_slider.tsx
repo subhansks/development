@@ -1,9 +1,11 @@
 "use client";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, ReactNode } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
+import clsx from "clsx";
 
-const ScrollSlider = () => {
+const UserProfileLinksSlider = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [isPrevVisible, setIsPrevVisible] = useState(false);
   const [isNextVisible, setIsNextVisible] = useState(true);
@@ -44,35 +46,50 @@ const ScrollSlider = () => {
       };
     }
   }, []);
-
-  const category = [
-    "Presenter",
-    "Gratisprover",
-    "Elektronik",
-    "TV",
-    "Grillar",
-    "Skor",
-    "Smartphones & Mobiltelefoner",
-    "Robotdammsugare",
-    "Kuponger",
-    "Jackor",
-    "Kläder",
-    "Kroppsvård",
-    "Trädgård",
-    "Parfymer",
-    "Resor",
-    "Ekonomi",
-    "Jackor",
-    "Kläder",
-    "Kroppsvård",
-    "Trädgård",
-    "Parfymer",
-    "Resor",
-    // Add more items if necessary
+  interface UserProfileLinksSliderProps {
+    children: ReactNode;
+  }
+  const navItems = [
+    {
+      name: "Mitt konto",
+      icon: "/assets/svg/profile/1.svg",
+      activeIcon: "/assets/svg/profile/active-1.svg",
+      href: "/mitt-konto",
+    },
+    {
+      name: "Mina deals",
+      icon: "/assets/svg/profile/2.svg",
+      activeIcon: "/assets/svg/profile/active-2.svg",
+      href: "/mitt-konto/mina-deals",
+    },
+    {
+      name: "Sparade erbjudanden",
+      icon: "/assets/svg/profile/3.svg",
+      activeIcon: "/assets/svg/profile/active-3.svg",
+      href: "/mitt-konto/sparade-erbjudanden",
+    },
+    {
+      name: "Mina diskussioner",
+      icon: "/assets/svg/profile/4.svg",
+      activeIcon: "/assets/svg/profile/active-4.svg",
+      href: "/mitt-konto/mina-diskussioner",
+    },
+    {
+      name: "Inställningar",
+      icon: "/assets/svg/profile/5.svg",
+      activeIcon: "/assets/svg/profile/active-5.svg",
+      href: "/mitt-konto/installningar",
+    },
+    {
+      name: "Logga ut",
+      icon: "/assets/svg/profile/6.svg",
+      activeIcon: "/assets/svg/profile/active-6.svg",
+      href: "/logga-ut",
+    },
   ];
-
+  const pathname = usePathname();
   return (
-    <div className="relative flex justify-center items-center">
+    <div className="relative flex justify-center items-center md:hidden">
       {isPrevVisible && (
         <button
           id="prevButton"
@@ -111,14 +128,29 @@ const ScrollSlider = () => {
           ref={scrollContainerRef}
           className="scrollBox-container overflow--avoid-vClip flex flex--grow-1 overflow--scrollX-raw hide-scrollbar carousel--isPrev carousel--isNext"
         >
-          {category.map((d, index) => (
+          {navItems.map((item, index) => (
             <div className="scrollBox-item space--v-1" key={index}>
-              <div className="text-nowrap whitespace-nowrap w-fit px-[12px] py-[8px] rounded-lg bg-dealguru-white">
+              <div
+                className={clsx(
+                  "text-nowrap whitespace-nowrap w-fit px-[12px] py-[8px] rounded-lg bg-dealguru-white",
+                  {
+                    "text-dealguru-blue bg-dealguru-blue":
+                      pathname === item.href,
+                  }
+                )}
+              >
                 <Link
-                  className="text-sm text-dealguru-blue font-bold"
-                  href={`/deals/${d}`}
+                  className=" flex text-sm text-dealguru-blue font-bold"
+                  href={item.href}
                 >
-                  {d}
+                  <Image
+                    src={pathname === item.href ? item.activeIcon : item.icon}
+                    alt={`${item.name} icon`}
+                    width={20}
+                    height={20}
+                    loading="lazy"
+                  />
+                  <span className="ml-2.5">{item.name}</span>
                 </Link>
               </div>
             </div>
@@ -129,4 +161,4 @@ const ScrollSlider = () => {
   );
 };
 
-export default ScrollSlider;
+export default UserProfileLinksSlider;
