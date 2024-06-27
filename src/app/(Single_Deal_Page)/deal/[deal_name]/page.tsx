@@ -11,7 +11,9 @@ const page = ({ params }: any) => {
       <div className="mt-3">
         <BreadCrumbs />
       </div>
-      <div className="mt-3 grid grid-cols-9 mb-14 gap-5 ">
+
+      {/* Above large screens */}
+      <div className="mt-3 lg:grid hidden lg:grid-cols-9 mb-14 gap-5 ">
         <LeftDealSection />
         <RightDealDetailSection />
       </div>
