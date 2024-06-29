@@ -381,3 +381,12 @@ html {
   border: none !important;
   border-top: 1px solid #e3e3e3 !important;
 }
+
+@media (max-width: 1024px) {
+  .dealguru-bottom-cards-main {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+.dealguru-bottom-cards-main {
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
