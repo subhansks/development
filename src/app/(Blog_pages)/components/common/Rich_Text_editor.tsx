@@ -18,8 +18,8 @@ const Rich_Text_editor = () => {
     setEditorContent(content);
   };
   return (
-    <div className="flex flex-col gap-3">
-      <h1 className="font-bold text-xl">Vad tycker du?</h1>
+    <div className="flex flex-col gap-3 mt-8">
+      <p className="text-gray-500 text-base mt-6 mb-4">Vad tycker du?</p>
       <ReactQuill
         className="bg-dealguru-white flex flex-col-reverse border-none shadow-md shadow-gray-200 rounded-lg border-white target_child "
         value={editorContent}

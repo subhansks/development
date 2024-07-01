@@ -1,7 +1,7 @@
 import React from 'react';
 import Main_Kopguider_card from '../common/Main_Kopguider_card';
 
-const Discussion_Section_Structure = ({ details }: any | undefined) => {
+const Kopguider_Section_Structure = ({ details }: any | undefined) => {
 
     return (
         <div className='grid gap-6 dealguru-bottom-cards-main'>
@@ -12,4 +12,4 @@ const Discussion_Section_Structure = ({ details }: any | undefined) => {
     );
 };
 
-export default Discussion_Section_Structure;
+export default Kopguider_Section_Structure;
