@@ -10,7 +10,12 @@ import HardBreak from "@tiptap/extension-hard-break";
 import { EditorContent, useEditor } from "@tiptap/react";
 import React, { useEffect, useState } from "react";
 
-import { Image as ImageIcon, Link as LinkIcon, Quote } from "lucide-react";
+import {
+  Image as ImageIcon,
+  Link as LinkIcon,
+  Quote,
+  SendHorizontal,
+} from "lucide-react";
 import {
   Menubar,
   MenubarContent,
@@ -114,176 +119,188 @@ const Tiptap = () => {
           editor={editor}
         />
         <div className="flex justify-start items-center  gap-2 h-fit   ">
-          <div className="flex bg-dealguru-white gap-2 px-4 py-2 border-t border-t-gray-300 rounded-b-lg w-full">
-            <button
-              className="w-fit p-2 h-full min-w-11 min-h-11 rounded-md flex justify-center items-center border border-slate-600  "
-              onClick={() => editor.chain().focus().toggleBlockquote().run()}
-              // className={editor.isActive("blockquote") ? "is-active" : ""}
-            >
-              <Quote width={24} height={24} />
+          <div className="flex  gap-3 bg-dealguru-white justify-between px-4 py-2 border-t border-t-gray-300 rounded-b-lg w-full">
+            <div className="w-full flex gap-2">
+              <button
+                className="w-fit p-2 h-full min-w-11 min-h-11 rounded-md flex justify-center items-center border border-slate-600  "
+                onClick={() => editor.chain().focus().toggleBlockquote().run()}
+                // className={editor.isActive("blockquote") ? "is-active" : ""}
+              >
+                <Quote width={24} height={24} />
+              </button>
+
+              <Menubar>
+                <MenubarMenu>
+                  <MenubarTrigger className="w-fit h-full min-w-11 min-h-11 p-2 rounded-md  flex justify-center items-center border border-slate-600  ">
+                    😀
+                  </MenubarTrigger>
+                  <MenubarContent className=" before:bg-slate-900 bg-dealguru-white p-2 shadow-2xl border-gray-300 border rounded-md mt-1 mb-1">
+                    <div className="p-2 h-[200px] flex flex-col gap-4 ">
+                      <div>
+                        <p className="font-bold text-lg">Select Emoji</p>
+                      </div>
+                      <div className=" grid grid-cols-4 h-[80%] overflow-y-scroll  mt-1 gap-4 pr-2">
+                        {Emojis.map((d) => (
+                          <p
+                            className="w-fit cursor-pointer"
+                            onClick={() =>
+                              editor.chain().focus().insertContent(d).run()
+                            }
+                          >
+                            {d}
+                          </p>
+                        ))}
+                      </div>
+                    </div>
+                  </MenubarContent>
+                </MenubarMenu>
+              </Menubar>
+              {/* </button> */}
+
+              {/* <button id=""> */}
+              <Menubar>
+                <MenubarMenu>
+                  <MenubarTrigger className="w-fit h-full min-w-11 min-h-11  rounded-md p-2  flex justify-center items-center border border-slate-600  ">
+                    <ImageIcon width={24} height={24} />
+                  </MenubarTrigger>
+                  <MenubarContent className="bg-dealguru-white p-2 w-[400px] shadow-2xl border-gray-300 border rounded-md mt-1 mb-1">
+                    <div className="p-2 h-fit min-w-full  flex flex-col gap-4 ">
+                      <div className="flex gap-2 items-center">
+                        <ImageIcon width={18} height={18} />
+                        <p className="font-bold text-lg"> Insert image</p>
+                      </div>
+                      <div className="  h-fit w-full   overflow-scroll no-scrollbar mt-1 flex flex-col gap-4">
+                        <div className=" flex w-full justify-center ">
+                          <UploadImage
+                            setImageData={setImage}
+                            imageData={image}
+                          />
+                        </div>
+                        <div className="flex flex-col  gap-2 mt-8">
+                          <p className="font-bold text-sm text-gray-500">
+                            {" "}
+                            Image from URL
+                          </p>
+                          <input
+                            type="url"
+                            onChange={(e) => {
+                              if (url.url_Text === "") setImage(e.target.value);
+                              if (image !== "") {
+                                setImage("");
+                                setImage(e.target.value);
+                                console.log(e.target.value);
+                              }
+                            }}
+                            className="w-full border focus-visible:border-red-300 border-zinc-700 rounded-md p-2"
+                          />
+                        </div>
+                        <div>
+                          <button
+                            onClick={addImage}
+                            className="w-full font-semibold font-open_sans text-dealguru-white text-sm bg-dealguru-blue  border-dealguru-blue hover:text-dealguru-blue hover:bg-dealguru-white   border rounded-md p-2 transition-all"
+                          >
+                            Add Image
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </MenubarContent>
+                </MenubarMenu>
+              </Menubar>
+
+              {/* Link */}
+              <Menubar>
+                <MenubarMenu>
+                  <MenubarTrigger className="w-fit  rounded-md p-2  h-full min-w-11 min-h-11 flex justify-center items-center border border-slate-600  ">
+                    <LinkIcon width={18} height={18} />
+                  </MenubarTrigger>
+                  <MenubarContent className="bg-dealguru-white p-2 w-[400px] shadow-2xl border-gray-300 border rounded-md mt-1 mb-1">
+                    <div className="p-2 h-fit min-w-full  flex flex-col gap-4 ">
+                      <div className="flex gap-2 items-center">
+                        <LinkIcon width={18} height={18} />
+
+                        <p className="font-bold text-lg"> Link</p>
+                      </div>
+
+                      <div className="  h-fit w-full   overflow-scroll no-scrollbar mt-1 flex flex-col gap-4">
+                        <div className="flex flex-col  gap-2 ">
+                          <p className="font-bold text-sm text-gray-500">
+                            {" "}
+                            URL
+                          </p>
+                          <input
+                            type="url"
+                            onChange={(e) => {
+                              if (url.url_Link === "") {
+                                setUrl({
+                                  url_Link: e.target.value,
+                                  url_Text: url.url_Text,
+                                });
+                              }
+                              if (url.url_Link !== "") {
+                                setUrl({
+                                  url_Link: "",
+                                  url_Text: url.url_Text,
+                                });
+                                setUrl({
+                                  url_Link: e.target.value,
+                                  url_Text: url.url_Text,
+                                });
+                                console.log(e.target.value);
+                              }
+                            }}
+                            className="w-full border focus-visible:border-red-300 border-zinc-700 rounded-md p-2"
+                          />
+                        </div>
+                        <div className="flex flex-col  gap-2 ">
+                          <p className="font-bold text-sm text-gray-500">
+                            {" "}
+                            Text
+                          </p>
+                          <input
+                            type="text"
+                            onChange={(e) => {
+                              if (url.url_Text === "") {
+                                setUrl({
+                                  url_Link: url.url_Link,
+                                  url_Text: e.target.value,
+                                });
+                              }
+                              if (url.url_Text !== "") {
+                                setUrl({
+                                  url_Link: url.url_Link,
+                                  url_Text: "",
+                                });
+                                setUrl({
+                                  url_Link: url.url_Link,
+                                  url_Text: e.target.value,
+                                });
+                                console.log(e.target.value);
+                              }
+                            }}
+                            className="w-full border focus-visible:border-red-300 border-zinc-700 rounded-md p-2"
+                          />
+                        </div>
+                        <div>
+                          <button
+                            onClick={addLink}
+                            type="submit"
+                            className="w-full font-semibold font-open_sans text-dealguru-white text-sm bg-dealguru-blue  border-dealguru-blue hover:text-dealguru-blue hover:bg-dealguru-white   border rounded-md p-2 transition-all"
+                          >
+                            Add Link
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </MenubarContent>
+                </MenubarMenu>
+              </Menubar>
+            </div>
+            {/* </button> */}
+            <button className="md:min-w-36 flex gap-2 p-2 h-11 md:rounded-md justify-center items-center rounded-full border border-dealguru-black bg-dealguru-black text-dealguru-white font-open_sans font-semibold">
+              <SendHorizontal className="" />
+              <p className="md:block hidden">Submit</p>
             </button>
-
-            <Menubar>
-              <MenubarMenu>
-                <MenubarTrigger className="w-fit h-full min-w-11 min-h-11 p-2 rounded-md  flex justify-center items-center border border-slate-600  ">
-                  😀
-                </MenubarTrigger>
-                <MenubarContent className=" before:bg-slate-900 bg-dealguru-white p-2 shadow-2xl border-gray-300 border rounded-md mt-1 mb-1">
-                  <div className="p-2 h-[200px] flex flex-col gap-4 ">
-                    <div>
-                      <p className="font-bold text-lg">Select Emoji</p>
-                    </div>
-                    <div className=" grid grid-cols-4 h-[80%] overflow-y-scroll  mt-1 gap-4 pr-2">
-                      {Emojis.map((d) => (
-                        <p
-                          className="w-fit cursor-pointer"
-                          onClick={() =>
-                            editor.chain().focus().insertContent(d).run()
-                          }
-                        >
-                          {d}
-                        </p>
-                      ))}
-                    </div>
-                  </div>
-                </MenubarContent>
-              </MenubarMenu>
-            </Menubar>
-            {/* </button> */}
-
-            {/* <button id=""> */}
-            <Menubar>
-              <MenubarMenu>
-                <MenubarTrigger className="w-fit h-full min-w-11 min-h-11  rounded-md p-2  flex justify-center items-center border border-slate-600  ">
-                  <ImageIcon width={24} height={24} />
-                </MenubarTrigger>
-                <MenubarContent className="bg-dealguru-white p-2 w-[400px] shadow-2xl border-gray-300 border rounded-md mt-1 mb-1">
-                  <div className="p-2 h-fit min-w-full  flex flex-col gap-4 ">
-                    <div className="flex gap-2 items-center">
-                      <ImageIcon width={18} height={18} />
-                      <p className="font-bold text-lg"> Insert image</p>
-                    </div>
-                    <div className="  h-fit w-full   overflow-scroll no-scrollbar mt-1 flex flex-col gap-4">
-                      <div className=" flex w-full justify-center ">
-                        <UploadImage
-                          setImageData={setImage}
-                          imageData={image}
-                        />
-                      </div>
-                      <div className="flex flex-col  gap-2 mt-8">
-                        <p className="font-bold text-sm text-gray-500">
-                          {" "}
-                          Image from URL
-                        </p>
-                        <input
-                          type="url"
-                          onChange={(e) => {
-                            if (url.url_Text === "") setImage(e.target.value);
-                            if (image !== "") {
-                              setImage("");
-                              setImage(e.target.value);
-                              console.log(e.target.value);
-                            }
-                          }}
-                          className="w-full border focus-visible:border-red-300 border-zinc-700 rounded-md p-2"
-                        />
-                      </div>
-                      <div>
-                        <button
-                          onClick={addImage}
-                          className="w-full font-semibold font-open_sans text-dealguru-white text-sm bg-dealguru-blue  border-dealguru-blue hover:text-dealguru-blue hover:bg-dealguru-white   border rounded-md p-2 transition-all"
-                        >
-                          Add Image
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </MenubarContent>
-              </MenubarMenu>
-            </Menubar>
-
-            {/* Link */}
-            <Menubar>
-              <MenubarMenu>
-                <MenubarTrigger className="w-fit  rounded-md p-2  h-full min-w-11 min-h-11 flex justify-center items-center border border-slate-600  ">
-                  <LinkIcon width={18} height={18} />
-                </MenubarTrigger>
-                <MenubarContent className="bg-dealguru-white p-2 w-[400px] shadow-2xl border-gray-300 border rounded-md mt-1 mb-1">
-                  <div className="p-2 h-fit min-w-full  flex flex-col gap-4 ">
-                    <div className="flex gap-2 items-center">
-                      <LinkIcon width={18} height={18} />
-
-                      <p className="font-bold text-lg"> Link</p>
-                    </div>
-
-                    <div className="  h-fit w-full   overflow-scroll no-scrollbar mt-1 flex flex-col gap-4">
-                      <div className="flex flex-col  gap-2 ">
-                        <p className="font-bold text-sm text-gray-500"> URL</p>
-                        <input
-                          type="url"
-                          onChange={(e) => {
-                            if (url.url_Link === "") {
-                              setUrl({
-                                url_Link: e.target.value,
-                                url_Text: url.url_Text,
-                              });
-                            }
-                            if (url.url_Link !== "") {
-                              setUrl({
-                                url_Link: "",
-                                url_Text: url.url_Text,
-                              });
-                              setUrl({
-                                url_Link: e.target.value,
-                                url_Text: url.url_Text,
-                              });
-                              console.log(e.target.value);
-                            }
-                          }}
-                          className="w-full border focus-visible:border-red-300 border-zinc-700 rounded-md p-2"
-                        />
-                      </div>
-                      <div className="flex flex-col  gap-2 ">
-                        <p className="font-bold text-sm text-gray-500"> Text</p>
-                        <input
-                          type="text"
-                          onChange={(e) => {
-                            if (url.url_Text === "") {
-                              setUrl({
-                                url_Link: url.url_Link,
-                                url_Text: e.target.value,
-                              });
-                            }
-                            if (url.url_Text !== "") {
-                              setUrl({
-                                url_Link: url.url_Link,
-                                url_Text: "",
-                              });
-                              setUrl({
-                                url_Link: url.url_Link,
-                                url_Text: e.target.value,
-                              });
-                              console.log(e.target.value);
-                            }
-                          }}
-                          className="w-full border focus-visible:border-red-300 border-zinc-700 rounded-md p-2"
-                        />
-                      </div>
-                      <div>
-                        <button
-                          onClick={addLink}
-                          type="submit"
-                          className="w-full font-semibold font-open_sans text-dealguru-white text-sm bg-dealguru-blue  border-dealguru-blue hover:text-dealguru-blue hover:bg-dealguru-white   border rounded-md p-2 transition-all"
-                        >
-                          Add Link
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </MenubarContent>
-              </MenubarMenu>
-            </Menubar>
-            {/* </button> */}
           </div>
         </div>
       </div>
