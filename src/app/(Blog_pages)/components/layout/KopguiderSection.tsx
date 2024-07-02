@@ -17,10 +17,10 @@ const KopguiderSection = ({ details }: any | undefined) => {
             </div>
 
             <TabsContent value='newest' className="w-full">
-                <Kopguider_Section_Structure details={details} />
-                <button className="border-dealguru-blue border rounded-lg py-2 px-4 mt-8 w-full bg-transparent font-light text-dealguru-blue">
-                  Visa fler
-                </button>
+              <Kopguider_Section_Structure details={details} />
+              <button className="border-dealguru-blue border rounded-lg py-2 px-4 mt-8 w-full bg-transparent font-light text-dealguru-blue">
+                Visa fler
+              </button>
             </TabsContent>
 
             <TabsContent value='popular' className="w-full">
