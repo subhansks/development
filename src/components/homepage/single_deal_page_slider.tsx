@@ -57,35 +57,39 @@ const SingleDealSlider = () => {
   return (
     <div className="relative flex flex-col items-center bg-dealguru-white p-4 rounded-lg shadow-lg shadow-gray-200">
       <div className="relative flex justify-center items-center w-full">
-        {activeSlide > 0 && (
-          <button
-            type="button"
-            className="w-8 md:flex justify-center items-center hidden bg-dealguru-white rounded-lg h-8 border border-dealguru-black hover:text-dealguru-white hover:bg-dealguru-blue absolute left-0"
-            onClick={() => scrollTo(activeSlide - 1)}
-          >
-            <Image
-              src="/assets/svg/angle_right_slider.svg"
-              width={20}
-              height={20}
-              alt="angle Icon"
-              className="rotate-180"
-            />
-          </button>
-        )}
-        {activeSlide < category.length - 1 && (
-          <button
-            type="button"
-            className="w-8 md:flex justify-center items-center hidden bg-dealguru-white rounded-lg h-8 border border-dealguru-black hover:text-dealguru-white hover:bg-dealguru-blue absolute right-0"
-            onClick={() => scrollTo(activeSlide + 1)}
-          >
-            <Image
-              src="/assets/svg/angle_right_slider.svg"
-              width={20}
-              height={20}
-              alt="angle Icon"
-            />
-          </button>
-        )}
+        <button
+          type="button"
+          className={`w-8 md:flex justify-center items-center bg-dealguru-white rounded-lg h-8 border border-dealguru-black hover:text-dealguru-white hover:bg-dealguru-blue absolute left-0 ${
+            activeSlide === 0 ? "opacity-50 cursor-not-allowed" : ""
+          }`}
+          onClick={() => scrollTo(activeSlide - 1)}
+          disabled={activeSlide === 0}
+        >
+          <Image
+            src="/assets/svg/angle_right_slider.svg"
+            width={20}
+            height={20}
+            alt="angle Icon"
+            className="rotate-180"
+          />
+        </button>
+        <button
+          type="button"
+          className={`w-8 md:flex justify-center items-center bg-dealguru-white rounded-lg h-8 border border-dealguru-black hover:text-dealguru-white hover:bg-dealguru-blue absolute right-0 ${
+            activeSlide === category.length - 1
+              ? "opacity-50 cursor-not-allowed"
+              : ""
+          }`}
+          onClick={() => scrollTo(activeSlide + 1)}
+          disabled={activeSlide === category.length - 1}
+        >
+          <Image
+            src="/assets/svg/angle_right_slider.svg"
+            width={20}
+            height={20}
+            alt="angle Icon"
+          />
+        </button>
         <div
           ref={scrollContainerRef}
           className="w-full overflow-x-scroll flex hide-scrollbar scroll-smooth snap-x snap-mandatory"
@@ -146,6 +150,12 @@ const SingleDealSlider = () => {
         }
         .transition-transform {
           transition: transform 0.5s ease-in-out;
+        }
+        .cursor-not-allowed {
+          cursor: not-allowed;
+        }
+        .opacity-50 {
+          opacity: 0.5;
         }
       `}</style>
     </div>
