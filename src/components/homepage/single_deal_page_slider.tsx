@@ -24,6 +24,11 @@ const SingleDealSlider = () => {
         left: targetPosition,
         behavior: "smooth",
       });
+
+      // Set a timeout to update activeSlide after the scroll completes
+      setTimeout(() => {
+        setActiveSlide(index);
+      }, 500); // Adjust the timeout duration to match the scroll duration
     }
   };
 
@@ -117,7 +122,7 @@ const SingleDealSlider = () => {
           <button
             key={index}
             className={`w-18 h-18 rounded-lg overflow-hidden ${
-              index === immediateActiveSlide ? "border-2 border-dealguru-blue" : ""
+              index === activeSlide ? "border-2 border-dealguru-blue" : ""
             }`}
             onClick={() => scrollTo(index)}
           >
