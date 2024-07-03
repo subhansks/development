@@ -14,7 +14,7 @@ const Discussion_Comment_Section_Structure = ({ details }: any | undefined) => {
     <section className="flex flex-col gap-6">
       <Main_Discussion_card details={details} />
 
-      <div className="min-h-64">
+      <div className="min-h-36">
         <Editor />
       </div>
       <Comments_Card />

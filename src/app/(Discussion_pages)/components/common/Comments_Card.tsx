@@ -4,14 +4,14 @@ import React from "react";
 
 const Comments_Card = () => {
   return (
-    <div className="bg-dealguru-white lg:px-16 md:px-12 px-4 py-4 rounded-lg shadow-md shadow-gray-200">
+    <div className="bg-dealguru-white  2xl:px-12 px-4 py-4 rounded-lg shadow-md shadow-gray-200">
       <div className="flex flex-col  gap-3 sm:gap-4">
         <div className="flex gap-3 sm:gap-4">
           <Image
             width={40}
             height={40}
             src="/assets/images/blank_avatar_new.png"
-            className="w-[40px]  h-[40px] rounded-full "
+            className="w-[35px]  h-[35px] rounded-full "
             alt="Avatar"
           />
           <p className="font-semibold text-xs flex items-center gap-1 overflow-hidden">
@@ -21,7 +21,7 @@ const Comments_Card = () => {
             </span>
           </p>
         </div>
-        <div className="flex gap-3 sm:gap-4">
+        <div className="flex gap-2 sm:gap-4">
           <div className="min-w-10 flex justify-center">
             <div className="p-[1px] h-full bg-slate-200 w-fit" />
           </div>
