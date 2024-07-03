@@ -15,6 +15,7 @@ import {
   Link as LinkIcon,
   Quote,
   SendHorizontal,
+  Smile,
 } from "lucide-react";
 import {
   Menubar,
@@ -114,27 +115,31 @@ const Tiptap = () => {
   // console.log(editor.getHTML());
   return (
     <>
-      <div className=" min-h-64 shadow-md rounded-lg">
+      <div className=" min-h-36 shadow-md rounded-lg">
         <EditorContent
           id="editor"
-          className="min-h-64 editor p-4 bg-dealguru-white overflow-scroll no-scrollbar  rounded-t-lg "
+          className="min-h-36 editor p-4 bg-dealguru-white overflow-scroll no-scrollbar  rounded-t-lg "
           editor={editor}
         />
         <div className="flex justify-start items-center  gap-2 h-fit   ">
-          <div className="flex  gap-3 bg-dealguru-white justify-between px-4 py-2 border-t border-t-gray-300 rounded-b-lg w-full">
-            <div className="w-full flex gap-2">
+          <div className="flex  gap-3 bg-dealguru-white justify-between px-4 py-2 border-t border-t-gray-300 rounded-b-lg w-full items-end">
+            <div className="w-full flex gap-2 items-end">
               <button
-                className="w-fit p-2 h-full min-w-11 min-h-11 rounded-md flex justify-center items-center border border-slate-600  "
+                className="w-fit p-2 h-fit  min-w-8 min-h-8 rounded-md flex justify-center items-center   hover:bg-gray-200  transition-all duration-200"
                 onClick={() => editor.chain().focus().toggleBlockquote().run()}
                 // className={editor.isActive("blockquote") ? "is-active" : ""}
+                title="Indent"
               >
-                <Quote width={24} height={24} />
+                <Quote width={18} height={18} color="#686D76" />
               </button>
 
               <Menubar>
                 <MenubarMenu>
-                  <MenubarTrigger className="w-fit h-full min-w-11 min-h-11 p-2 rounded-md  flex justify-center items-center border border-slate-600  ">
-                    😀
+                  <MenubarTrigger
+                    className="w-fit h-fit min-w-8 min-h-8 hover:bg-gray-200  transition-all duration-200 p-2 rounded-md  flex justify-center items-center "
+                    title="Emojis"
+                  >
+                    <Smile width={18} height={18} color="#686D76" />
                   </MenubarTrigger>
                   <MenubarContent className=" before:bg-slate-900 bg-dealguru-white p-2 shadow-2xl border-gray-300 border rounded-md mt-1 mb-1">
                     <div className="p-2 h-[200px] flex flex-col gap-4 ">
@@ -162,8 +167,11 @@ const Tiptap = () => {
               {/* <button id=""> */}
               <Menubar>
                 <MenubarMenu>
-                  <MenubarTrigger className="w-fit h-full min-w-11 min-h-11  rounded-md p-2  flex justify-center items-center border border-slate-600  ">
-                    <ImageIcon width={24} height={24} />
+                  <MenubarTrigger
+                    className="w-fit h-fit  min-w-8 min-h-8 hover:bg-gray-200  transition-all duration-200  rounded-md p-2  flex justify-center items-center "
+                    title="Inset Image"
+                  >
+                    <ImageIcon width={18} height={18} color="#686D76" />
                   </MenubarTrigger>
                   <MenubarContent className="bg-dealguru-white p-2 w-[400px] shadow-2xl border-gray-300 border rounded-md mt-1 mb-1">
                     <div className="p-2 h-fit min-w-full  flex flex-col gap-4 ">
@@ -213,8 +221,11 @@ const Tiptap = () => {
               {/* Link */}
               <Menubar>
                 <MenubarMenu>
-                  <MenubarTrigger className="w-fit  rounded-md p-2  h-full min-w-11 min-h-11 flex justify-center items-center border border-slate-600  ">
-                    <LinkIcon width={18} height={18} />
+                  <MenubarTrigger
+                    className="w-fit  rounded-md p-2  h-fit  min-w-8 min-h-8 hover:bg-gray-200  transition-all duration-200 flex justify-center items-center "
+                    title="Link"
+                  >
+                    <LinkIcon width={18} height={18} color="#686D76" />
                   </MenubarTrigger>
                   <MenubarContent className="bg-dealguru-white p-2 w-[400px] shadow-2xl border-gray-300 border rounded-md mt-1 mb-1">
                     <div className="p-2 h-fit min-w-full  flex flex-col gap-4 ">
@@ -299,9 +310,9 @@ const Tiptap = () => {
               </Menubar>
             </div>
             {/* </button> */}
-            <button className="md:min-w-36 flex gap-2 p-2 h-11 md:rounded-md justify-center items-center rounded-full border border-dealguru-black bg-dealguru-black text-dealguru-white font-open_sans font-semibold">
-              <p className="md:block hidden text-base">Submit</p>
-              <SendHorizontal width={18} height={18} className="" />
+            <button className="md:min-w-fit  flex gap-4 px-5  py-2 md:rounded-md justify-between items-center rounded-full border border-dealguru-black bg-dealguru-black text-dealguru-white font-open_sans font-semibold">
+              <p className="md:block hidden text-sm">Kommentera</p>
+              <SendHorizontal width={16} height={16} className="" />
             </button>
           </div>
         </div>
