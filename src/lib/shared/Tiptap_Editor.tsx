@@ -70,6 +70,7 @@ const Tiptap = () => {
       }),
       Image.configure({
         allowBase64: true,
+        inline: true,
         HTMLAttributes: {
           class: "editor-image",
         },
@@ -86,12 +87,13 @@ const Tiptap = () => {
         .setImage({ src: image[0]?.data_url || image })
         .run();
       setTimeout(() => {
-        editor?.chain().focus().enter().run();
         const { state }: null | any = editor;
         const { from } = state.selection;
+        console.log(from);
         const newPos = from + 1;
         editor?.commands.setTextSelection(newPos);
-      }, 500);
+        // editor?.chain().focus().enter().run();
+      }, 200);
     }
   };
 
@@ -109,7 +111,7 @@ const Tiptap = () => {
   if (!editor) {
     return null;
   }
-  console.log(editor.getHTML());
+  // console.log(editor.getHTML());
   return (
     <>
       <div className=" min-h-64 shadow-md rounded-lg">
@@ -139,7 +141,7 @@ const Tiptap = () => {
                       <div>
                         <p className="font-bold text-lg">Select Emoji</p>
                       </div>
-                      <div className=" grid grid-cols-4 h-[80%] overflow-y-scroll  mt-1 gap-4 pr-2">
+                      <div className=" grid grid-cols-4 h-[80%] overflow-y-scroll  customize-scrollbar mt-1 gap-4 pr-2">
                         {Emojis.map((d) => (
                           <p
                             className="w-fit cursor-pointer"
@@ -298,8 +300,8 @@ const Tiptap = () => {
             </div>
             {/* </button> */}
             <button className="md:min-w-36 flex gap-2 p-2 h-11 md:rounded-md justify-center items-center rounded-full border border-dealguru-black bg-dealguru-black text-dealguru-white font-open_sans font-semibold">
-              <SendHorizontal className="" />
-              <p className="md:block hidden">Submit</p>
+              <p className="md:block hidden text-base">Submit</p>
+              <SendHorizontal width={18} height={18} className="" />
             </button>
           </div>
         </div>
