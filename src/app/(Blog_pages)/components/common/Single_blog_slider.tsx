@@ -84,7 +84,7 @@ const SingleBlogSlider = () => {
         <div
           id="scrollContainer"
           ref={scrollContainerRef}
-          className="h-[412px] scrollBox-container overflow--avoid-vClip flex flex--grow-1 overflow--scrollX-raw hide-scrollbar carousel--isPrev carousel--isNext"
+          className="scrollBox-container overflow--avoid-vClip flex flex--grow-1 overflow--scrollX-raw hide-scrollbar carousel--isPrev carousel--isNext"
         >
           <div className="scrollBox-item space--v-1">
             <SingleBlogSliderCard />
