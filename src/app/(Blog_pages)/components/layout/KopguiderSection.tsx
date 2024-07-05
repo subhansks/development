@@ -7,10 +7,10 @@ const KopguiderSection = ({ details }: any | undefined) => {
     <section className='md:w-[95%] w-[100%] mx-auto'>
       <div className='flex items-center flex-col gap-4 w-full'>
         <div className='flex sm:items-center justify-between w-full sm:flex-row flex-col gap-4 items-start'>
-          <Tabs defaultValue="newest" className="flex flex-col w-full items-center justify-center gap-4 py-2 px-4 rounded-md">
+          <Tabs defaultValue="newest" className="flex flex-col w-full items-center justify-center gap-4 py-2 md:px-4 rounded-md">
             <div className='flex w-full justify-between'>
-              <h3 className='text-2xl font-semibold text-gray-800'>Articles</h3>
-              <TabsList className='bg-white'>
+              <h3 className='text-2xl font-semibold text-gray-800 mobile-hidden'>Articles</h3>
+              <TabsList className='bg-white mob-w-full'>
                 <TabsTrigger value="newest">Newest</TabsTrigger>
                 <TabsTrigger value="popular">Popular</TabsTrigger>
               </TabsList>

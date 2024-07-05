@@ -1,0 +1,92 @@
+.dealguru-bottom-cards-main {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+  @media (max-width: 1024px) {
+    div.dealguru-bottom-cards-main {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    .blog-sidebar{display: none;}
+  }
+  @media (max-width: 767px) {
+    .mob-w-full{ width: 100%;}
+    .mob-w-full button {
+      width: inherit;
+    }
+    .mobile-hidden{display: none;}
+  }
+  
+  
+  
+  
+          .blog-contain {
+              background: #fff;
+              padding: 36px 28px;
+              border-radius: 20px;
+          }
+          .s-blog .blog-txt {      
+            font-size: 15px;      
+            font-weight: 400;      
+            line-height: 1.5;      
+            color: #313131;    
+            margin-top: 32px;
+            margin-bottom: 54px; 
+        }
+        
+        .s-blog .blog-txt p {
+          font-size: 15px;
+          line-height: 1.5;
+          margin-bottom: 17px !important;
+          color: #313131;
+      }
+        .s-blog .blog-txt a{
+            color: rgb(3, 103, 221);
+        }
+        
+        .s-blog .blog-txt a:hover{
+            text-decoration: underline;
+        }
+        .s-blog .blog-txt h3 {
+          font-size: 20px;
+          color: #313131;
+          letter-spacing: 0;
+          line-height: 1.3em;
+          margin-bottom: 14px;
+          display: inherit;
+          font-weight: 700;
+      }
+      .s-blog .blog-txt ul {
+        list-style: initial;
+        padding-left: 36px;
+        margin-bottom: 20px;
+        line-height: 1.5;
+        font-size: 15px;
+    }
+    .s-blog .blog-txt li {
+      margin-bottom: 6px;
+      position: relative;
+      list-style-type: square;
+      line-height: 1.7;
+      font-size: 15px;
+      color: #313131;
+      white-space: unset !important;
+  }
+  .comment-input{
+    border-radius: 200px !important;
+    padding: 10px 10px 10px 20px;
+    border: 1px solid rgb(237, 239, 241);
+    font-family: 'Nunito Sans' !important;
+    font-size: 12px;
+  }
+  .s-blog .dealguru-bottom-card {
+    border: none;
+    border-radius: 22px;
+    box-shadow: 0px 0px 10px 0px #272E610D;
+  }
+  .s-blog .dealguru-bottom-card {
+    padding: 16px 16px 22px 16px;
+  }
+  @media (max-width: 560px){
+    .bg-dealguru-white.dealguru-bottom-card {
+      width: 75vh !important;
+  }
+  }

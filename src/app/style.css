@@ -12926,11 +12926,18 @@ input:checked + .navMenu-trigger.btnGroup-item--radio-new > .navMenu-hamburger {
   --tw-text-opacity: 1;
     color: rgb(0 103 225 / var(--tw-text-opacity));
 }
-@media (max-width: 1024px) {
-  .dealguru-bottom-cards-main {
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
-}
 .dealguru-bottom-cards-main {
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+@media (max-width: 1024px) {
+  div.dealguru-bottom-cards-main {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  .blog-sidebar{display: none;}
+}
+@media (max-width: 767px) {
+  .mob-w-full{ width: 100%;}
+  .mob-w-full button {
+    width: inherit;
+  }
 }
