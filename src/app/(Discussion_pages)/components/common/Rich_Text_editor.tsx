@@ -1,11 +1,11 @@
 "use client";
 
 import React from "react";
-import Loader from "./Loader";
 
 import { useState } from "react";
 import dynamic from "next/dynamic";
 import "react-quill/dist/quill.snow.css"; // Import Quill styles
+import Loader from "@/lib/shared/Loader";
 // Dynamically import ReactQuill to prevent SSR issues
 const ReactQuill = dynamic(() => import("react-quill"), {
   ssr: false,

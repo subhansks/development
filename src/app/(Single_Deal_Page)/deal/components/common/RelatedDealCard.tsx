@@ -1,15 +1,14 @@
+import Comment_Bookmark from "@/components/homepage/comment_bookmark";
+import HomepageMediaCard from "@/components/homepage/homepage_card_media_items";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import HomepageMediaCard from "./homepage_card_media_items";
-import LikeModule from "./like_module";
-import Comment_Bookmark from "./comment_bookmark";
 
-const HomeDealCard_Grid = () => {
+const RelatedDealCard = () => {
   return (
-    <div className=" overflow-hidden  w-full min-h-[250px]  bg-white rounded-xl shadow-lg shadow-gray-200 p-4 flex flex-col gap-4 items-center">
-      <div className="  flex w-full  gap-4   items-start   ">
-        <div className=" h-24 min-w-[80px]  flex items-start ">
+    <div className=" overflow-hidden snap-start min-w-[70%] md:w-full min-h-[250px]  bg-white rounded-xl shadow-lg shadow-gray-200 p-4 flex flex-col gap-4 items-center">
+      <div className="flex w-full gap-4 items-start">
+        <div className="h-24 min-w-[80px] flex items-start ">
           <Image
             src="/assets/images/dealcard1.png"
             width={200}
@@ -86,4 +85,4 @@ const HomeDealCard_Grid = () => {
   );
 };
 
-export default HomeDealCard_Grid;
+export default RelatedDealCard;

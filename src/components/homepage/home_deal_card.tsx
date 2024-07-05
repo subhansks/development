@@ -22,7 +22,7 @@ const HomeDealCard = () => {
           <div className="flex min-w-full md:gap-2 gap-1 flex-col md:flex-row ">
             <div className="flex flex-col gap-2  ">
               {" "}
-              <Link href={"/"}>
+              <Link href={`/deal/${"Sänk din elfaktura"}`}>
                 <h1 className="text-dealguru-black md:text-xl text-sm  font-bold ">
                   Sänk din elfaktura
                 </h1>
