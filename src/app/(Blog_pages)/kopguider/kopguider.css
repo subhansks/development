@@ -14,8 +14,29 @@
     }
     .mobile-hidden{display: none;}
   }
-  
-  
+  @media screen and (max-width: 1024px) {
+    .dealguru-bottom-navigation-main {
+        background: #f7f7f7;
+    }
+    .mob-white {
+        background: #ffffff;
+    }
+    .mt-26{
+      margin-top: 6rem;
+    }
+    .cpt-0{ padding-top: 0px;}
+    .cgap-0{ gap: 0px;}
+    .dealguru-bottom-card {
+      padding: 0px;
+      box-shadow: none;
+    }
+    div.dealguru-top h2 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-top: 0px;
+        color: #1B2738;
+    }
+}
   .dealguru-top h2 {
     font-size: 2.6rem;
 }
