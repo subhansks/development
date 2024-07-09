@@ -15,7 +15,7 @@ const Main_Kopguider_card = ({ details }: any | undefined) => {
     <Link href={`/kopguider/${'Bästa deal du hittat ? Som du är nöjd med ?'}`}>
         <div className='bg-white p-4 rounded-xl flex flex-col justify-between h-full'>
             <div>
-                <Image src='/assets/images/deal1.jpg' alt='Advertisement' width={450} height={180} className='rounded-md h-[200px] self-center object-cover' />
+                <Image src='/assets/images/deal1.jpg' alt='Advertisement' width={500} height={180} className='rounded-md h-[200px] self-center object-cover' />
                 <h3 className='text-gray-800 text-xl font-semibold mt-3'>Allt du behöver veta innan du köper ett tyngdtäcke</h3>
                 <p className='text-gray-500 text-sm mt-3'>Apple har precis släppt stora nyheter! Bland dessa nyheter har det släppts två nya p...</p>
                 <Button variant={'outline'} size={'sm'} className='w-fit bg-gray-100 text-xs font-semibold h-auto py-1 px-2 mt-3'>health & beauty</Button>

@@ -6,7 +6,7 @@ const Kopguider_sidebar = () => {
   return (
     <section className='flex flex-col gap-4 blog-sidebar'>
       <h3 className='text-2xl text-gray-800 font-bold'>Mest lästa guiderna just nu</h3>
-      <div className='flex flex-col gap-6'>
+      <div className='flex flex-col gap-4'>
           <Sidebar_card />
           <Sidebar_card />
           <Sidebar_card />

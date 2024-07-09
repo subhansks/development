@@ -8,9 +8,11 @@ const page = () => {
         <section className='min-h-screen z-0 px-4 2xl:px-x-pad md:px-8 w-full mt-28 2xl:max-w-[1900px] 2xl:m-auto 2xl:mt-28'>
             <div className='py-5'>
                 <Kopguider_header />
-                <div className='flex gap-6 md:mt-10 mt-6 md:flex-row flex-col'>
+                <div className='flex gap-8 md:mt-5 mt-5 md:flex-row flex-col pt-5'>
                     <KopguiderSection />
-                    <Kopguider_sidebar />
+                    <div className='pt-6'>
+                        <Kopguider_sidebar />
+                    </div>
                 </div>
             </div>
         </section>
