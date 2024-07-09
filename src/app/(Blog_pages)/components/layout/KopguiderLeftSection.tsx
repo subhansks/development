@@ -9,7 +9,7 @@ import Kopguider_Comment_Section from "./Kopguider_Comment_Section";
 const KopguiderLeftSection = ({ details }: any | undefined) => {
   return (
     <>
-      <section className='md:w-[85%] lg:[w-80%] w-[100%] mx-auto'>
+      <section className='md:w-[100%] lg:[w-80%] w-[100%] mx-auto'>
         <div className='bg-white blog-contain py-5 px-8'>
           <Button variant={'outline'} size={'sm'} className='w-fit bg-gray-100 text-xs font-semibold h-auto py-1 px-2'>health & beauty</Button>
           <div className='mt-6 flex flex-col gap-4'>
