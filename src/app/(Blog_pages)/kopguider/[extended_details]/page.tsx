@@ -13,7 +13,7 @@ const page = ({ params }: any) => {
                 <Kopguider_single_header />
                 <div className='flex gap-8 md:mt-5 md:flex-row flex-col'>
                     <KopguiderLeftSection />
-                    <Kopguider_sidebar />
+                    <Kopguider_sidebar/>
                 </div>
                 <div className={` gap-6 flex-col mt-5 mb-5 pb-5`}>
                     <h3 className='text-2xl text-gray-800 font-bold mt-8 mb-3'>
