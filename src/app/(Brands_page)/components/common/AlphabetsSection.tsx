@@ -33,7 +33,7 @@ const AlphabetsSection = () => {
     { id: 27, text: "Z" }
 ];
 
-const handleScroll = (id) => {
+const handleScroll = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
         element.scrollIntoView({ behavior: 'smooth', block: 'center' });
