@@ -8,7 +8,7 @@ import SortingSection from '../components/common/SortingSection';
 import StoresSection from '../components/common/StoresSection';
 import './stores.css';
 
-export default function DiscoverExclusive() {
+export default function page() {
     const ItemData = [
         { id: 0, text: "0-9" },
         { id: 1, text: "A" },
@@ -89,7 +89,7 @@ export default function DiscoverExclusive() {
                 <section ref={sectionRef} className='border-b-2 border-gray-200 pb-4'>
                     <div className='flex flex-col gap-6'>
                         <HeadingTop />
-                        <div ref={stickyRef} className={`flex items-center gap-3 transition-all duration-150 -mt-1 ${isSticky ? 'fixed top-24 overflow-x-auto whitespace-nowrap py-4 left-0 w-full border-b border-t border-gray-200 bg-white shadow-md z-50 px-8 transition-opacity duration-300 opacity-100' : 'opacity-1 flex-wrap'}`}>
+                        <div ref={stickyRef} className={`flex items-center gap-3 transition-all duration-150 -mt-1 ${isSticky ? 'fixed top-24 overflow-x-auto whitespace-nowrap py-3 left-0 w-full border-b border-t border-gray-200 bg-white shadow-md z-50 px-8 transition-opacity duration-300 opacity-100 2xl:px-x-pad' : 'opacity-1 flex-wrap'}`}>
                             <AlphabetsSection />
                         </div>
                         <SortingSection />

@@ -56,7 +56,7 @@ const StoresSection = () => {
         {ItemData.map((e, i) => (
             <div key={i} className='border-b-2 border-gray-200 mt-6'>
                 <h2 className='thisTag text-2xl md:text-4xl text-gray-500 font-semibold' id={e.text}>{e.text} </h2>
-                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full justify-center'>
+                <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full justify-center'>
                     {ShopData.map((item, index) => (
                         <Link href={`/deals/${item.text}`}>     
                             <div key={index} className='flex items-center flex-wrap gap-4 cursor-pointer h-24'>
