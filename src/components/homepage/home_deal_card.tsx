@@ -5,13 +5,15 @@ import HomepageMediaCard from "./homepage_card_media_items";
 import LikeModule from "./like_module";
 import Comment_Bookmark from "./comment_bookmark";
 
-const HomeDealCard = () => {
+const HomeDealCard = ({ item }: any) => {
+  // console.log(item);
   return (
     <div className="  w-full min-h-[250px]  bg-white rounded-xl shadow-lg shadow-gray-200 p-4 gap-3 max-md:items-start items-center">
       <div className="  flex w-full  gap-2 md:gap-4  items-start md:h-full  ">
         <div className=" h-24  md:h-[230px] md:min-w-[230px] md:max-w-[230px] flex md:items-center items-start ">
           <Image
             src="/assets/images/dealcard1.png"
+            // src={item.imageUrl}
             width={200}
             height={0}
             alt="placeholder"
@@ -24,14 +26,14 @@ const HomeDealCard = () => {
               {" "}
               <Link href={`/deal/${"Sänk din elfaktura"}`}>
                 <h1 className="text-dealguru-black md:text-xl text-sm  font-bold ">
-                  Sänk din elfaktura
+                  {item.title}
                 </h1>
               </Link>
               <div className="max-md:hidden">
-                <HomepageMediaCard />
+                <HomepageMediaCard item={item} />
               </div>
             </div>
-            <LikeModule />
+            <LikeModule item={item} />
           </div>
 
           <div className="md:flex justify-between  hidden ">
@@ -49,7 +51,7 @@ const HomeDealCard = () => {
         </div>
       </div>
       <div className=" md:hidden flex-col flex gap-2">
-        <HomepageMediaCard />
+        <HomepageMediaCard item={item} />
         <div className="flex justify-between flex-row-reverse gap-4">
           <div className="flex justify-between ">
             <Comment_Bookmark />

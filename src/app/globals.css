@@ -382,16 +382,7 @@ html {
   border-top: 1px solid #e3e3e3 !important;
 }
 
-@media (max-width: 1024px) {
-  .dealguru-bottom-cards-main {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  }
-}
-.dealguru-bottom-cards-main {
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-}
-
-/* TIP TAP EDITOR */
+/* TIP TAP EDITOR  */
 .editor > div {
   min-height: 150px !important;
   border: 1px solid rgb(215, 215, 219);

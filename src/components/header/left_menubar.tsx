@@ -203,7 +203,7 @@ export function SheetDemo() {
         <div className=" flex z-[90 ] flex-col pb-6 h-[100vh] stroke-none  overflow-y-scroll no-scrollbar ">
           <ul className="">
             <li>
-              <Link href={"/4"} className="flex py-3 gap-2 px-4">
+              <Link href={"/brands"} className="flex py-3 gap-2 px-4">
                 <Image
                   alt="Notification Icon"
                   width="28"
@@ -214,7 +214,7 @@ export function SheetDemo() {
               </Link>
             </li>
             <li>
-              <Link href={"/3"} className="flex py-3 gap-2  px-4">
+              <Link href={"/stores"} className="flex py-3 gap-2  px-4">
                 <Image
                   alt="Notification Icon"
                   width="28"

@@ -2,12 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const HomepageMediaCard = () => {
+const HomepageMediaCard = ({ item }: any) => {
+  // console.log(item.cashback);
   return (
     <div className=" flex flex-col  gap-2  mt-3 md:mt-0 ">
       <div className="flex gap-2 items-center w-fit ">
         <p className="font-bold pr-2 text-lg border-r max-md:text-base text-dealguru-blue border-gray-300">
-          230 SEK
+          {item.cashback} SEK
         </p>
         <Link href={"/"}>
           <p className="capitalize bord text-sm font-bold">greenely</p>

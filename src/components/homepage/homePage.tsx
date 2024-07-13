@@ -1,17 +1,23 @@
 "use client";
-import React, { useContext, useEffect } from "react";
+import React, { ReactNode, useContext, useEffect } from "react";
 import HomeFilters from "./filters_home";
 import HomeDealCard from "./home_deal_card";
 import CarouselSlider from "./slider";
 import LogoSlider from "../footer/logo_slider";
 import { Context } from "@/context/ContextAPI";
 import HomeDealCard_Grid from "./HomeDealCard_Grid";
+import { HomePageProps } from "@/types/HomePageTypes";
+import { HomePageData } from "@/server/actions/HomePageData";
 
-const HomePageContent = () => {
+const HomePageContent = ({ topData, leastData }: any) => {
   const { isGrid, setIsGrid } = useContext(Context);
 
   return (
-    <div className={`${isGrid ? "col-span-7" : "md_lg:col-span-5 md:col-span-7 "} border-gray-300 rounded-lg`}>
+    <div
+      className={`${
+        isGrid ? "col-span-7" : "md_lg:col-span-5 md:col-span-7 "
+      } border-gray-300 rounded-lg`}
+    >
       <div className="flex md:items-end justify-between md:flex-row flex-col items-start  gap-2 md:mb-0  min-h-11 ">
         <div className=" ">
           <h1 className="text-[1.3rem] not-italic text-dealguru-black font-bold antialiased">
@@ -20,23 +26,26 @@ const HomePageContent = () => {
         </div>
         <HomeFilters setIsGrid={setIsGrid} />
       </div>
-      <div className={`${isGrid ? "grid md:grid-cols-3 mb-4 " : "grid grid-cols-1 md:grid-cols-1"} mt-3 gap-5`}>
-
+      <div
+        className={`${
+          isGrid
+            ? "grid md:grid-cols-3 mb-4 "
+            : "grid grid-cols-1 md:grid-cols-1"
+        } mt-3 gap-5`}
+      >
         {/* This section of upper content is limited until carousel of contents maybe 6 - 10 feed components  */}
-        {isGrid ? (
-          Array(15).fill(1).map((item, index) => (
-            <HomeDealCard_Grid />
-
-          ))
-        ) : (
-          Array(3).fill(1).map((item, index) => (
-            <HomeDealCard />
-          ))
-        )
-        }
+        {isGrid
+          ? Array(15)
+              .fill(1)
+              .map((item, index) => <HomeDealCard_Grid />)
+          : topData.map(
+              (item: HomePageProps, index: number): ReactNode => (
+                <HomeDealCard item={item} key={index} />
+              )
+            )}
 
         {/* This is carousel slider */}
-        <div className={` gap-3 flex-col ${isGrid ? 'hidden' : 'flex '} `}>
+        <div className={` gap-3 flex-col ${isGrid ? "hidden" : "flex "} `}>
           <h1 className="text-[1.3rem] not-italic text-dealguru-black font-bold">
             Bästa dealsen just nu
           </h1>
@@ -44,18 +53,25 @@ const HomePageContent = () => {
         </div>
 
         {/* This section is then flow of feed section which is unlimited */}
-        {!isGrid && (
+        {!isGrid &&
+          leastData.map(
+            (item: any, index: number): ReactNode => (
+              <HomeDealCard item={item} key={index} />
+            )
+          )}
 
-          Array(5).fill(1).map((item, index) => (
-            <HomeDealCard />
-          ))
-        )
-        }
-
-        <div className={`mb-3 ${isGrid && 'hidden'}`}>
+        <div className={`mb-3 ${isGrid && "hidden"}`}>
           <LogoSlider />
         </div>
-
+        <button
+          onClick={async () => {
+            const d = await HomePageData();
+            console.log(d);
+          }}
+          className="text-dealguru-blue font-bold border border-gray-200 rounded-lg py-2 px-4"
+        >
+          click
+        </button>
       </div>
     </div>
   );
