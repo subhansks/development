@@ -1,5 +1,5 @@
 "use client";
-import React, { ReactNode, useContext, useEffect } from "react";
+import React, { ReactNode, useContext } from "react";
 import HomeFilters from "./filters_home";
 import HomeDealCard from "./home_deal_card";
 import CarouselSlider from "./slider";
@@ -60,18 +60,18 @@ const HomePageContent = ({ topData, leastData }: any) => {
             )
           )}
 
-        <div className={`mb-3 ${isGrid && "hidden"}`}>
-          <LogoSlider />
-        </div>
         <button
           onClick={async () => {
             const d = await HomePageData();
             console.log(d);
           }}
-          className="text-dealguru-blue font-bold border border-gray-200 rounded-lg py-2 px-4"
+          className="bg-dealguru-blue font-open_sans text-dealguru-white font-bold border border-gray-200 rounded-lg py-2 px-4"
         >
-          click
+          Load More
         </button>
+        <div className={`mb-3 ${isGrid && "hidden"}`}>
+          <LogoSlider />
+        </div>
       </div>
     </div>
   );

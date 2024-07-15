@@ -6,7 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import UserProfileLinksSlider from "@/components/homepage/UserProfile_mobile_links_slider";
-import { navItems } from "@/app/constants/navItems";
+import { navItems } from "@/constants/navItems";
 
 // Define the props type
 interface ProfilePageProps {

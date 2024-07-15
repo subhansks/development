@@ -12,8 +12,12 @@ const HomeDealCard = ({ item }: any) => {
       <div className="  flex w-full  gap-2 md:gap-4  items-start md:h-full  ">
         <div className=" h-24  md:h-[230px] md:min-w-[230px] md:max-w-[230px] flex md:items-center items-start ">
           <Image
-            src="/assets/images/dealcard1.png"
-            // src={item.imageUrl}
+            // src="/assets/images/dealcard1.png"
+            src={
+              item.imageUrl
+                ? `https://dealguru.se/admin/uploads/${item?.imageUrl}`
+                : "/assets/images/dealcard1.png"
+            }
             width={200}
             height={0}
             alt="placeholder"
@@ -24,7 +28,7 @@ const HomeDealCard = ({ item }: any) => {
           <div className="flex min-w-full md:gap-2 gap-1 flex-col md:flex-row ">
             <div className="flex flex-col gap-2  ">
               {" "}
-              <Link href={`/deal/${"Sänk din elfaktura"}`}>
+              <Link href={`/deal/${item.title}`}>
                 <h1 className="text-dealguru-black md:text-xl text-sm  font-bold ">
                   {item.title}
                 </h1>

@@ -12,11 +12,11 @@ const getConnection = () => {
     });
   }
   return createPool({
-    host: process.env.DB_HOST,
-    port: parseInt(process.env.DB_PORT || "3306", 10),
-    user: process.env.DB_USERNAME,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
+    host: "c120755.sgvps.net",
+    // port: parseInt(process.env.DB_PORT || "3306", 10),
+    user: "u3578tvfn1d5a",
+    password: "db54c11Cb@8|",
+    database: "dby7k1wm00xyri",
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0,

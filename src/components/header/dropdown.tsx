@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import Image from "next/image";
 import Link from "next/link";
-import { navItems } from "@/app/constants/navItems";
+import { navItems } from "@/constants/navItems";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 export function DropdownMenuDemo({
