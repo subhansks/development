@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 import { Open_Sans } from "next/font/google";
 
-const open_sans = Open_Sans({ subsets: ["latin"], variable: '--open_sans' });
+const open_sans = Open_Sans({ subsets: ["latin"], variable: "--open_sans" });
 
 const myFont = localFont({ src: "../../public/assets/font/nunito.woff2" });
 
@@ -26,9 +26,7 @@ export default function RootLayout({
     <html lang="sv">
       <body className={`${myFont.className} ${open_sans.variable}`}>
         <Navbar />
-        <Wrapper>
-          {children}
-        </Wrapper>
+        <Wrapper>{children}</Wrapper>
         <Footer />
         <Footer_Menu />
       </body>

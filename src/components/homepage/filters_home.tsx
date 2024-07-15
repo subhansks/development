@@ -1,11 +1,13 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useSelectedLayoutSegment } from "next/navigation";
 import React from "react";
 
 const HomeFilters = ({ setIsGrid }: any) => {
   // const val = useMediaQuery("(min-width: 768px)");
   // console.log(val);
+  const segment = useSelectedLayoutSegment();
 
   return (
     <>
@@ -13,19 +15,19 @@ const HomeFilters = ({ setIsGrid }: any) => {
         <div className="flex gap-1 bg-dealguru-white px-1 rounded-md justify-center items-center h-11">
           <Link
             className="flex items-center justify-center rounded-md button text-sm  px-3  h-9  border-r bg-dealguru-grey text-dealguru-blue"
-            href="/test"
+            href="/"
           >
             Utvalda favoriter
           </Link>
           <Link
             className=" flex items-center justify-center rounded-md button px-3 h-9 text-sm  border-r bg-dealguru-white text-[#5a5a5a]"
-            href="/test"
+            href="/nya-erbjudanden"
           >
             Nya deals
           </Link>
           <Link
             className=" flex items-center justify-center rounded-md button px-3 h-9 text-sm  border-r bg-dealguru-white text-[#5a5a5a]"
-            href="/test"
+            href="/populara-erbjudanden"
           >
             Högst betyg
           </Link>
@@ -33,7 +35,6 @@ const HomeFilters = ({ setIsGrid }: any) => {
         <div className="flex px-1 gap-1  bg-dealguru-white  rounded-md justify-center items-center h-11">
           <div
             className=" button px-2 py-1 flex items-center justify-center h-9 border-r bg-dealguru-grey text-dealguru-blue"
-
             onClick={() => setIsGrid(true)}
           >
             <Image
@@ -46,7 +47,6 @@ const HomeFilters = ({ setIsGrid }: any) => {
           </div>
           <div
             className=" button px-2 py-1 h-9 border-r flex justify-center items-center bg-dealguru-grey text-[#5a5a5a]"
-
             onClick={() => setIsGrid(false)}
           >
             <Image
@@ -64,19 +64,19 @@ const HomeFilters = ({ setIsGrid }: any) => {
         <div className="flex gap-1 bg-dealguru-white px-1 rounded-md justify-center items-center h-11 min-w-full">
           <Link
             className="flex  flex-grow items-center justify-center rounded-md button text-sm  px-3  h-9  border-r bg-dealguru-grey text-dealguru-blue"
-            href="/test"
+            href="/"
           >
             Standard
           </Link>
           <Link
             className=" flex flex-grow  items-center justify-center rounded-md button px-3 h-9 text-sm  border-r bg-dealguru-white text-[#5a5a5a]"
-            href="/test"
+            href="/nya-erbjudanden"
           >
             Nyast
           </Link>
           <Link
             className=" flex flex-grow  items-center justify-center rounded-md button px-3 h-9 text-sm  border-r bg-dealguru-white text-[#5a5a5a]"
-            href="/test"
+            href="/populara-erbjudanden"
           >
             Popularitet
           </Link>

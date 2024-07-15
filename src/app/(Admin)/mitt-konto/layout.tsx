@@ -6,13 +6,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import UserProfileLinksSlider from "@/components/homepage/UserProfile_mobile_links_slider";
-import { navItems } from "@/lib/navItems";
+import { navItems } from "@/constants/navItems";
+
 
 // Define the props type
 interface ProfilePageProps {
   children: ReactNode;
 }
-
 
 export default function ProfilePage({ children }: ProfilePageProps) {
   const pathname = usePathname();

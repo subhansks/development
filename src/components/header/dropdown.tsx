@@ -1,6 +1,5 @@
 import React from "react";
 
-
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -8,12 +7,12 @@ import {
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
- 
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import Image from "next/image";
 import Link from "next/link";
-import { navItems } from "@/lib/navItems";
+import { navItems } from "@/constants/navItems";
+
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 export function DropdownMenuDemo({
@@ -31,12 +30,14 @@ export function DropdownMenuDemo({
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           {navItems.map((item, index) => (
+
             <Link href={item.href} key={index} className="flex" style={{ all: 'inherit' }}>
               <DropdownMenuItem
                 className={clsx(
                   "cursor-pointer",
                   { "text-dealguru-blue ": pathname === item.href }
                 )}
+
               >
                 <Image
                   src={pathname === item.href ? item.activeIcon : item.icon}
@@ -52,7 +53,7 @@ export function DropdownMenuDemo({
             </Link>
           ))}
         </DropdownMenuGroup>
-       
+
       </DropdownMenuContent>
     </DropdownMenu>
   );
