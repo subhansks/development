@@ -38,28 +38,31 @@ const Footer = () => {
                 <Link href="/">Deals </Link>
               </li>
               <li className="text-sm text-gray-600">
-                <Link href="/">Deals </Link>
+                <Link href="/kopguider">Blogg </Link>
               </li>
               <li className="text-sm text-gray-600">
-                <Link href="/">Deals </Link>
+                <Link href="/diskussioner">Diskussioner </Link>
               </li>
               <li className="text-sm text-gray-600">
-                <Link href="/">Deals </Link>
+                <Link href="/om-oss">Om oss </Link>
               </li>
               <li className="text-sm text-gray-600">
-                <Link href="/">Deals </Link>
+                <Link href="/kontakta-oss">Kontakta oss </Link>
+              </li>
+              <li className="text-sm text-gray-600">
+                <Link href="/dealguru-in-media">DealGuru in media </Link>
               </li>
             </ul>
             <h4 className="text-xl font-bold mb-4 mt-4">Community</h4>
             <ul className="flex flex-col gap-4">
               <li className="text-sm text-gray-600">
-                <Link href="/">Deals </Link>
+                <Link href="/">Kom igång </Link>
               </li>
               <li className="text-sm text-gray-600">
-                <Link href="/">Deals </Link>
+                <Link href="/fragor-och-svar">FAQ </Link>
               </li>
               <li className="text-sm text-gray-600">
-                <Link href="/">Deals </Link>
+                <Link href="/medlemsvillkor">Medlemsvillkor </Link>
               </li>
             </ul>
           </div>
@@ -162,12 +165,12 @@ const Footer = () => {
           </div>
           <ToTop />
           <div className="flex gap-3">
-            <Link className="text-sm text-gray-600" href="/">
-              Privacy Policy
+            <Link className="text-sm text-gray-600" href="/integritetspolicy">
+            Integritetspolicy
             </Link>
 
             <Link className="text-sm text-gray-600" href="/">
-              Terms of Use
+            Användarvillkor
             </Link>
           </div>
         </div>

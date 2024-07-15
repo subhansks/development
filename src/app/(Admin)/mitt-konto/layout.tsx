@@ -8,6 +8,7 @@ import clsx from "clsx";
 import UserProfileLinksSlider from "@/components/homepage/UserProfile_mobile_links_slider";
 import { navItems } from "@/constants/navItems";
 
+
 // Define the props type
 interface ProfilePageProps {
   children: ReactNode;
