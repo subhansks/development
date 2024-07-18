@@ -7,7 +7,7 @@ const LikeModule = ({ item }: any) => {
       <p className=" text-xs font-bold ">Bra deal? Rösta här:</p>
       <div className="flex md:gap-2 gap-1">
         <div className="border border-dealguru-blue md:w-[40px] md:h-[40px] w-[35px] h-[35px] flex p-2 items-center justify-center rounded-md  ">
-          <span className="font-bold  text-sm">{item.likes}</span>
+          <span className="font-bold  text-sm">{item?.likes}</span>
         </div>
         <div className=" bg-dealguru-grey md:w-[40px] md:h-[40px] w-[35px] h-[35px] flex p-2 items-center justify-center rounded-md cursor-pointer">
           <Image

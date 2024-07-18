@@ -5,7 +5,16 @@ import LeftDealSection from "../components/layout/LeftDealSection";
 import RightDealDetailSection from "../components/layout/RightDealDetailSection";
 import BelowLargeScreens from "../components/layout/BelowLargeScreens";
 
-const page = ({ params }: any) => {
+// function delay() {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve(void 0);
+//     }, 15000);
+//   });
+// }
+
+const page = async ({ params }: any) => {
+  // await delay();
   return (
     <section className="min-h-screen z-0 px-4  2xl:px-x-pad md:px-8 w-full mt-28 3xl:w-[1900px] 3xl:m-auto 3xl:mt-28">
       <ScrollSlider />

@@ -1,10 +1,10 @@
 "use server";
+
 import { eq } from "drizzle-orm";
 import { db } from "../db/connection/db";
 import { cashbackengineRetailers, tableImages } from "../drizzle/Schema/schema";
 
 export const HomePageData = async () => {
-  "use server";
   try {
     // const topRecommendationData = await db
     //   .select({

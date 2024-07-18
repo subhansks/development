@@ -12,6 +12,8 @@ export const metadata: Metadata = {
   description: "By DealGuru Organization",
 };
 import { Open_Sans } from "next/font/google";
+import { Suspense } from "react";
+import Loading from "./(Home_page)/components/layout/Loading";
 
 const open_sans = Open_Sans({ subsets: ["latin"], variable: "--open_sans" });
 
@@ -26,7 +28,9 @@ export default function RootLayout({
     <html lang="sv">
       <body className={`${myFont.className} ${open_sans.variable}`}>
         <Navbar />
-        <Wrapper>{children}</Wrapper>
+        <Wrapper>
+          <Suspense fallback={<Loading />}>{children}</Suspense>
+        </Wrapper>
         <Footer />
         <Footer_Menu />
       </body>

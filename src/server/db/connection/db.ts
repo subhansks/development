@@ -3,14 +3,14 @@ import { createPool } from "mysql2";
 import * as schema from "../../drizzle/Schema/schema";
 
 const getConnection = () => {
-  if (process.env.DB_URL) {
-    return createPool({
-      uri: process.env.DB_URL,
-      waitForConnections: true,
-      connectionLimit: 10,
-      queueLimit: 0,
-    });
-  }
+  // if (process.env.DB_URL) {
+  //   return createPool({
+  //     uri: process.env.DB_URL,
+  //     waitForConnections: true,
+  //     connectionLimit: 10,
+  //     queueLimit: 0,
+  //   });
+  // }
   return createPool({
     host: "c120755.sgvps.net",
     // port: parseInt(process.env.DB_PORT || "3306", 10),

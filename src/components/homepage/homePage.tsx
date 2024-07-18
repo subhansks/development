@@ -8,10 +8,12 @@ import { Context } from "@/context/ContextAPI";
 import HomeDealCard_Grid from "./HomeDealCard_Grid";
 import { HomePageProps } from "@/types/HomePageTypes";
 import { HomePageData } from "@/server/actions/HomePageData";
+import { revalidatePath } from "next/cache";
+import { useRouter } from "next/navigation";
 
 const HomePageContent = ({ topData, leastData }: any) => {
   const { isGrid, setIsGrid } = useContext(Context);
-
+  const router = useRouter();
   return (
     <div
       className={`${
@@ -62,7 +64,9 @@ const HomePageContent = ({ topData, leastData }: any) => {
 
         <button
           onClick={async () => {
-            const d = await HomePageData();
+            const d = await fetch("http://localhost:3000/api/revalidate");
+            // window.scrollTo(0, 0);
+            router.refresh();
             console.log(d);
           }}
           className="bg-dealguru-blue font-open_sans text-dealguru-white font-bold border border-gray-200 rounded-lg py-2 px-4"

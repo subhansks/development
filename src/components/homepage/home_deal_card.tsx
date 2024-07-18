@@ -14,7 +14,7 @@ const HomeDealCard = ({ item }: any) => {
           <Image
             // src="/assets/images/dealcard1.png"
             src={
-              item.imageUrl
+              item
                 ? `https://dealguru.se/admin/uploads/${item?.imageUrl}`
                 : "/assets/images/dealcard1.png"
             }
@@ -28,9 +28,9 @@ const HomeDealCard = ({ item }: any) => {
           <div className="flex min-w-full md:gap-2 gap-1 flex-col md:flex-row ">
             <div className="flex flex-col gap-2  ">
               {" "}
-              <Link href={`/deal/${item.title}`}>
+              <Link href={`/deal/${item?.title}`}>
                 <h1 className="text-dealguru-black md:text-xl text-sm  font-bold ">
-                  {item.title}
+                  {item?.title}
                 </h1>
               </Link>
               <div className="max-md:hidden">
