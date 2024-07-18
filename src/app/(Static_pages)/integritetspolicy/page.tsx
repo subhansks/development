@@ -5,14 +5,14 @@ import '../static_pages.css';
 export default function PrivacyPolicyPage() {
     return (
         <>
-            <main>
+            <main className='integritetspolicy'>
                 <div>
                     <section className='static-page-main'>
                         <div className='static-page-container relative w-full mt-26'>
                             <div className='bg-image-container'>
                                 <Image src='/assets/images/page-header.jpg' alt='Image' layout='fill' objectFit='cover' className='bg-image' />
                             </div>
-                            <h2 className='text-overlay'>Integritetspolicy</h2>
+                            <h1 className='text-overlay'>Integritetspolicy</h1>
                         </div>
                     </section>
 
