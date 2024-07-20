@@ -5,8 +5,10 @@ import Sidebar from "@/components/sidebar/sidebar";
 import { HomePageData } from "@/server/actions/HomePageData";
 import { HomePageProps } from "@/types/HomePageTypes";
 import { Suspense } from "react";
-import MainData from "./components/layout/MainData";
 import Loading from "./components/layout/Loading";
+import MainData from "./components/layout/MainData";
+
+// export const dynamic = "force-dynamic";
 
 export default async function Home() {
   return (
