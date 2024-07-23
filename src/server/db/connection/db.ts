@@ -3,24 +3,25 @@ import { createPool } from "mysql2";
 import * as schema from "../../drizzle/Schema/schema";
 
 const getConnection = () => {
-  // if (process.env.DB_URL) {
-  //   return createPool({
-  //     uri: process.env.DB_URL,
-  //     waitForConnections: true,
-  //     connectionLimit: 10,
-  //     queueLimit: 0,
-  //   });
-  // }
   return createPool({
-    host: "c120755.sgvps.net",
-    // port: parseInt(process.env.DB_PORT || "3306", 10),
-    user: "u3578tvfn1d5a",
-    password: "db54c11Cb@8|",
-    database: "dby7k1wm00xyri",
+    host: process.env.DB_HOST,
+    user: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0,
   });
+  // return createPool({
+  //   host: "localhost",
+  //   port: 3306,
+  //   user: "dealguru",
+  //   password: "EJTF9y4F2Q",
+  //   database: "dealguru_dev",
+  //   waitForConnections: true,
+  //   connectionLimit: 10,
+  //   queueLimit: 0,
+  // });
 };
 
 const connection = getConnection();

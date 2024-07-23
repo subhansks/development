@@ -6,7 +6,7 @@ import CarouselSlider from "./slider";
 import LogoSlider from "../footer/logo_slider";
 import { Context } from "@/context/ContextAPI";
 import HomeDealCard_Grid from "./HomeDealCard_Grid";
-import { HomePageProps } from "@/types/HomePageTypes";
+import { HomePageProps } from "@/types/AllTypes";
 import { HomePageData } from "@/server/actions/HomePageData";
 import { revalidatePath } from "next/cache";
 import { useRouter } from "next/navigation";
