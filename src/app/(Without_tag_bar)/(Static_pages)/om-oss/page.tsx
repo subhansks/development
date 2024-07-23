@@ -6,7 +6,7 @@ import '../static_pages.css';
 export default function page() {
     return (
         <>
-            <main>
+            <main className='om_oss'>
                 <div>
                     <section className='static-page-main'>
                         <div className='static-page-container relative w-full mt-26'>
