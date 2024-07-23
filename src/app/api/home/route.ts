@@ -8,7 +8,7 @@ export const dynamic = "force-dynamic";
 export async function GET(request: Request, response: Response) {
   // const cookie = cookies();
   // console.log(cookie);
-  draftMode().enable();
+  // draftMode().enable();
   // response.headers.set("Pragma", "no-cache");
   // const data = await HomePageData();
   const data = DATA[0];
