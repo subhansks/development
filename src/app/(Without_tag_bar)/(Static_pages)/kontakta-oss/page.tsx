@@ -5,7 +5,7 @@ import "../static_pages.css";
 export default function page() {
   return (
     <>
-      <main>
+      <main className="kontakta_oss">
         <div>
           <section className="static-page-main">
             <div className="static-page-container relative w-full mt-26">
@@ -15,16 +15,16 @@ export default function page() {
                   alt="Image"
                   layout="fill"
                   objectFit="cover"
-                  className="bg-image "
+                  className="bg-image"
                 />
               </div>
-              <h2 className="text-overlay">Kontakt</h2>
+              <h1 className="text-overlay">Kontakt</h1>
             </div>
           </section>
 
           <section className="space-y-8 max-w-screen-md_lg mx-auto px-10 md:px-20 my-14 md:my-20 content_sec">
             <div className="space-y-2">
-              <h2 className="text-xl md:text-2xl font-semibold text-gray-800">
+              <h2 className="text-xl md:text-2xl 2xl:text-3xl font-bold text-gray-800">
                 Skicka ett meddelande till DealGuru-teamet
               </h2>
               <p className="text-gray-500 text-base">
